@@ -1,32 +1,31 @@
 import { useMemo, Children, isValidElement, ReactElement } from 'react'
-import exp from 'constants'
 
-type CollectionType = {
-  header: null | ReactElement,
+export type CollectionType = {
+  header?: ReactElement,
   content: ReactElement[],
-  footer: null | ReactElement
+  footer?: ReactElement
 }
 
 interface Slots {
-  children: ReactElement
+  children: ReactElement[] | ReactElement
 }
 
-export const useSlots = (children: Slots) => {
-  const slots = useMemo(() => {
+export const useSlots = ({ children }: Slots): CollectionType => {
+  return useMemo(() => {
     const collection: CollectionType = {
-      header: null,
       content: [],
-      footer: null
     }
 
     Children.forEach(children, child => {
       if (!isValidElement(child)) return
 
-      switch(child.type) {
-        case 'Header':
+      // TODO может быть переписать на collection[child.key] = child и в последующем удалить switch/case + content
+
+      switch (child.key) {
+        case 'header':
           collection.header = child
           break
-        case 'Footer':
+        case 'footer':
           collection.footer = child
           break
         default:
@@ -34,8 +33,8 @@ export const useSlots = (children: Slots) => {
           break
       }
     })
-  }, [children])
 
-  return slots
+    return collection
+  }, [children])
 }
 
