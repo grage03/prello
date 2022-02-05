@@ -24,19 +24,19 @@ function App() {
             {/* TODO переписать Suspense в HOC, или придумать другое решения для анти репита кода */}
 
             <Route path="/" element={
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense fallback={<div>Loader...</div>}>
                 <PublicPage />
               </Suspense>
             }/>
 
             <Route path="admin" element={
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense fallback={<div>Loader...</div>}>
                 <AdminPage/>
               </Suspense>
             }/>
 
             <Route path="board" element={
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense fallback={<div>Loader...</div>}>
                 <BoardPage/>
               </Suspense>
             }/>
