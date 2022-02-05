@@ -2,8 +2,6 @@ import React, { useContext } from 'react'
 
 import './styles/style.sass'
 
-import { Button } from '../ui-components/Button'
-
 import { UserContext } from '../../../domain/user/store'
 
 export const Header = () => {
@@ -25,7 +23,7 @@ export const Header = () => {
       </div>
 
       {user.getUser()
-        ? <Button />
+        ? <button>log in</button>
         : <h1>user not login</h1>
       }
     </header>
