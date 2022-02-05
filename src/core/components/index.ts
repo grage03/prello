@@ -1,10 +1,10 @@
 import { NotFound } from './NotFound'
 import { Header } from './Header'
 
-import { Button } from './ui-components/Button'
+import { UiButton } from './ui-components/Button'
 
 export {
   NotFound,
   Header,
-  Button
+  UiButton
 }
