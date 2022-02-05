@@ -3,7 +3,7 @@ import { makeAutoObservable } from 'mobx'
 import { createContext } from 'react'
 
 export class User {
-  private user: IUser | null
+  private user: IUser | null  // store
 
   constructor() {
     makeAutoObservable(this)
@@ -11,11 +11,15 @@ export class User {
     this.user = null
   }
 
-  public getUser(): IUser | null {
+  public getUser(): IUser | null {  // getter
     return this.user
   }
 
-  public setUser(value: IUser): void {
+  public setUser(value: IUser): void {  // action
+    this.updateUser(value)
+  }
+
+  private updateUser(value: IUser): void {  // mutation
     this.user = value
   }
 }
