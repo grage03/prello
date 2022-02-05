@@ -25,12 +25,7 @@ function App() {
 
             <Route path="/" element={
               <Suspense fallback={<div>Loading...</div>}>
-                <PublicPage>
-                  <React.Fragment key="header">
-                    <h4>test!!!</h4>
-                  </React.Fragment>
-                  <h1>test</h1>
-                </PublicPage>
+                <PublicPage />
               </Suspense>
             }/>
 

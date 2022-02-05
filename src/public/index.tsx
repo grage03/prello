@@ -1,17 +1,9 @@
-import React, { ReactElement } from 'react'
-import { CollectionType, useSlots } from '../core/hooks/useSlots/useSlots'
+import React from 'react'
 
-interface PublicPageProps {
-  children: ReactElement[] | ReactElement
-}
-
-const PublicPage = ({ children }: PublicPageProps) => {
-  const slots: CollectionType = useSlots({ children })
+const PublicPage = () => {
   return (
     <div>
-      {slots.header}
       <aside>Public page</aside>
-      {slots.content}
     </div>
   )
 }
