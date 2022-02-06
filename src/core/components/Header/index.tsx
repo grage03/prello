@@ -8,11 +8,11 @@ export const Header = () => {
   const { user } = useContext(UserContext)
 
   return (
-    <header className='header'>
-      <div className='header__logo'>
+    <header className="header">
+      <div className="header__logo">
         <h1>logo</h1>
       </div>
-      <div className='header__navigation'>
+      <div className="header__navigation">
         <nav>
           <ul>
             <li>1</li>
@@ -22,9 +22,10 @@ export const Header = () => {
         </nav>
       </div>
 
-      {user.getUser()
-        ? <button>log in</button>
-        : <h1>user not login</h1>
+      {
+        user.getUser()
+          ? <button type="button">log in</button>
+          : <h1>user not login</h1>
       }
     </header>
   )

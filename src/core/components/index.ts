@@ -6,5 +6,5 @@ import { UiButton } from './ui-components/Button'
 export {
   NotFound,
   Header,
-  UiButton
+  UiButton,
 }

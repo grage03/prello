@@ -7,10 +7,10 @@ import './style/styles.sass'
 
 export const UiButton = ({ description, isTransparent, isBold, onClick }: ButtonProps) => {
   const classes = classNames({
-    "button": true,
-    "button--transparent": isTransparent,
-    "button--standard": !isTransparent,
-    "button--bold": isBold
+    button: true,
+    'button--transparent': isTransparent,
+    'button--standard': !isTransparent,
+    'button--bold': isBold,
   })
 
   function onInteracting() {
@@ -18,7 +18,7 @@ export const UiButton = ({ description, isTransparent, isBold, onClick }: Button
   }
 
   return (
-    <button className={classes} onClick={onInteracting}>
+    <button type="button" className={classes} onClick={onInteracting}>
       {description}
     </button>
   )

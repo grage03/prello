@@ -14,34 +14,44 @@ const BoardPage = React.lazy(() => import('./board'))
 
 function App() {
   return (
-    <div className='container'>
+    <div className="container">
       <UserContext.Provider value={{
-        user: new User()
-      }}>
-        <Header/>
+        user: new User(),
+      }}
+      >
+        <Header />
         <BrowserRouter>
           <Routes>
             {/* TODO переписать Suspense в HOC, или придумать другое решения для анти репита кода */}
 
-            <Route path="/" element={
-              <Suspense fallback={<div>Loading...</div>}>
-                <PublicPage />
-              </Suspense>
-            }/>
+            <Route
+              path="/"
+              element={(
+                <Suspense fallback={<div>Loading...</div>}>
+                  <PublicPage />
+                </Suspense>
+            )}
+            />
 
-            <Route path="admin" element={
-              <Suspense fallback={<div>Loading...</div>}>
-                <AdminPage/>
-              </Suspense>
-            }/>
+            <Route
+              path="admin"
+              element={(
+                <Suspense fallback={<div>Loading...</div>}>
+                  <AdminPage />
+                </Suspense>
+            )}
+            />
 
-            <Route path="board" element={
-              <Suspense fallback={<div>Loading...</div>}>
-                <BoardPage/>
-              </Suspense>
-            }/>
+            <Route
+              path="board"
+              element={(
+                <Suspense fallback={<div>Loading...</div>}>
+                  <BoardPage />
+                </Suspense>
+            )}
+            />
 
-            <Route path="*" element={<NotFound/>}/>
+            <Route path="*" element={<NotFound />} />
 
           </Routes>
         </BrowserRouter>

@@ -1,9 +1,10 @@
-import { IUser } from '../interface'
 import { makeAutoObservable } from 'mobx'
 import { createContext } from 'react'
+import { IUser } from '../interface'
 
 export class User {
-  private user: IUser | null  // store
+  // store
+  private user: IUser | null
 
   constructor() {
     makeAutoObservable(this)
@@ -11,19 +12,22 @@ export class User {
     this.user = null
   }
 
-  public getUser(): IUser | null {  // getter
+  // getter
+  public getUser(): IUser | null {
     return this.user
   }
 
-  public setUser(value: IUser): void {  // action
+  // action
+  public setUser(value: IUser): void {
     this.updateUser(value)
   }
 
-  private updateUser(value: IUser): void {  // mutation
+  // mutation
+  private updateUser(value: IUser): void {
     this.user = value
   }
 }
 
 export const UserContext = createContext({
-  user: new User()
+  user: new User(),
 })
