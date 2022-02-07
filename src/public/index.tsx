@@ -1,9 +1,10 @@
 import React from 'react'
 
 const PublicPage = () => {
+  const message = 'message'
   return (
     <div>
-      <aside>Public page</aside>
+      <aside>{message}</aside>
     </div>
   )
 }

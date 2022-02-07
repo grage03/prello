@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useMemo } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import { NotFound, Header } from './core/components'
@@ -12,13 +12,13 @@ const PublicPage = React.lazy(() => import('./public'))
 const AdminPage = React.lazy(() => import('./admin'))
 const BoardPage = React.lazy(() => import('./board'))
 
+// TODO move storage to App.tsx
 function App() {
+  const userStore = useMemo(() => ({ user: new User() }), [])
+
   return (
     <div className="container">
-      <UserContext.Provider value={{
-        user: new User(),
-      }}
-      >
+      <UserContext.Provider value={userStore}>
         <Header />
         <BrowserRouter>
           <Routes>
@@ -30,7 +30,7 @@ function App() {
                 <Suspense fallback={<div>Loading...</div>}>
                   <PublicPage />
                 </Suspense>
-            )}
+              )}
             />
 
             <Route
@@ -39,7 +39,7 @@ function App() {
                 <Suspense fallback={<div>Loading...</div>}>
                   <AdminPage />
                 </Suspense>
-            )}
+              )}
             />
 
             <Route
@@ -48,7 +48,7 @@ function App() {
                 <Suspense fallback={<div>Loading...</div>}>
                   <BoardPage />
                 </Suspense>
-            )}
+              )}
             />
 
             <Route path="*" element={<NotFound />} />
