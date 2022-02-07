@@ -23,7 +23,7 @@ export const Header = () => {
         </nav>
       </div>
 
-      <UiHint>
+      <UiHint description="test">
         <h2 key="trigger">hello</h2>
         <div>
           <h1>ну привет</h1>

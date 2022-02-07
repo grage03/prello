@@ -35,9 +35,10 @@
         "indent": ["error", 2, { "SwitchCase": 1 }],
         "import/no-unresolved": "error",
         "react/function-component-definition": [0, { "namedComponents": "arrow-function" }],
-        "arrow-body-style": ["error", "always"],
+        "arrow-body-style": ["warn", "always"],
         "array-bracket-spacing": ["error", "always"],
-        "import/prefer-default-export": "off"
+        "import/prefer-default-export": "off",
+        "jsx-a11y/mouse-events-have-key-events": "off"
     },
     "settings": {
         "import/parsers": {
