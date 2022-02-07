@@ -14,9 +14,7 @@ export const UiHint = ({ children, title, description }: UiHintProps) => {
       </div>
       {isHovered && (
         <div className="hint__content">
-          {
-            title && <div className="hint__content--title">{title}</div>
-          }
+          {title && <div className="hint__content--title">{title}</div>}
           <div className="hint__content--description">
             {description}
           </div>
