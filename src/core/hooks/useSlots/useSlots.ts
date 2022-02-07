@@ -1,9 +1,12 @@
-import { useMemo, Children, isValidElement, ReactElement } from 'react'
+import {
+  useMemo, Children, isValidElement, ReactElement,
+} from 'react'
 
-export type CollectionType = {
-  header?: ReactElement,
+type CollectionType = {
   content: ReactElement[],
-  footer?: ReactElement
+  header?: ReactElement,
+  footer?: ReactElement,
+  trigger?: ReactElement
 }
 
 interface Slots {
@@ -16,10 +19,8 @@ export const useSlots = ({ children }: Slots): CollectionType => {
       content: [],
     }
 
-    Children.forEach(children, child => {
+    Children.forEach(children, (child) => {
       if (!isValidElement(child)) return
-
-      // TODO может быть переписать на collection[child.key] = child и в последующем удалить switch/case + content
 
       switch (child.key) {
         case 'header':
@@ -28,6 +29,9 @@ export const useSlots = ({ children }: Slots): CollectionType => {
         case 'footer':
           collection.footer = child
           break
+        case 'trigger':
+          collection.trigger = child
+          break
         default:
           collection.content.push(child)
           break
@@ -35,6 +39,5 @@ export const useSlots = ({ children }: Slots): CollectionType => {
     })
 
     return collection
-  }, [children])
+  }, [ children ])
 }
-

@@ -3,6 +3,7 @@ import React, { useContext } from 'react'
 import './styles/style.sass'
 
 import { UserContext } from '../../../domain/user/store'
+import { UiHint } from '../ui-components/Hint'
 
 export const Header = () => {
   const { user } = useContext(UserContext)
@@ -21,6 +22,13 @@ export const Header = () => {
           </ul>
         </nav>
       </div>
+
+      <UiHint>
+        <h2 key="trigger">hello</h2>
+        <div>
+          <h1>ну привет</h1>
+        </div>
+      </UiHint>
 
       {
         user.getUser()

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { SelectProps } from './interface'
 import './style/style.sass'
 
-  // TODO add animation, add the ability to close when clicking outside the component, also the arrow icon
+// TODO add animation, add the ability to close when clicking outside the component, also the arrow icon
 
 export const UiSelect = ({ label, selectItems, onClickItem }: SelectProps) => {
   const [ selectItem, setSelectItem ] = useState(label)
