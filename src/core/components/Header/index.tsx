@@ -1,12 +1,12 @@
-import React, { useContext } from 'react'
-
+import React from 'react'
+import { observer } from 'mobx-react'
 import './styles/style.sass'
 
-import { UserContext } from '../../../domain/user/store'
 import { UiHint } from '../ui-components/Hint'
+import { userStore } from '../../../domain/user/store'
 
-export const Header = () => {
-  const { user } = useContext(UserContext)
+export const Header = observer(() => {
+  const { profile } = userStore
 
   return (
     <header className="header">
@@ -22,19 +22,17 @@ export const Header = () => {
           </ul>
         </nav>
       </div>
-
       <UiHint description="test">
         <h2 key="trigger">hello</h2>
         <div>
           <h1>ну привет</h1>
         </div>
       </UiHint>
-
       {
-        user.getUser()
+        profile
           ? <button type="button">log in</button>
           : <h1>user not login</h1>
       }
     </header>
   )
-}
+})
