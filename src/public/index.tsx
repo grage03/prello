@@ -1,4 +1,5 @@
 import React from 'react'
+import './style/styles.sass'
 
 const PublicPage = () => {
   const message = 'message'
