@@ -11,7 +11,7 @@ export const Header = observer(() => {
   return (
     <header className="header">
       <div className="header__logo">
-        <h1>logo</h1>
+        <h3>logo</h3>
       </div>
       <div className="header__navigation">
         <nav>
@@ -23,7 +23,7 @@ export const Header = observer(() => {
         </nav>
       </div>
       <UiHint description="test">
-        <h2 key="trigger">hello</h2>
+        <h4 key="trigger">hello</h4>
         <div>
           <h1>ну привет</h1>
         </div>
@@ -31,7 +31,7 @@ export const Header = observer(() => {
       {
         profile
           ? <button type="button">log in</button>
-          : <h1>user not login</h1>
+          : <h3>user not login</h3>
       }
     </header>
   )
