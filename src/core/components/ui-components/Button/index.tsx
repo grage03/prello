@@ -5,7 +5,9 @@ import { ButtonProps } from './interface'
 
 import './style/styles.sass'
 
-export const UiButton = ({ description, isTransparent, isBold, onClick }: ButtonProps) => {
+export const UiButton = ({
+  description, isTransparent, isBold, onClick,
+}: ButtonProps) => {
   const classes = classNames({
     button: true,
     'button--transparent': isTransparent,

@@ -10,7 +10,7 @@ export const UiSelect = ({ label, selectItems, onClickItem }: SelectProps) => {
   const [ isActive, setIsActive ] = useState(false)
 
   function onClickSelect() {
-    setClasses((prevState => isActive ? 'select__label' : prevState + ' select__label--active'))
+    setClasses((prevState) => (isActive ? 'select__label' : `${prevState} select__label--active`))
     setIsActive(!isActive)
   }
 
