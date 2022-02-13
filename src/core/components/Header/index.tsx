@@ -23,11 +23,8 @@ export const Header = observer(() => {
         </nav>
       </div>
       <UiHint description="test">
-<<<<<<< HEAD
         <div key="trigger">hello</div>
-=======
         <h4 key="trigger">hello</h4>
->>>>>>> 2f4d497a5323ea1aa1c46a506b456ef924e85ec6
         <div>
           ну привет
         </div>
