@@ -13,9 +13,7 @@ export const Header = observer(() => {
 
   const changeLocale = async (key: 'en' | 'ru') => {
     if (i18n.language === key) return
-
-    const currentLocale = key === 'ru' ? 'ru' : 'en'
-    await i18n.changeLanguage(currentLocale)
+    await i18n.changeLanguage(key)
   }
 
   return (
