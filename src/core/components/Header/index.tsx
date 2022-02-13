@@ -23,9 +23,9 @@ export const Header = observer(() => {
         </nav>
       </div>
       <UiHint description="test">
-        <h2 key="trigger">hello</h2>
+        <div key="trigger">hello</div>
         <div>
-          <h1>ну привет</h1>
+          ну привет
         </div>
       </UiHint>
       {
