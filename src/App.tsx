@@ -1,49 +1,35 @@
 import React, { Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import { NotFound, Header } from './core/components'
+import { NotFound } from './core/components'
 
 import './core/style/reset.sass'
 import './core/style/global.sass'
 
-const PublicPage = React.lazy(() => import('./public'))
-const AdminPage = React.lazy(() => import('./admin'))
-const BoardPage = React.lazy(() => import('./board'))
+const PublicRoute = React.lazy(() => import('./public'))
+const AdminRoute = React.lazy(() => import('./admin'))
+const BoardRoute = React.lazy(() => import('./board'))
+
+const PublicPage = React.lazy(() => import('./public/views/Public'))
+const LoginPage = React.lazy(() => import('./public/views/Login'))
+const RegistrationPage = React.lazy(() => import('./public/views/Registration'))
 
 function App() {
   return (
     <div className="container">
-      <Header />
       <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={(
-              <Suspense fallback={<div>Loading...</div>}>
-                <PublicPage />
-              </Suspense>
-            )}
-          />
-
-          <Route
-            path="admin"
-            element={(
-              <Suspense fallback={<div>Loading...</div>}>
-                <AdminPage />
-              </Suspense>
-            )}
-          />
-
-          <Route
-            path="board"
-            element={(
-              <Suspense fallback={<div>Loading...</div>}>
-                <BoardPage />
-              </Suspense>
-            )}
-          />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<PublicRoute />}>
+              <Route index element={<PublicPage />} />
+              <Route path="login" element={<LoginPage />} />
+              <Route path="registration" element={<RegistrationPage />} />
+            </Route>
+            <Route path="admin" element={<AdminRoute />} />
+            <Route path="board" element={<BoardRoute />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </div>
   )

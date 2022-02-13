@@ -1,10 +1,12 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
+import { Header } from '../core/components'
 
 const PublicPage = () => {
-  const message = 'message'
   return (
     <div>
-      <aside>{message}</aside>
+      <Header />
+      <Outlet />
     </div>
   )
 }
