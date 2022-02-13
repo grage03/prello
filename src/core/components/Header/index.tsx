@@ -1,17 +1,27 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { observer } from 'mobx-react'
 import './styles/style.sass'
 
 import { UiHint } from '../ui-components/Hint'
 import { userStore } from '../../../domain/user/store'
+import { UiSelect } from '../ui-components'
 
 export const Header = observer(() => {
   const { profile } = userStore
+  const { t, i18n } = useTranslation([ 'translation' ])
+
+  const changeLocale = async (key: 'en' | 'ru') => {
+    if (i18n.language === key) return
+
+    const currentLocale = key === 'ru' ? 'ru' : 'en'
+    await i18n.changeLanguage(currentLocale)
+  }
 
   return (
     <header className="header">
       <div className="header__logo">
-        <h1>logo</h1>
+        <h1>{ t('translation:header') }</h1>
       </div>
       <div className="header__navigation">
         <nav>
@@ -22,10 +32,14 @@ export const Header = observer(() => {
           </ul>
         </nav>
       </div>
+      <UiSelect
+        selectItems={[ 'en', 'ru' ]}
+        onClickItem={changeLocale}
+      />
       <UiHint description="test">
-        <h2 key="trigger">hello</h2>
+        <div key="trigger">hello</div>
         <div>
-          <h1>ну привет</h1>
+          ну привет
         </div>
       </UiHint>
       {
