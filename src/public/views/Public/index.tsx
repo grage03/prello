@@ -3,7 +3,7 @@ import React from 'react'
 const Public = () => {
   return (
     <div>
-      public page
+      <h1>123</h1>
     </div>
   )
 }
