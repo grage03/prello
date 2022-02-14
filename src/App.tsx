@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './core/modules/locale/config'
 
+import { Loader } from './core/components/common/loader'
 import { NotFound } from './core/components'
 
 import './core/style/reset.sass'
@@ -19,7 +20,7 @@ function App() {
   return (
     <div className="container">
       <BrowserRouter>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<PublicRoute />}>
               <Route index element={<PublicPage />} />
