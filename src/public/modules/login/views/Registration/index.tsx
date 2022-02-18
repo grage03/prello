@@ -1,11 +1,9 @@
 import React from 'react'
 
-const Registration = () => {
+export const RegistrationPage = () => {
   return (
     <div>
       registration component
     </div>
   )
 }
-
-export default Registration
