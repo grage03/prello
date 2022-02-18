@@ -1,5 +1,5 @@
-import { NotFound } from './NotFound'
-import { Header } from './Header'
+import { NotFound } from './common/NotFound'
+import { Header } from './common/Header'
 
 import { UiButton, UiSelect } from './ui-components'
 

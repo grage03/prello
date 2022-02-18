@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 import { Header } from '../core/components'
 import './style/styles.sass'
 
-const PublicPage = () => {
+const PublicRoute = () => {
   return (
     <div>
       <Header />
@@ -12,4 +12,4 @@ const PublicPage = () => {
   )
 }
 
-export default PublicPage
+export default PublicRoute

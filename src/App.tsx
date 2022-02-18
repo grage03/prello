@@ -1,19 +1,19 @@
 import React, { Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './core/modules/locale/config'
+import './core/plugins/locale/config'
 
 import { NotFound } from './core/components'
 
 import './core/style/reset.sass'
 import './core/style/global.sass'
+import { PublicPage } from './public/layouts/Main'
+// TODO: move to file (index.js) => export
+import { LoginPage } from './public/modules/login/views/Login'
+import { RegistrationPage } from './public/modules/login/views/Registration'
 
 const PublicRoute = React.lazy(() => import('./public'))
 const AdminRoute = React.lazy(() => import('./admin'))
 const BoardRoute = React.lazy(() => import('./board'))
-
-const PublicPage = React.lazy(() => import('./public/views/Public'))
-const LoginPage = React.lazy(() => import('./public/views/Login'))
-const RegistrationPage = React.lazy(() => import('./public/views/Registration'))
 
 function App() {
   return (

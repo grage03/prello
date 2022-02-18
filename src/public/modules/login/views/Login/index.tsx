@@ -1,11 +1,9 @@
 import React from 'react'
 
-const Public = () => {
+export const LoginPage = () => {
   return (
     <div>
-      <h1>123</h1>
+      login component
     </div>
   )
 }
-
-export default Public

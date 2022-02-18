@@ -2,8 +2,8 @@ import React from 'react'
 import { observer } from 'mobx-react'
 import './styles/style.sass'
 
-import { UiHint } from '../ui-components/Hint'
-import { userStore } from '../../../domain/user/store'
+import { UiHint } from '../../ui-components/Hint'
+import { userStore } from '../../../../domain/user/store'
 
 export const Header = observer(() => {
   const { profile } = userStore
