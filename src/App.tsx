@@ -10,6 +10,7 @@ import { PublicPage } from './public/layouts/Main'
 // TODO: move to file (index.js) => export
 import { LoginPage } from './public/modules/login/views/Login'
 import { RegistrationPage } from './public/modules/login/views/Registration'
+import { Loader } from './core/components/common/Loader'
 
 const PublicRoute = React.lazy(() => import('./public'))
 const AdminRoute = React.lazy(() => import('./admin'))
@@ -19,7 +20,7 @@ function App() {
   return (
     <div className="container">
       <BrowserRouter>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<PublicRoute />}>
               <Route index element={<PublicPage />} />
