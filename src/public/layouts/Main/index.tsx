@@ -1,9 +1,11 @@
 import React from 'react'
 
+import '../../../assets/styles/_helpers.sass'
+
 export const PublicPage = () => {
   return (
-    <div>
-      <h1>123</h1>
+    <div className="h-container">
+      test
     </div>
   )
 }
