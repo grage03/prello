@@ -1,41 +1,47 @@
 import React from 'react'
-import { observer } from 'mobx-react'
+import { useLocation, useNavigate } from 'react-router-dom'
+
+import { UserWrapper } from './components/UserWrapper'
+import { LogoIcon } from '../../../assets/icon/app/logo'
+import { UiLink, UiIcon } from '../../../core/components/ui-components'
 
 import '../../../assets/styles/_helpers.sass'
 import './style/styles.sass'
+import { navigationOptions } from './enums'
 
-import { UiHint } from '../../../core/components/ui-components/Hint'
-import { userStore } from '../../../domain/user/store'
+const BurgerMenu = React.lazy(() => import('./components/Burger'))
 
-export const Header = observer(() => {
-  const { profile } = userStore
+export const Header = () => {
+  const navigate = useNavigate()
+  const { pathname } = useLocation()
+
+  const onUserClickLogo = () => {
+    if (pathname === '/') return
+    navigate('/')
+  }
 
   return (
     <header className="h-container header">
-      <div className="header__logo">
-        <h3>logo</h3>
+      <div className="header__burger">
+        <BurgerMenu />
       </div>
-      <div className="header__navigation">
-        <nav>
-          <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-          </ul>
-        </nav>
+      <div className="header__logo" onClick={onUserClickLogo}>
+        <UiIcon size={60} viewBox="0 0 70 70">
+          <LogoIcon />
+        </UiIcon>
       </div>
-      <UiHint description="test">
-        <div key="trigger">hello</div>
-        <h4 key="trigger">hello</h4>
-        <div>
-          ну привет
-        </div>
-      </UiHint>
-      {
-        profile
-          ? <button type="button">log in</button>
-          : <h3>user not login</h3>
-      }
+      <nav className="header__navigation">
+        <ul>
+          {
+            navigationOptions.map((item) => (
+              <li key={item.option} className="header__navigation-item">
+                <UiLink>{item.name}</UiLink>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      <UserWrapper />
     </header>
   )
-})
+}
