@@ -53,7 +53,9 @@
         "jsx-a11y/no-noninteractive-element-interactions": "off",
         "import/extensions": "off",
         "consistent-return": "off",
-        "quotes": "off"
+        "quotes": "off",
+        "global-require": "off",
+        "import/no-dynamic-require": "off"
     },
     "settings": {
         "import/parsers": {
