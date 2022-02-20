@@ -1,0 +1,36 @@
+@import '../../../../../../assets/styles/_variables.sass'
+
+.burger
+  &__icon
+    span
+      display: block
+      width: 30px
+      height: 3px
+      margin-bottom: 7px
+      background-color: $grey-80
+
+  &__close
+    text-align: right
+    margin-bottom: 10px
+
+  &__wrapper
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    height: 100vh
+    z-index: 999
+    background-color: rgba(#000, 0.8)
+
+  &__menu
+    padding: 30px 0
+    background-color: $snow-cloud
+    height: 100%
+    width: 80%
+
+  &__navigation-item
+    border-top: 1px solid $grey-80
+    padding: 20px 10px
+
+    &:last-child
+      border-bottom: 1px solid $grey-80

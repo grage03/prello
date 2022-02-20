@@ -50,7 +50,10 @@
             }
         ],
         "jsx-a11y/click-events-have-key-events": "off",
-        "import/extensions": "off"
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "import/extensions": "off",
+        "consistent-return": "off",
+        "quotes": "off"
     },
     "settings": {
         "import/parsers": {

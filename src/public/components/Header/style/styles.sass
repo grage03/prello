@@ -1,3 +1,36 @@
+@import '../../../../assets/styles/_mixins.sass'
+@import '../../../../assets/styles/_variables.sass'
+
 .header
-  display: flex
-  justify-content: space-between
+  position: relative
+  @include flex-justify-between
+  align-items: center
+  height: 60px
+
+  &__burger
+    display: none
+
+    @media screen and (max-width: $sm-max-width)
+      display: block
+      height: 25px
+
+  &__logo
+    height: 50px
+    cursor: pointer
+
+    @media screen and (max-width: $sm-max-width)
+      position: absolute
+      left: 60px
+
+  &__navigation
+    ul
+      @include flex-justify-between
+
+      @media screen and (max-width: $sm-max-width)
+        display: none
+
+  &__navigation-item
+    margin-right: 40px
+
+    &:last-child
+      margin-right: 0

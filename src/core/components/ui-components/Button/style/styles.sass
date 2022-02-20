@@ -1,20 +1,23 @@
 @import '../../../../../assets/styles/_variables.sass'
+@import '../../../../../assets/styles/_functions.sass'
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
 
 .button
-  border-radius: 8px
+  border-radius: 12px
   cursor: pointer
   font-size: 14px
+  padding: 9px 18px
+  font-family: Manrope,sans-serif
+  font-weight: bold
 
   &--standard
-    background-color: $deep-water
-    padding: 13px 17px
+    background-color: $glacier
     color: white
     border: 0
 
     &:hover
-      background-color: $lichen
-      box-shadow: 0 0 10px $lichen
+      background-color: $green-50
+      box-shadow: 0 0 16px $green-50
 
     &:active
       box-shadow: inset 0 0 20px $blue-peacock
@@ -32,6 +35,3 @@
     &:active
       border: 3px solid $blue-peacock
       color: $blue-peacock
-
-  &--bold
-    font-weight: bold

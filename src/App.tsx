@@ -19,22 +19,20 @@ const BoardRoute = React.lazy(() => import('./board'))
 
 function App() {
   return (
-    <div className="container">
-      <BrowserRouter>
-        <Suspense fallback={<Loader />}>
-          <Routes>
-            <Route path="/" element={<PublicRoute />}>
-              <Route index element={<PublicPage />} />
-              <Route path="login" element={<LoginPage />} />
-              <Route path="registration" element={<RegistrationPage />} />
-            </Route>
-            <Route path="admin" element={<AdminRoute />} />
-            <Route path="board" element={<BoardRoute />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<PublicRoute />}>
+            <Route index element={<PublicPage />} />
+            <Route path="login" element={<LoginPage />} />
+            <Route path="registration" element={<RegistrationPage />} />
+          </Route>
+          <Route path="admin" element={<AdminRoute />} />
+          <Route path="board" element={<BoardRoute />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   )
 }
 
