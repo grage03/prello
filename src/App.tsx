@@ -4,12 +4,13 @@ import './core/plugins/locale/config'
 
 import { NotFound } from './core/components'
 
-import './core/style/reset.sass'
-import './core/style/global.sass'
+import './assets/styles/main.sass'
+
 import { PublicPage } from './public/layouts/Main'
 // TODO: move to file (index.js) => export
 import { LoginPage } from './public/modules/login/views/Login'
 import { RegistrationPage } from './public/modules/login/views/Registration'
+
 import { Loader } from './core/components/common/Loader'
 
 const PublicRoute = React.lazy(() => import('./public'))

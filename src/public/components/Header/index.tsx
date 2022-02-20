@@ -1,15 +1,17 @@
 import React from 'react'
 import { observer } from 'mobx-react'
-import './styles/style.sass'
 
-import { UiHint } from '../../ui-components/Hint'
-import { userStore } from '../../../../domain/user/store'
+import '../../../assets/styles/_helpers.sass'
+import './style/styles.sass'
+
+import { UiHint } from '../../../core/components/ui-components/Hint'
+import { userStore } from '../../../domain/user/store'
 
 export const Header = observer(() => {
   const { profile } = userStore
 
   return (
-    <header className="header">
+    <header className="h-container header">
       <div className="header__logo">
         <h3>logo</h3>
       </div>
