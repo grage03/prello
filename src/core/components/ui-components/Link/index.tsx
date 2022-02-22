@@ -6,6 +6,7 @@ import './style/styles.sass'
 
 import { UiLinkProps } from './interface'
 
+// TODO rewrite children to React.Element
 export const UiLink = ({
   to, isArrow, isUnderline, children,
 }: UiLinkProps) => {
