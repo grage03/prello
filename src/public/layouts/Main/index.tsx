@@ -6,10 +6,10 @@ import { PublicAssessment, PublicHelp, PublicReviews } from './components'
 
 export const PublicPage = () => {
   return (
-    <div className="h-container">
+    <main className="h-container">
       <PublicHelp />
       <PublicReviews />
       <PublicAssessment />
-    </div>
+    </main>
   )
 }
