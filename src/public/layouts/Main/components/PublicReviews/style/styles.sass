@@ -1,15 +1,29 @@
+@import '../../../../../../assets/styles/_variables.sass'
+
 .people-reviews
   padding: 40px 0
   display: flex
 
+  @media screen and (max-width: $md-min-width)
+    flex-direction: column
+
   &__interactions
     width: 30%
+
+    @media screen and (max-width: $md-min-width)
+      width: 100%
+      text-align: center
 
   &__list
     width: 70%
     display: flex
     justify-content: flex-end
     gap: 16px
+
+    @media screen and (max-width: $md-min-width)
+      width: 100%
+      justify-content: center
+      flex-wrap: wrap
 
   &__item
     cursor: pointer
