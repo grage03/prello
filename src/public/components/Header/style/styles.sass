@@ -1,11 +1,17 @@
-@import '../../../../assets/styles/_mixins.sass'
 @import '../../../../assets/styles/_variables.sass'
 
 .header
-  position: relative
-  @include flex-justify-between
-  align-items: center
-  height: 60px
+  position: fixed
+  left: 0
+  right: 0
+  background-color: white
+
+  &__wrapper
+    position: relative
+    @include flex-justify-between
+    align-items: center
+    height: 65px
+    box-shadow: 0 5px 10px rgba(0,0,0,0.22)
 
   &__burger
     display: none

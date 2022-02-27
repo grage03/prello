@@ -21,27 +21,29 @@ export const Header = () => {
   }
 
   return (
-    <header className="h-container header">
-      <div className="header__burger">
-        <BurgerMenu />
+    <header className="header">
+      <div className="h-container header__wrapper">
+        <div className="header__burger">
+          <BurgerMenu />
+        </div>
+        <div className="header__logo" onClick={onUserClickLogo}>
+          <UiIcon size={60} viewBox="0 0 70 70">
+            <LogoIcon />
+          </UiIcon>
+        </div>
+        <nav className="header__navigation">
+          <ul>
+            {
+              navigationOptions.map((item) => (
+                <li key={item.option} className="header__navigation-item">
+                  <UiLink>{item.name}</UiLink>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+        <UserWrapper />
       </div>
-      <div className="header__logo" onClick={onUserClickLogo}>
-        <UiIcon size={60} viewBox="0 0 70 70">
-          <LogoIcon />
-        </UiIcon>
-      </div>
-      <nav className="header__navigation">
-        <ul>
-          {
-            navigationOptions.map((item) => (
-              <li key={item.option} className="header__navigation-item">
-                <UiLink>{item.name}</UiLink>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
-      <UserWrapper />
     </header>
   )
 }
