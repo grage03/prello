@@ -4,6 +4,7 @@ import { UiIcon } from '../../../../../../../core/components/ui-components'
 import { FullStar } from '../../../../../../../assets/icon/app/fullStar'
 import { HalfEmptyStar } from '../../../../../../../assets/icon/app/halfEmptyStar'
 
+// TODO rewrite with Array.fill or another
 export const Score = ({ score }: ScoreProps) => {
   const [ stars, setStars ] = useState<string[]>([])
 
