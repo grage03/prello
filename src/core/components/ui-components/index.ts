@@ -4,6 +4,7 @@ import { UiHint } from './Hint'
 import { UiLink } from './Link'
 import { UiIcon } from './Icon'
 import { UiImage } from './Image'
+import { UiLogo } from './Logo'
 
 export {
   UiSelect,
@@ -12,4 +13,5 @@ export {
   UiHint,
   UiLink,
   UiIcon,
+  UiLogo,
 }
