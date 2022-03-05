@@ -1,9 +1,9 @@
 import React from 'react'
-import { UiLogoProps } from './interface'
+import { UiIconProps } from './interface'
 
 export const UiIcon = ({
-  viewBox = "0 0 24 24", children, size = 24,
-}: UiLogoProps) => {
+  viewBox = "0 0 24 24", icon, size = 24,
+}: UiIconProps) => {
   return (
     <div className="icon">
       <svg
@@ -16,7 +16,7 @@ export const UiIcon = ({
         aria-hidden="true"
         role="presentation"
       >
-        {children}
+        {icon}
       </svg>
     </div>
   )

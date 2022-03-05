@@ -27,9 +27,7 @@ export const Header = () => {
           <BurgerMenu />
         </div>
         <div className="header__logo" onClick={onUserClickLogo}>
-          <UiIcon size={60} viewBox="0 0 70 70">
-            <LogoIcon />
-          </UiIcon>
+          <UiIcon size={60} viewBox="0 0 70 70" icon={<LogoIcon />} />
         </div>
         <nav className="header__navigation">
           <ul>

@@ -29,9 +29,7 @@ export const Footer = () => {
     <footer className="h-container footer">
       <div className="footer__description">
         <div className="footer__description-logo">
-          <UiIcon size={60} viewBox="0 0 70 70">
-            <LogoIcon />
-          </UiIcon>
+          <UiIcon size={60} viewBox="0 0 70 70" icon={<LogoIcon />} />
           <p className="footer__description-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
