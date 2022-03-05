@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 
-export interface UiLogoProps {
-  children: ReactElement
+export interface UiIconProps {
+  icon: ReactElement
   size?: number
   viewBox?: string
 }
