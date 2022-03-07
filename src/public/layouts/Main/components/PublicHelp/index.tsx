@@ -23,7 +23,7 @@ export const PublicHelp = () => {
         </div>
       </div>
       <div className="help-teams__image">
-        <UiImage src="helpTeams" width="480" />
+        <UiImage src="helpTeams" width="480px" />
       </div>
     </div>
   )
