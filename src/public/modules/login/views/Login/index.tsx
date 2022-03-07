@@ -1,9 +1,12 @@
 import React from 'react'
+import { AuthWrapper } from '../../components/AuthWrapper'
 
 export const LoginPage = () => {
   return (
-    <div>
-      login component
-    </div>
+    <AuthWrapper>
+      <div className="login">
+        login
+      </div>
+    </AuthWrapper>
   )
 }
