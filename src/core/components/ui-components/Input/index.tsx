@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { UiInputProps } from './interface'
 
 import './style/styles.sass'
-import { UiButton } from '../Button'
+import { useSlots } from '../../../hooks/useSlots/useSlots'
 
 export const UiInput = ({
   placeholder,
@@ -10,23 +10,26 @@ export const UiInput = ({
   disabled,
   width,
   limit,
+  label,
+  required,
+  register,
   type = "text",
-  isButton,
+  children,
 }: UiInputProps) => {
   const [ value, setValue ] = useState('')
+  const slots = useSlots({ children })
 
   const onUserChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value)
   }
 
-  const onUserClickButton = () => {
-    return true
-  }
-
   return (
-    <div className="input" style={{ width: width || '100%' }}>
+    <div className="form-input" style={{ width: width || '100%' }}>
+      <label className="form-input__label" htmlFor={label}>{label}</label>
       <input
-        className="input__item"
+        {...register(label, { required })}
+        id={label}
+        className="form-input__item"
         placeholder={placeholder}
         value={value}
         onChange={onUserChangeInput}
@@ -35,9 +38,7 @@ export const UiInput = ({
         disabled={disabled}
         maxLength={limit}
       />
-      {
-        isButton && <UiButton description="Join Now" onClick={onUserClickButton} width="30%" />
-      }
+      {slots.button}
     </div>
   )
 }

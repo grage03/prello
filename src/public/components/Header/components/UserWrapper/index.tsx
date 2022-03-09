@@ -11,7 +11,7 @@ export const UserWrapper = observer(() => {
   const { profile } = userStore
 
   const onUserLogin = () => {
-    if (pathname === '/login') return alert('You are already on the authorization page!')
+    if (pathname === '/login') throw new Error('You are already on the authorization page!')
     navigate('/login')
   }
 

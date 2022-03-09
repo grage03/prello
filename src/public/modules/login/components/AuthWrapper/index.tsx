@@ -19,7 +19,7 @@ export const AuthWrapper = ({ children }: AuthWrapperProps) => {
   return (
     <div className="h-container authorization">
       <div className="authorization__img">
-        <UiImage src={pageInformation.page} />
+        <UiImage src={pageInformation.page} width="60%" />
       </div>
       <div className="authorization__interaction">
         <h2 className="authorization__title">{pageInformation.page}</h2>

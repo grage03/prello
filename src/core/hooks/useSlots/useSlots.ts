@@ -2,15 +2,14 @@ import {
   useMemo, Children, isValidElement, ReactElement,
 } from 'react'
 
+// TODO move to ./interface/index.ts
 type CollectionType = {
   content: ReactElement[],
-  header?: ReactElement,
-  footer?: ReactElement,
-  trigger?: ReactElement
+  [slot: string]: ReactElement[] | ReactElement
 }
 
 interface Slots {
-  children: ReactElement[] | ReactElement
+  children?: ReactElement[] | ReactElement
 }
 
 export const useSlots = ({ children }: Slots): CollectionType => {
@@ -20,20 +19,14 @@ export const useSlots = ({ children }: Slots): CollectionType => {
     }
 
     Children.forEach(children, (child) => {
-      if (!isValidElement(child)) return
+      if (!isValidElement(child) || typeof child.key !== 'string') return
 
       switch (child.key) {
-        case 'header':
-          collection.header = child
-          break
-        case 'footer':
-          collection.footer = child
-          break
-        case 'trigger':
-          collection.trigger = child
+        case 'content':
+          collection.content.push(child)
           break
         default:
-          collection.content.push(child)
+          collection[child.key] = child
           break
       }
     })

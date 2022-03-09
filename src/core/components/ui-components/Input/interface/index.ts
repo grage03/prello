@@ -1,12 +1,22 @@
-export interface UiInputProps {
-  placeholder: string
-  type: 'email' | 'text'
+import { ReactElement } from 'react'
+import { UseFormRegister } from 'react-hook-form'
 
+interface IFormValues {
+  [value: string]: string;
+}
+
+export interface UiInputProps {
+  placeholder: string;
+  type: 'email' | 'text';
+  label: string;
+  register: UseFormRegister<IFormValues>;
+
+  required?: boolean;
   autocomplete?: string
   disabled?: boolean
   width?: string
   limit?: number
-  isButton?: boolean
+  children?: ReactElement | ReactElement[]
 }
 
 // EMAIL = 'email,

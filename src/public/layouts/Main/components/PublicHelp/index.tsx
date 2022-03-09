@@ -2,7 +2,6 @@ import React from 'react'
 
 import './style/styles.sass'
 import { UiImage } from '../../../../../core/components/ui-components'
-import { UiInput } from '../../../../../core/components/ui-components/Input'
 
 export const PublicHelp = () => {
   return (
@@ -13,14 +12,6 @@ export const PublicHelp = () => {
           A complete set of tools for your work: Kanban boards, weekly calendar, task management, flexible
           notifications, and more.
         </p>
-        <div className="help-teams__launch">
-          <UiInput
-            placeholder="Enter your email address"
-            type="email"
-            width="80%"
-            isButton
-          />
-        </div>
       </div>
       <div className="help-teams__image">
         <UiImage src="helpTeams" width="480px" />
@@ -28,3 +19,13 @@ export const PublicHelp = () => {
     </div>
   )
 }
+
+// <UiInput
+//   placeholder="Enter your email address"
+//   type="email"
+//   width="80%"
+// >
+//   <React.Fragment key="button">
+//     <UiButton description="Join Now" onClick={onUserClickButton} width="30%" />
+//   </React.Fragment>
+// </UiInput>
