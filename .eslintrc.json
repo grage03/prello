@@ -56,7 +56,8 @@
         "quotes": "off",
         "global-require": "off",
         "import/no-dynamic-require": "off",
-        "react/jsx-props-no-spreading": "off"
+        "react/jsx-props-no-spreading": "off",
+        "jsx-a11y/label-has-associated-control": "off"
     },
     "settings": {
         "import/parsers": {
