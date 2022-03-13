@@ -1,7 +1,7 @@
 export interface ButtonProps {
   description: string
 
-  isTransparent?: boolean,
+  transparent?: boolean,
   width?: string
 
   onClick(): void
