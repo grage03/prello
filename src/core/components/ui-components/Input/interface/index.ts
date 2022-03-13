@@ -1,12 +1,11 @@
-export interface UiInputProps {
-  placeholder: string
-  type: 'email' | 'text'
+import { ReactElement } from 'react'
 
-  autocomplete?: string
-  disabled?: boolean
-  width?: string
-  limit?: number
-  isButton?: boolean
+export interface UiInputProps {
+  placeholder: string;
+  type: 'email' | 'text' | 'password';
+
+  width?: string;
+  children?: ReactElement | ReactElement[];
 }
 
 // EMAIL = 'email,

@@ -1,43 +1,38 @@
 import React, { useState } from 'react'
+import classNames from 'classnames'
 import { UiInputProps } from './interface'
 
 import './style/styles.sass'
-import { UiButton } from '../Button'
+import { useSlots } from '../../../hooks/useSlots/useSlots'
 
 export const UiInput = ({
   placeholder,
-  autocomplete = "off",
-  disabled,
   width,
-  limit,
   type = "text",
-  isButton,
+  children,
 }: UiInputProps) => {
+  const slots = useSlots({ children })
+  const classes = classNames({
+    'form-input__item': true,
+    'form-input__item--button': slots.button,
+  })
+
   const [ value, setValue ] = useState('')
 
   const onUserChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value)
   }
 
-  const onUserClickButton = () => {
-    return true
-  }
-
   return (
-    <div className="input" style={{ width: width || '100%' }}>
+    <div className="form-input" style={{ width: width || 'auto' }}>
       <input
-        className="input__item"
+        className={classes}
         placeholder={placeholder}
         value={value}
         onChange={onUserChangeInput}
-        autoComplete={autocomplete}
         type={type}
-        disabled={disabled}
-        maxLength={limit}
       />
-      {
-        isButton && <UiButton description="Join Now" onClick={onUserClickButton} width="30%" />
-      }
+      {slots.button}
     </div>
   )
 }

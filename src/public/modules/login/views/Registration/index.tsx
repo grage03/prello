@@ -1,9 +1,11 @@
 import React from 'react'
+import { AuthWrapper } from '../../components/AuthWrapper'
+import { RegistrationForm } from './components/RegistrationForm'
 
 export const RegistrationPage = () => {
   return (
-    <div>
-      registration component
-    </div>
+    <AuthWrapper>
+      <RegistrationForm />
+    </AuthWrapper>
   )
 }

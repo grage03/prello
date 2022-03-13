@@ -18,7 +18,7 @@ export const UiImage = ({
 
   return (
     <img
-      style={{ width: width ? `${width}px` : '100%' }}
+      style={{ width: width ? `${width}` : '100%' }}
       className={classes}
       src={imgSrc()}
       alt={alt}

@@ -19,7 +19,7 @@ export const UiLink = ({
   const navigate = useNavigate()
 
   const onUserClickLink = () => {
-    if (!to) return alert('no')
+    if (!to) throw new Error('no')
 
     navigate(`/${to}`)
   }

@@ -14,6 +14,10 @@ export const UiLogo = ({ logo, size, to }: UiLogoProps) => {
 
   const navigate = useNavigate()
 
+  const imgSize = () => {
+    return size === "small" ? "80%" : "100%"
+  }
+
   const onUserClickLogo = () => {
     if (!to) throw new Error("Route is empty!")
     navigate(to)
@@ -21,7 +25,7 @@ export const UiLogo = ({ logo, size, to }: UiLogoProps) => {
 
   return (
     <div className={classes} onClick={onUserClickLogo}>
-      <UiImage src={logo} noRadius />
+      <UiImage src={logo} noRadius width={imgSize()} />
     </div>
   )
 }

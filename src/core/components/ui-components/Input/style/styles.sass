@@ -1,15 +1,19 @@
 @import '../../../../../assets/styles/_variables.sass'
 @import '../../../../../assets/styles/_mixins.sass'
 
-.input
+.form-input
   @include flex-justify-between
   border: 1px solid $grey-80
   border-radius: 32px
   padding: 8px 8px 8px 16px
+  position: relative
 
   &__item
-    width: 50%
+    width: 100%
     border: none
     background: none
     outline: none
     padding: 0
+
+    &--button
+      width: 65%
