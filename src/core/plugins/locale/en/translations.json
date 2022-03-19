@@ -1,3 +1,17 @@
 {
-  "header": "logo"
+  "public-header-reasons": "Why prello?",
+  "public-header-partners": "Partners",
+  "public-header-reviews": "Reviews",
+
+  "public-teams-title": "We help teams to be more effective",
+  "public-teams-description": "A complete set of tools for your work: Kanban boards, weekly calendar, task management, flexible notifications, and more.",
+
+  "public-reasons-title": "Reasons why you should choose Prello",
+  "public-reasons-description": "Prello - this is the best team management app",
+
+  "user-login": "Log In",
+  "user-join": "Join Now",
+  "user-more": "Learn more",
+
+  "input-email": "Enter your email address"
 }

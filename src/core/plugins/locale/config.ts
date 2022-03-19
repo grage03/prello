@@ -4,16 +4,6 @@ import { initReactI18next } from 'react-i18next'
 import translationEn from './en/translations.json'
 import translationRu from './ru/translations.json'
 
-// const changeLocale = async (key: 'en' | 'ru') => {
-//   if (i18n.language === key) return
-//   await i18n.changeLanguage(key)
-// }
-
-// <UiSelect
-//   selectItems={[ 'en', 'ru' ]}
-// onClickItem={changeLocale}
-// />
-
 export const resources = {
   en: {
     translation: translationEn,

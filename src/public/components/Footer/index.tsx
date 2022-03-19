@@ -1,8 +1,9 @@
 import React from 'react'
+import i18n from 'i18next'
 
 import './style/styles.sass'
 import { LogoIcon } from '../../../assets/icon/app/logo'
-import { UiIcon } from '../../../core/components/ui-components'
+import { UiIcon, UiSelect } from '../../../core/components/ui-components'
 
 const servicesPlaceholder = [
   { name: "Email Marketing", to: "" },
@@ -25,11 +26,22 @@ const followPlaceholder = [
 ]
 
 export const Footer = () => {
+  const changeLocale = async (key: 'en' | 'ru') => {
+    if (i18n.language === key) return
+    await i18n.changeLanguage(key)
+  }
+
   return (
     <footer className="h-container footer">
       <div className="footer__description">
         <div className="footer__description-logo">
-          <UiIcon size={60} viewBox="0 0 70 70" icon={<LogoIcon />} />
+          <div className="footer__description-language">
+            <UiIcon size={60} viewBox="0 0 70 70" icon={<LogoIcon />} />
+            <UiSelect
+              selectItems={[ 'en', 'ru' ]}
+              onClickItem={changeLocale}
+            />
+          </div>
           <p className="footer__description-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { observer } from 'mobx-react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { userStore } from '../../../../../domain/user/store'
@@ -9,6 +10,7 @@ export const UserWrapper = observer(() => {
   const navigate = useNavigate()
   const { pathname } = useLocation()
   const { profile } = userStore
+  const { t } = useTranslation()
 
   const onUserLogin = () => {
     if (pathname === '/login') throw new Error('You are already on the authorization page!')
@@ -21,7 +23,7 @@ export const UserWrapper = observer(() => {
         profile
           ? <h3>profile</h3>
           : (
-            <UiButton description="Log In" onClick={onUserLogin} />
+            <UiButton description={t(`translation:user-login`)} onClick={onUserLogin} />
           )
       }
     </div>
