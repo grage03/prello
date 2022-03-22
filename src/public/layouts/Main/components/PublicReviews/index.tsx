@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 import './style/styles.sass'
 import { UiLink } from '../../../../../core/components/ui-components'
@@ -25,11 +26,13 @@ const reviewsPlaceholder = [
 ]
 
 export const PublicReviews = () => {
+  const { t } = useTranslation()
+
   return (
     <div className="people-reviews">
       <div className="people-reviews__interactions">
-        <h2>People Are Saying About Us</h2>
-        <UiLink>See more</UiLink>
+        <h2>{t('translation:public-reviews-title')}</h2>
+        <UiLink>{t('translation:see-more')}</UiLink>
       </div>
       <div className="people-reviews__list">
         {

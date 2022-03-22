@@ -1,10 +1,12 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 import './style/styles.sass'
-import { UiButton, UiImage } from '../../../../../core/components/ui-components'
-import { UiInput } from '../../../../../core/components/ui-components/Input'
+import { UiButton, UiImage, UiInput } from '../../../../../core/components/ui-components'
 
 export const PublicHelp = () => {
+  const { t } = useTranslation()
+
   const onUserClickButton = () => {
     alert('ok')
   }
@@ -12,18 +14,15 @@ export const PublicHelp = () => {
   return (
     <div className="help-teams">
       <div className="help-teams__interaction">
-        <h1 className="help-teams__title">We help teams to be more effective</h1>
-        <p className="help-teams__description">
-          A complete set of tools for your work: Kanban boards, weekly calendar, task management, flexible
-          notifications, and more.
-        </p>
+        <h1 className="help-teams__title">{t('translation:public-teams-title')}</h1>
+        <p className="help-teams__description">{t('translation:public-teams-description')}</p>
         <UiInput
-          placeholder="Enter your email address"
+          placeholder={t('translation:input-email')}
           type="email"
           width="80%"
         >
           <React.Fragment key="button">
-            <UiButton description="Join Now" onClick={onUserClickButton} width="30%" />
+            <UiButton description={t('translation:user-join')} onClick={onUserClickButton} width="30%" />
           </React.Fragment>
         </UiInput>
       </div>

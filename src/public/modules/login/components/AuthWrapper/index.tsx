@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
 import { UiImage } from '../../../../../core/components/ui-components'
 import { AuthWrapperProps, pageInformationType } from './interface'
@@ -10,6 +11,7 @@ import { LogoList } from '../LogoList'
 
 export const AuthWrapper = ({ children }: AuthWrapperProps) => {
   const { pathname } = useLocation()
+  const { t } = useTranslation()
   const [ pageInformation, setPageInformation ] = useState<pageInformationType>(loginPlaceholder)
 
   useEffect(() => {
@@ -22,13 +24,13 @@ export const AuthWrapper = ({ children }: AuthWrapperProps) => {
         <UiImage src={pageInformation.page} width="60%" />
       </div>
       <div className="authorization__interaction">
-        <h2 className="authorization__title">{pageInformation.page}</h2>
+        <h2 className="authorization__title">{t(`translation:public-${pageInformation.page}`)}</h2>
         <LogoList />
         {children}
         <div className="authorization__help">
-          <h5 className="authorization__help-description">{pageInformation.description}</h5>
+          <h5 className="authorization__help-description">{t(pageInformation.description)}</h5>
           <Link className="authorization__help-link" to={`/${pageInformation.to.toLowerCase()}`}>
-            {pageInformation.to}
+            {t(pageInformation.value)}
           </Link>
         </div>
       </div>

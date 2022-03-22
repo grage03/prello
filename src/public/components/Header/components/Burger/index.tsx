@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import './style/styles.sass'
 import { UiLink } from '../../../../../core/components/ui-components'
 import { navigationOptions } from '../../enums'
 
 const Burger = () => {
+  const { t } = useTranslation()
   const [ isOpen, setIsOpen ] = useState(false)
 
   return (
@@ -24,7 +26,7 @@ const Burger = () => {
                   {
                     navigationOptions.map((item) => (
                       <li key={item.option} className="burger__navigation-item">
-                        <UiLink>{item.name}</UiLink>
+                        <UiLink>{t(`translation:${item.name}`)}</UiLink>
                       </li>
                     ))
                   }
