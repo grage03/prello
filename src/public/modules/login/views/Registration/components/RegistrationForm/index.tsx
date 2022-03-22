@@ -1,5 +1,6 @@
 import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 import { IRegistrationForm } from './interface'
 import {
   UiButton,
@@ -12,6 +13,8 @@ import './style/styles.sass'
 
 export const RegistrationForm = () => {
   const { register, handleSubmit } = useForm<IRegistrationForm>()
+  const { t } = useTranslation()
+
   const onSubmit: SubmitHandler<IRegistrationForm> = (data) => {
     return console.log(data)
   }
@@ -24,18 +27,18 @@ export const RegistrationForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="registration-form">
-      <UiFormGroup label="Enter email address">
-        <UiInput placeholder="Email" type="email" key="content" />
+      <UiFormGroup label={t('translation:input-email')}>
+        <UiInput placeholder={t('translation:email-placeholder')} type="email" key="content" />
       </UiFormGroup>
 
-      <UiFormGroup label="Create password">
-        <UiInput placeholder="Password" type="password" key="content" />
+      <UiFormGroup label={t('translation:input-password')}>
+        <UiInput placeholder={t('translation:password-placeholder')} type="password" key="content" />
       </UiFormGroup>
 
-      <UiCheckBox label="I agree to terms & conditions" />
+      <UiCheckBox label={t('translation:public-registration-agree')} />
 
       <div className="registration-form__submit">
-        <UiButton description="Registration" onClick={loginUser} width="100%" transparent />
+        <UiButton description={t('translation:public-registration')} onClick={loginUser} width="100%" transparent />
       </div>
     </form>
   )

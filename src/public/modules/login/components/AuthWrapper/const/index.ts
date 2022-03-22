@@ -2,12 +2,14 @@ import { pageInformationType } from '../interface'
 
 export const loginPlaceholder: pageInformationType = Object.freeze({
   page: 'login',
-  description: 'Don\'t have an account yet?',
-  to: 'Registration',
+  to: 'registration',
+  description: 'translation:public-login-help',
+  value: 'translation:public-registration',
 })
 
 export const registrationPlaceholder: pageInformationType = Object.freeze({
   page: 'registration',
-  description: 'Do you already have an account?',
-  to: 'Login',
+  to: 'login',
+  description: 'translation:public-registration-help',
+  value: 'translation:public-login',
 })

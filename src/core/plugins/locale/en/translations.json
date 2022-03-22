@@ -9,9 +9,32 @@
   "public-reasons-title": "Reasons why you should choose Prello",
   "public-reasons-description": "Prello - this is the best team management app",
 
+  "public-partners-title": "Our partners",
+  "public-partners-description": "Get to know the companies that already use our services",
+
+  "public-reviews-title": "People Are Saying About Us",
+
+  "public-assessment-convenience": "Convenience of work",
+  "public-assessment-support": "Quick support",
+  "public-assessment-interfaces": "User-friendly interfaces",
+  "public-assessment-communication": "Convenient communication",
+
+  "public-login": "Login",
+  "public-login-help": "Don't have an account yet?",
+
+  "public-registration": "Registration",
+  "public-registration-agree": "I agree to terms & conditions",
+  "public-registration-help": "Do you already have an account?",
+
   "user-login": "Log In",
   "user-join": "Join Now",
   "user-more": "Learn more",
 
-  "input-email": "Enter your email address"
+  "see-more": "See more",
+
+  "input-email": "Enter your email address",
+  "input-password": "Enter password",
+
+  "email-placeholder": "Email",
+  "password-placeholder": "Password"
 }

@@ -9,9 +9,32 @@
   "public-reasons-title": "Причины, почему вы должны выбрать Прелло",
   "public-reasons-description": "Прелло - это лучшее приложение для управления командой",
 
+  "public-partners-title": "Наши партнеры",
+  "public-partners-description": "Познакомьтесь с компаниями, которые уже пользуются нашими сервисами",
+
+  "public-reviews-title": "People Are Saying About Us",
+
+  "public-assessment-convenience": "Удобство работы",
+  "public-assessment-support": "Быстрая поддержка",
+  "public-assessment-interfaces": "Дружелюбный интерфейс",
+  "public-assessment-communication": "Удобное общение",
+
+  "public-login": "Авторизация",
+  "public-login-help": "Ещё нет аккаунта?",
+
+  "public-registration": "Регистрация",
+  "public-registration-agree": "Я согласен с правилами и условиями",
+  "public-registration-help": "Уже есть аккаунт?",
+
   "user-login": "Логин",
   "user-join": "Присоединяйтесь",
   "user-more": "Читать больше",
 
-  "input-email": "Введите адрес почты"
+  "see-more": "See more",
+
+  "input-email": "Введите адрес почты",
+  "input-password": "Введите пароль",
+
+  "email-placeholder": "Адрес почты",
+  "password-placeholder": "Пароль"
 }

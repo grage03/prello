@@ -6,9 +6,10 @@ export interface AuthWrapperProps {
 
 export type pageInformationType = {
   page: pageList
-  to: linkList
+  to: pageList
+
   description: string
+  value: string
 }
 
 type pageList = 'login' | 'registration'
-type linkList = 'Login' | 'Registration'
