@@ -19,10 +19,9 @@ export const PublicHelp = () => {
         <UiInput
           placeholder={t('translation:input-email')}
           type="email"
-          width="80%"
         >
           <React.Fragment key="button">
-            <UiButton description={t('translation:user-join')} onClick={onUserClickButton} width="30%" />
+            <UiButton description={t('translation:user-join')} onClick={onUserClickButton} />
           </React.Fragment>
         </UiInput>
       </div>

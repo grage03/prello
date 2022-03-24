@@ -8,6 +8,7 @@ import './style/styles.sass'
 import '../../../../../assets/styles/_variables.sass'
 import { loginPlaceholder, registrationPlaceholder } from './const'
 import { LogoList } from '../LogoList'
+import { scrollToTop } from '../../../../../core/plugins/utilities/functions'
 
 export const AuthWrapper = ({ children }: AuthWrapperProps) => {
   const { pathname } = useLocation()
@@ -17,6 +18,10 @@ export const AuthWrapper = ({ children }: AuthWrapperProps) => {
   useEffect(() => {
     setPageInformation(pathname === '/login' ? loginPlaceholder : registrationPlaceholder)
   }, [ pathname ])
+
+  useEffect(() => {
+    scrollToTop()
+  }, [])
 
   return (
     <div className="h-container authorization">
