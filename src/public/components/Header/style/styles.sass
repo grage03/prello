@@ -1,18 +1,17 @@
 @import '../../../../assets/styles/_variables.sass'
 
 .header
+  outline: 1px solid black
+  background-color: white
+  z-index: 999
   position: fixed
   left: 0
   right: 0
-  background-color: white
-  z-index: 999
-
-  &__wrapper
-    position: relative
-    @include flex-justify-between
-    align-items: center
-    height: 65px
-    box-shadow: 0 5px 10px rgba(0,0,0,0.22)
+  @include flex-justify-between
+  align-items: center
+  height: 65px
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22)
+  max-width: 100%
 
   &__burger
     display: none
