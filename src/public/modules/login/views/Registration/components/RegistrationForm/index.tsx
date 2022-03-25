@@ -12,18 +12,16 @@ import {
 import './style/styles.sass'
 
 export const RegistrationForm = () => {
-  const { register, handleSubmit } = useForm<IRegistrationForm>()
+  const { handleSubmit } = useForm<IRegistrationForm>()
   const { t } = useTranslation()
 
   const onSubmit: SubmitHandler<IRegistrationForm> = (data) => {
-    return console.log(data)
+    return data
   }
 
   const loginUser = () => {
-    alert('ok')
+    return 'ok'
   }
-
-  console.log(register)
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="registration-form">

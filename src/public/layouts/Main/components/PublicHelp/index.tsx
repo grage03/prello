@@ -8,7 +8,7 @@ export const PublicHelp = () => {
   const { t } = useTranslation()
 
   const onUserClickButton = () => {
-    alert('ok')
+    return true
   }
 
   return (

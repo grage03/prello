@@ -7,18 +7,16 @@ import { UiButton, UiFormGroup, UiInput } from '../../../../../../../core/compon
 import './style/styles.sass'
 
 export const LoginForm = () => {
-  const { register, handleSubmit } = useForm<ILoginForm>()
+  const { handleSubmit } = useForm<ILoginForm>()
   const { t } = useTranslation()
 
   const onSubmit: SubmitHandler<ILoginForm> = (data) => {
-    return console.log(data)
+    return data
   }
 
   const loginUser = () => {
-    alert('ok')
+    return true
   }
-
-  console.log(register)
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="login-form">
