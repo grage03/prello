@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { throttle } from '../../plugins/utilities/functions'
+import { debounce } from '../../plugins/utilities/functions'
 
 export const useScroll = () => {
   const [ position, setPosition ] = useState({
@@ -8,7 +8,7 @@ export const useScroll = () => {
   })
 
   useEffect(() => {
-    const handler = () => {
+    const handler = debounce(() => {
       setPosition((prevPosition) => {
         const { pageXOffset, pageYOffset } = window
         return prevPosition.x !== pageXOffset || prevPosition.y !== pageYOffset
@@ -18,8 +18,8 @@ export const useScroll = () => {
           }
           : prevPosition
       })
-    }
-    window.addEventListener('scroll', throttle(handler, 200))
+    }, 100)
+    window.addEventListener('scroll', handler)
 
     // TODO: move to publicPage for fix bug
     return () => {

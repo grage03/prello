@@ -14,6 +14,15 @@ export const throttle = <T, U extends any[]>(fn: () => T, ms: number) => {
   }
 }
 
+export const debounce = <T, U extends any[]>(fn: () => T, ms: number) => {
+  let timeout: any
+  return (...args: U) => {
+    clearTimeout(timeout)
+    // @ts-ignore
+    timeout = setTimeout(() => fn.apply(this, args), ms)
+  }
+}
+
 export const scrollToTop = () => {
   const isScrollTop = true
 

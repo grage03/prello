@@ -17,6 +17,7 @@ import { scrollToTop } from '../../../core/plugins/utilities/functions'
 export const PublicPage = () => {
   const { y } = useScroll()
   const topPosition = useRef(null)
+  console.log(y)
 
   useEffect(() => {
     scrollToTop()
