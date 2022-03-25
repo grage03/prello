@@ -8,7 +8,9 @@ export const useScroll = () => {
   })
 
   useEffect(() => {
-    const handler = debounce(() => {
+    let mounted = true
+    const handler = (debounce(() => {
+      if (!mounted) return
       setPosition((prevPosition) => {
         const { pageXOffset, pageYOffset } = window
         return prevPosition.x !== pageXOffset || prevPosition.y !== pageYOffset
@@ -18,11 +20,11 @@ export const useScroll = () => {
           }
           : prevPosition
       })
-    }, 100)
+    }, 100))
     window.addEventListener('scroll', handler)
 
-    // TODO: move to publicPage for fix bug
     return () => {
+      mounted = false
       window.removeEventListener('scroll', handler)
     }
   }, [])
