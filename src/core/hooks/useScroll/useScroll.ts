@@ -18,10 +18,9 @@ export const useScroll = () => {
           }
           : prevPosition
       })
-    }, 100)
+    }, 200)
     window.addEventListener('scroll', handler)
 
-    // TODO: move to publicPage for fix bug
     return () => {
       window.removeEventListener('scroll', handler)
     }

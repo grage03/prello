@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 
 import '../../../assets/styles/_helpers.sass'
 import './style/styles.sass'
@@ -11,20 +11,16 @@ import {
   PublicPartners,
 } from './components'
 import { ScrollItem } from '../../components/ScrollItem'
-import { useScroll } from '../../../core/hooks/useScroll/useScroll'
 import { scrollToTop } from '../../../core/plugins/utilities/functions'
 
 export const PublicPage = () => {
-  const { y } = useScroll()
-  const topPosition = useRef(null)
-
   useEffect(() => {
     scrollToTop()
   }, [])
 
   return (
-    <main className="h-container public-wrapper" ref={topPosition}>
-      {y > 400 && <ScrollItem />}
+    <main className="h-container public-wrapper">
+      <ScrollItem />
       <PublicHelp />
       <PublicReasons />
       <PublicPartners />
