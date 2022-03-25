@@ -1,11 +1,11 @@
 import { ReactElement } from 'react'
 
 export interface UiInputProps {
-  placeholder: string;
-  type: 'email' | 'text' | 'password';
+  placeholder: string
+  type: 'email' | 'text' | 'password'
 
-  width?: string;
-  children?: ReactElement | ReactElement[];
+  width?: string
+  children?: ReactElement | ReactElement[]
 }
 
 // EMAIL = 'email,

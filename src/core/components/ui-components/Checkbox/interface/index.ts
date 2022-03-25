@@ -1,3 +1,3 @@
 export interface IUiCheckBox {
-  label: string;
+  label: string
 }
