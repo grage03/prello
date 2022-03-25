@@ -1,19 +1,25 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { reasons } from './enum'
 
 import './style/styles.sass'
 import { UiImage, UiLink } from '../../../../../core/components/ui-components'
+import { AnimationElement } from '../../../../../core/components/app/AnimationElement'
 
 export const PublicReasons = () => {
   const { t } = useTranslation()
+  const titleRef = useRef(null)
 
   return (
     <div className="reasons">
-      <div className="reasons__title">
-        <h2 className="reasons__title-text">{t('translation:public-reasons-title')}</h2>
-        <h4 className="reasons__title-description">{t('translation:public-reasons-description')}</h4>
+      <div className="reasons__title" ref={titleRef}>
+        <AnimationElement animationRef={titleRef} direction="left">
+          <>
+            <h2 className="reasons__title-text">{t('translation:public-reasons-title')}</h2>
+            <h4 className="reasons__title-description">{t('translation:public-reasons-description')}</h4>
+          </>
+        </AnimationElement>
       </div>
       <div className="reasons__list">
         {

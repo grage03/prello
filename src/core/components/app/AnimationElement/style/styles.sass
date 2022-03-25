@@ -1,0 +1,20 @@
+.animation-wrapper
+  position: relative
+
+  &--left-to-start
+    animation-duration: 4s
+    animation-name: left-to-start
+    animation-iteration-count: infinite
+
+    @keyframes left-to-start
+      from
+        right: 1016px
+        opacity: 0
+      to
+        right: 0
+        opacity: 1
+
+  &--right-to-start
+    animation-duration: 4s
+    animation-name: right-to-start
+    animation-iteration-count: infinite
