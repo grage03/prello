@@ -11,7 +11,7 @@ import {
   PublicPartners,
 } from './components'
 import { ScrollItem } from '../../components/ScrollItem'
-import { scrollToTop } from '../../../core/plugins/utilities/functions'
+import { scrollToTop } from '../../../core/lib/utilities/functions'
 
 export const PublicPage = () => {
   useEffect(() => {
