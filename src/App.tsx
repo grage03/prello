@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './core/plugins/locale/config'
+import './core/lib/locale/config'
 
 import { Loader, NotFound } from './core/components/common'
 
