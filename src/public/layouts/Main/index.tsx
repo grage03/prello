@@ -12,7 +12,7 @@ import {
 } from './components'
 import { ScrollItem } from '../../components/ScrollItem'
 import { useScroll } from '../../../core/hooks/useScroll/useScroll'
-import { scrollToTop } from '../../../core/plugins/utilities/functions'
+import { scrollToTop } from '../../../core/lib/utilities/functions'
 
 export const PublicPage = () => {
   const { y } = useScroll()

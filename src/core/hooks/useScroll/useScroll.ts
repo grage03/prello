@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { debounce } from '../../plugins/utilities/functions'
+import { debounce } from '../../lib/utilities/functions'
 
 export const useScroll = () => {
   const [ position, setPosition ] = useState({

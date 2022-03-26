@@ -8,7 +8,7 @@ import './style/styles.sass'
 import '../../../../../assets/styles/_variables.sass'
 import { loginPlaceholder, registrationPlaceholder } from './const'
 import { LogoList } from '../LogoList'
-import { scrollToTop } from '../../../../../core/plugins/utilities/functions'
+import { scrollToTop } from '../../../../../core/lib/utilities/functions'
 
 export const AuthWrapper = ({ children }: AuthWrapperProps) => {
   const { pathname } = useLocation()
