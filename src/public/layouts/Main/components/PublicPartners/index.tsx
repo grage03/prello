@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import './style/styles.sass'
@@ -9,11 +7,6 @@ import { UiLogo } from '../../../../../core/components/ui-components'
 
 export const PublicPartners = () => {
   const { t } = useTranslation()
-
-  useEffect(() => {
-    Aos.init()
-    Aos.refresh()
-  }, [])
 
   return (
     <div className="partners">
@@ -24,8 +17,8 @@ export const PublicPartners = () => {
       <div className="partners__list">
         {
           partners.map((item, index) => (
-            <div data-aos="zoom-in" data-aos-duration={`${index}000`}>
-              <UiLogo logo={item.img} key={index} />
+            <div data-aos="zoom-in" data-aos-duration={`${index}000`} key={index}>
+              <UiLogo logo={item.img} />
             </div>
           ))
         }

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import '../../../assets/styles/_helpers.sass'
 import './style/styles.sass'
 
@@ -16,6 +17,8 @@ import { scrollToTop } from '../../../core/lib/utilities/functions'
 export const PublicPage = () => {
   useEffect(() => {
     scrollToTop()
+    Aos.init()
+    Aos.refresh()
   }, [])
 
   return (

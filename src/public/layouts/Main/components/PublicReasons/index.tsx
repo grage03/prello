@@ -1,6 +1,4 @@
-import React, { useEffect, useRef } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
+import React, { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { reasons } from './enum'
@@ -11,11 +9,6 @@ import { UiImage, UiLink } from '../../../../../core/components/ui-components'
 export const PublicReasons = () => {
   const { t } = useTranslation()
   const titleRef = useRef(null)
-
-  useEffect(() => {
-    Aos.init()
-    Aos.refresh()
-  }, [])
 
   return (
     <div className="reasons">

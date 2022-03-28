@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import './style/styles.sass'
@@ -29,11 +27,6 @@ const reviewsPlaceholder = [
 
 export const PublicReviews = () => {
   const { t } = useTranslation()
-
-  useEffect(() => {
-    Aos.init()
-    Aos.refresh()
-  }, [])
 
   return (
     <div className="people-reviews">
