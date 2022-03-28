@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 import '../../../assets/styles/_helpers.sass'
 import './style/styles.sass'
+
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 import {
   PublicAssessment,
