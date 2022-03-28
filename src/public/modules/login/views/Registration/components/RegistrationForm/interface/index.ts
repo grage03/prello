@@ -1,5 +1,5 @@
 export interface IRegistrationForm {
-  name: string;
-  password: string;
-  isAgree: boolean;
+  name: string
+  password: string
+  isAgree: boolean
 }
