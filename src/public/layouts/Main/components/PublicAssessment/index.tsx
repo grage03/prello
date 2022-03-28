@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import { useTranslation } from 'react-i18next'
 
 import './style/styles.sass'
@@ -30,11 +32,16 @@ const assessmentPlaceholder = [
 export const PublicAssessment = () => {
   const { t } = useTranslation()
 
+  useEffect(() => {
+    Aos.init()
+    Aos.refresh()
+  }, [])
+
   return (
     <div className="assessment">
       {
         assessmentPlaceholder.map((item, index) => (
-          <div className="assessment__item" key={index}>
+          <div className="assessment__item" key={index} data-aos="fade-up" data-aos-duration={`${index}000`}>
             <h3 className="assessment__title">{t(item.service)}</h3>
             <div className="assessment__score">
               <Score score={item.score} />
