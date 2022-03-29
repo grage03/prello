@@ -4,6 +4,7 @@ import i18n from 'i18next'
 import './style/styles.sass'
 import { LogoIcon } from '../../../assets/icon/app/logo'
 import { UiIcon, UiSelect } from '../../../core/components/ui-components'
+import { useStorage } from '../../../core/hooks/useStorage/useStorage'
 
 const servicesPlaceholder = [
   { name: "Email Marketing", to: "" },
@@ -26,6 +27,8 @@ const followPlaceholder = [
 ]
 
 export const Footer = () => {
+  const { getItem } = useStorage('local')
+
   const changeLocale = async (key: 'en' | 'ru') => {
     if (i18n.language === key) return
     await i18n.changeLanguage(key)
@@ -38,6 +41,7 @@ export const Footer = () => {
           <div className="footer__description-language">
             <UiIcon size={60} viewBox="0 0 70 70" icon={<LogoIcon />} />
             <UiSelect
+              label={getItem('i18nextLng')}
               selectItems={[ 'en', 'ru' ]}
               onClickItem={changeLocale}
             />
