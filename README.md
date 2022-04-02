@@ -1,3 +1,5 @@
+Ну, посмотрим что из этого выйдет. Может даже этот код мне понравится и можно будет его не удалять, как происходило с прошлыми попытками? :)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
