@@ -5,6 +5,7 @@ import './style/styles.sass'
 
 const PublicRoute = () => {
   return (
+    // TODO: add layout here
     <>
       <Header />
       <Outlet />
