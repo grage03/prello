@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
-import './style/styles.sass'
+import styles from './style/styles.module.sass'
 import { UiLink } from '../../../../../core/components/ui-components'
 
 const reviewsPlaceholder = [
@@ -29,18 +29,23 @@ export const PublicReviews = () => {
   const { t } = useTranslation()
 
   return (
-    <div className="people-reviews">
-      <div className="people-reviews__interactions" data-aos="fade-up" data-aos-duration="1000">
+    <div className={styles['people-reviews']}>
+      <div className={styles['people-reviews__interactions']} data-aos="fade-up" data-aos-duration="1000">
         <h2>{t('translation:public-reviews-title')}</h2>
         <UiLink>{t('translation:see-more')}</UiLink>
       </div>
-      <div className="people-reviews__list">
+      <div className={styles['people-reviews__list']}>
         {
           reviewsPlaceholder.map((item, index) => (
-            <div className="people-reviews__item" key={index} data-aos="fade-left" data-aos-duration={`${index}500`}>
+            <div
+              className={styles['people-reviews__item']}
+              key={index}
+              data-aos="fade-left"
+              data-aos-duration={`${index}500`}
+            >
               <p>{item.review}</p>
-              <div className="people-reviews__item-user">
-                <img className="people-reviews__avatar" src={item.avatar} alt="avatar" />
+              <div className={styles['people-reviews__item-user']}>
+                <img className={styles['people-reviews__avatar']} src={item.avatar} alt="avatar" />
                 <div>
                   <h4>{item.name}</h4>
                   <h5>{item.role}</h5>

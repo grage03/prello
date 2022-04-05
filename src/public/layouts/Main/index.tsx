@@ -24,13 +24,13 @@ export const PublicPage = () => {
   }, [])
 
   return (
-    <main className="h-container public-wrapper">
+    <div className="public-wrapper">
       <ScrollItem />
       <PublicHelp />
       <PublicReasons />
       <PublicPartners />
       <PublicReviews />
       <PublicAssessment />
-    </main>
+    </div>
   )
 }
