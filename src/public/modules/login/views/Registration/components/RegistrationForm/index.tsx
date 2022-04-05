@@ -9,7 +9,7 @@ import {
   UiCheckBox,
 } from '../../../../../../../core/components/ui-components'
 
-import './style/styles.sass'
+import styles from './style/styles.module.sass'
 
 export const RegistrationForm = () => {
   const { handleSubmit } = useForm<IRegistrationForm>()
@@ -24,7 +24,7 @@ export const RegistrationForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="registration-form">
+    <form onSubmit={handleSubmit(onSubmit)} className={styles['registration-form']}>
       <UiFormGroup label={t('translation:input-email')}>
         <UiInput placeholder={t('translation:email-placeholder')} type="email" key="content" />
       </UiFormGroup>
@@ -35,7 +35,7 @@ export const RegistrationForm = () => {
 
       <UiCheckBox label={t('translation:public-registration-agree')} />
 
-      <div className="registration-form__submit">
+      <div className={styles['registration-form__submit']}>
         <UiButton description={t('translation:public-registration')} onClick={loginUser} width="100%" transparent />
       </div>
     </form>

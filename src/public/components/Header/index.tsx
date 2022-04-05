@@ -6,9 +6,8 @@ import { UserWrapper } from './components/UserWrapper'
 import { LogoIcon } from '../../../assets/icon/app/logo'
 import { UiLink, UiIcon } from '../../../core/components/ui-components'
 
-import '../../../assets/styles/_helpers.sass'
-// TODO: need fix
 import styles from './style/styles.module.sass'
+import '../../../assets/styles/_helpers.sass'
 import { navigationOptions } from './enums'
 
 const BurgerMenu = React.lazy(() => import('./components/Burger'))

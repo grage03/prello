@@ -35,7 +35,7 @@ export const Footer = () => {
   }
 
   return (
-    <footer className="h-container footer">
+    <footer className={styles['footer']}>
       <div className={styles['footer__description']}>
         <div className={styles['footer__description-logo']}>
           <div className={styles['footer__description-language']}>

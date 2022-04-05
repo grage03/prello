@@ -4,7 +4,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import { ILoginForm } from './interface'
 import { UiButton, UiFormGroup, UiInput } from '../../../../../../../core/components/ui-components'
 
-import './style/styles.sass'
+import styles from './style/styles.module.sass'
 
 export const LoginForm = () => {
   const { handleSubmit } = useForm<ILoginForm>()
@@ -19,7 +19,7 @@ export const LoginForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="login-form">
+    <form onSubmit={handleSubmit(onSubmit)} className={styles['login-form']}>
       <UiFormGroup label={t('translation:input-email')}>
         <UiInput placeholder={t('translation:email-placeholder')} type="email" key="content" />
       </UiFormGroup>

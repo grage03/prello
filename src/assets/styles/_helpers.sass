@@ -1,22 +1,6 @@
 @import './_variables.sass'
 @import './_functions.sass'
+@import './_mixins.sass'
 
 .h-container
-  flex: 1
-  padding: 0
-  margin: 0 auto
-
-  @media screen and (min-width: $xs-min-width)
-    padding: 0 21px
-
-  @media screen and (min-width: $md-min-width)
-    padding: 0 42px
-    max-width: $md-min-width
-
-  @media screen and (min-width: $lg-min-width)
-    padding: 0 84px
-    max-width: $lg-min-width
-
-  @media screen and (min-width: $xl-min-width)
-    padding: 0 168px
-    max-width: $xl-min-width
+  @include h-container
