@@ -6,8 +6,8 @@ import { UiButton, UiImage, UiInput } from '../../../../../core/components/ui-co
 import { Sparks } from '../../../../components/Sparks'
 
 const sparksPosition = {
-  x: '-100px',
-  y: '30px',
+  left: '-150px',
+  bottom: '60px',
 }
 
 export const PublicHelp = () => {
@@ -21,7 +21,7 @@ export const PublicHelp = () => {
     <div className={styles['help-teams']}>
       <div className={styles['help-teams__interaction']}>
         <h1 className={styles['help-teams__title']}>{t('translation:public-teams-title')}</h1>
-        <Sparks quantity={3} position={sparksPosition}>
+        <Sparks position={sparksPosition}>
           <p className={styles['help-teams__description']}>{t('translation:public-teams-description')}</p>
         </Sparks>
         <UiInput
