@@ -9,16 +9,23 @@ const sizes = {
   big: 0.8,
 }
 
+const positionInit = {
+  top: '0',
+  right: '0',
+  bottom: '0',
+  left: '0',
+}
+
 export const Sparks = ({
-  quantity = 3, position, size = 'standard', rotate = 0, children,
+  quantity = 3, position = positionInit, size = 'standard', rotate = 0, children,
 }: SparksProps) => {
   const initStyles = () => {
     return {
       transform: `scale(${sizes[size]}) rotate(${rotate}deg)`,
-      top: 0 || position?.top,
-      right: 0 || position?.right,
-      bottom: 0 || position?.bottom,
-      left: 0 || position?.left,
+      top: position.top,
+      right: position.right,
+      bottom: position.bottom,
+      left: position.left,
     }
   }
 
