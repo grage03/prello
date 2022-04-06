@@ -30,7 +30,7 @@
     ],
     "rules": {
         "semi": ["error", "never"],
-        "linebreak-style": ["error", "windows"],
+        "linebreak-style": "off",
         "react/jsx-filename-extension": [2, { "extensions": [".ts", ".tsx"] }],
         "max-len": ["error", { "code": 120 }],
         "indent": ["error", 2, { "SwitchCase": 1 }],
