@@ -22,8 +22,12 @@
 
     @media screen and (max-width: $md-min-width)
       width: 100%
+      margin-top: 48px
       justify-content: center
       flex-wrap: wrap
+      flex-direction: column
+      align-content: space-around
+    
 
   &__item
     cursor: pointer
@@ -35,9 +39,18 @@
     padding: 20px
     border-radius: 16px
     border: 2px solid #ECECEC
+    
+    @media screen and (max-width: $md-min-width)  
+     width: 80%
+     height: 80% 
+      
 
     &-user
       display: flex
+      
+      @media screen and (max-width: $md-min-width) 
+        margin-top: 18px
+      
 
   &__avatar
     width: 64px

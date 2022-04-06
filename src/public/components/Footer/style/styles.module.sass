@@ -38,6 +38,11 @@
       width: 100%
       justify-content: center
       flex-wrap: wrap
+    
+    @media screen and (max-width: $sm-min-width)
+      flex-direction: column
+      align-content: flex-start
+      gap: 40px
 
   &__copyright
     text-align: center
