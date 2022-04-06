@@ -57,7 +57,7 @@
         "import/no-dynamic-require": "off",
         "react/jsx-props-no-spreading": "off",
         "jsx-a11y/label-has-associated-control": "off",
-        "linebreak-style": "off"
+        "dot-notation": "off"
     },
     "settings": {
         "import/parsers": {
