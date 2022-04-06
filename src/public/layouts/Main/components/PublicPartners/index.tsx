@@ -4,6 +4,12 @@ import { useTranslation } from 'react-i18next'
 import styles from './style/styles.module.sass'
 import { partners } from './enum'
 import { UiLogo } from '../../../../../core/components/ui-components'
+import { Sparks } from '../../../../components/Sparks'
+
+const sparksPosition = {
+  top: '40px',
+  left: '20px',
+}
 
 export const PublicPartners = () => {
   const { t } = useTranslation()
@@ -11,7 +17,9 @@ export const PublicPartners = () => {
   return (
     <div className="partners">
       <div className={styles['partners__title']} data-aos="fade-right" data-aos-duration="1000">
-        <h2>{t('translation:public-partners-title')}</h2>
+        <Sparks size="small" position={sparksPosition} rotate={120}>
+          <h2>{t('translation:public-partners-title')}</h2>
+        </Sparks>
         <h4>{t('translation:public-partners-description')}</h4>
       </div>
       <div className={styles['partners__list']}>

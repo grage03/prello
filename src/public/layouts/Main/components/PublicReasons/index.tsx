@@ -5,6 +5,12 @@ import { reasons } from './enum'
 
 import styles from './style/styles.module.sass'
 import { UiImage, UiLink } from '../../../../../core/components/ui-components'
+import { Sparks } from '../../../../components/Sparks'
+
+const sparksPosition = {
+  bottom: '80px',
+  right: '0px',
+}
 
 export const PublicReasons = () => {
   const { t } = useTranslation()
@@ -13,7 +19,9 @@ export const PublicReasons = () => {
   return (
     <div className="reasons">
       <div className="reasons__title" ref={titleRef} data-aos="fade-up" data-aos-duration="1000">
-        <h2 className={styles['reasons__title-text']}>{t('translation:public-reasons-title')}</h2>
+        <Sparks quantity={2} size="small" position={sparksPosition} rotate={65}>
+          <h2 className={styles['reasons__title-text']}>{t('translation:public-reasons-title')}</h2>
+        </Sparks>
         <h4 className={styles['reasons__title-description']}>{t('translation:public-reasons-description')}</h4>
       </div>
       <div className={styles['reasons__list']}>
