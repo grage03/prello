@@ -4,11 +4,12 @@ import { useTranslation } from 'react-i18next'
 
 import { UserWrapper } from './components/UserWrapper'
 import { LogoIcon } from '../../../assets/icon/app/logo'
-import { UiLink, UiIcon } from '../../../core/components/ui-components'
+import { UiIcon } from '../../../core/components/ui-components'
 
 import styles from './style/styles.module.sass'
 import '../../../assets/styles/_helpers.sass'
 import { navigationOptions } from './enums'
+import { Anchor } from '../../../core/components/app/Anchor'
 
 const BurgerMenu = React.lazy(() => import('./components/Burger'))
 
@@ -35,7 +36,7 @@ export const Header = () => {
           {
             navigationOptions.map((item) => (
               <li key={item.option} className={styles['header__navigation-item']}>
-                <UiLink>{t(item.name)}</UiLink>
+                <Anchor anchor={item.option}>{t(item.name)}</Anchor>
               </li>
             ))
           }

@@ -29,7 +29,7 @@ export const PublicReviews = () => {
   const { t } = useTranslation()
 
   return (
-    <div className={styles['people-reviews']}>
+    <div className={styles['people-reviews']} id="reviews">
       <div className={styles['people-reviews__interactions']} data-aos="fade-up" data-aos-duration="1000">
         <h2>{t('translation:public-reviews-title')}</h2>
         <UiLink>{t('translation:see-more')}</UiLink>
