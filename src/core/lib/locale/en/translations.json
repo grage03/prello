@@ -1,7 +1,9 @@
 {
-  "public-header-reasons": "Why prello?",
-  "public-header-partners": "Partners",
-  "public-header-reviews": "Reviews",
+  "public-header-entrance": "Sign Up",
+  "public-header-reasons": "Why Prello?",
+  "public-header-industries": "Industries",
+  "public-header-blog": "Blog",
+  "public-header-pricing": "Pricing",
 
   "public-teams-title": "We help teams to be more effective",
   "public-teams-description": "A complete set of tools for your work: Kanban boards, weekly calendar, task management, flexible notifications, and more.",

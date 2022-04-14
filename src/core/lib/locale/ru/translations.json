@@ -1,7 +1,9 @@
 {
+  "public-header-entrance": "Зарегестрироваться",
   "public-header-reasons": "Почему Прелло?",
-  "public-header-partners": "Партнеры",
-  "public-header-reviews": "Отзывы",
+  "public-header-industries": "Отрасли",
+  "public-header-blog": "Блог",
+  "public-header-pricing": "Цены",
 
   "public-teams-title": "Мы помогаем командам быть более эффективными!",
   "public-teams-description": "Полный набор инструментов для вашей работы: доски Канбан, еженедельный календарь, управление задачами, гибкие уведомления и многое другое.",
