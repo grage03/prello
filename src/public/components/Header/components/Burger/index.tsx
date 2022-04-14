@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
-import { UiLink } from '../../../../../core/components/ui-components'
+import { UiIcon } from '../../../../../core/components/ui-components'
 import { navigationOptions } from '../../enums'
+import { Anchor } from '../../../../../core/components/app/Anchor'
 
 const Burger = () => {
   const { t } = useTranslation()
@@ -20,14 +21,25 @@ const Burger = () => {
         isOpen && (
           <div className={styles['burger__wrapper']}>
             <div className={styles['burger__menu']}>
-              <h3 className={styles['burger__close']} onClick={() => setIsOpen(false)}>Close</h3>
-              <nav className="burger__navigation">
-                <ul>
+              <div className={styles['burger__menu-title']}>
+                <h3 className={styles['burger__close']} onClick={() => setIsOpen(false)}>
+                  {t('translation:public-header-go-back')}
+                </h3>
+              </div>
+              <nav className={styles['burger__navigation']}>
+                <ul className={styles['burger__navigation-list']}>
                   {
                     navigationOptions.map((item) => (
-                      <li key={item.option} className={styles['burger__navigation-item']}>
-                        <UiLink>{t(`translation:${item.name}`)}</UiLink>
-                      </li>
+                      <div className={styles['burger__navigation-item']} key={item.option}>
+                        <UiIcon icon={<item.icon />} size={24} viewBox="0 0 16 16" fill="none" />
+                        <li
+                          key={item.option}
+                          className={styles['burger__navigation-link']}
+                          onClick={() => setIsOpen(false)}
+                        >
+                          <Anchor anchor={item.option}>{t(`translation:${item.name}`)}</Anchor>
+                        </li>
+                      </div>
                     ))
                   }
                 </ul>
