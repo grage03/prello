@@ -31,7 +31,9 @@ const Burger = () => {
                   {
                     navigationOptions.map((item) => (
                       <div className={styles['burger__navigation-item']} key={item.option}>
-                        <UiIcon icon={<item.icon />} size={24} viewBox="0 0 16 16" fill="none" />
+                        <div className={styles['burger__navigation-icon']}>
+                          <UiIcon icon={<item.icon />} size={24} viewBox="0 0 16 16" fill="none" />
+                        </div>
                         <li
                           key={item.option}
                           className={styles['burger__navigation-link']}
