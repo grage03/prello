@@ -1,4 +1,5 @@
 @import '../../../../../../assets/styles/_variables.sass'
+@import '../../../../../../assets/styles/_mixins.sass'
 
 .burger
   &__icon
@@ -10,9 +11,18 @@
       background-color: $grey-80
 
   &__close
-    text-align: right
-    margin-bottom: 10px
+    font-weight: bold
 
+    &:before
+      content: ''
+      display: inline-block
+      width: 12px
+      height: 12px
+      border-top: 3px solid black
+      border-right: 3px solid black
+      margin: 0px 30px 0px 40px 
+      transform: rotate(-135deg)
+      
   &__wrapper
     position: absolute
     top: 0
@@ -28,9 +38,17 @@
     height: 100%
     width: 80%
 
+  &__navigation-list
+    display: flex
+    justify-content: space-evenly
+    align-items: flex-end
+
   &__navigation-item
-    border-top: 1px solid $grey-80
-    padding: 20px 10px
+    width: 60%
+    border-bottom: 3px solid $warm-grey
+    padding: 20px 10px 0px 10px
+    text-align: center
+    margin-top: 20px
 
     &:last-child
-      border-bottom: 1px solid $grey-80
+      border-bottom: 3px solid $warm-grey

@@ -5,11 +5,14 @@ import { UiLogoProps } from './interface'
 import { UiImage } from '../Image'
 import './style/styles.sass'
 
-export const UiLogo = ({ logo, size, to }: UiLogoProps) => {
+export const UiLogo = ({
+  logo, size, borderStyle, to,
+}: UiLogoProps) => {
   const classes = classNames({
     logo: true,
     'logo--small': size === "small",
     'logo--big': size === "big",
+    'logo--border': borderStyle,
   })
 
   const navigate = useNavigate()
