@@ -13,7 +13,7 @@ import {
   PublicReasons,
   PublicPartners,
 } from './components'
-import { ScrollItem } from '../../components/ScrollItem'
+import { ScrollItem } from '../../components'
 import { scrollToTop } from '../../../core/lib/utilities/functions'
 
 export const PublicPage = () => {
