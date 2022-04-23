@@ -58,7 +58,8 @@
         "import/no-dynamic-require": "off",
         "react/jsx-props-no-spreading": "off",
         "jsx-a11y/label-has-associated-control": "off",
-        "dot-notation": "off"
+        "dot-notation": "off",
+        "no-return-await": "off"
     },
     "settings": {
         "import/parsers": {
