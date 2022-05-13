@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
 import { UiButton, UiImage, UiInput } from '../../../../../core/components/ui-components'
-import { Sparks } from '../../../../components/Sparks'
+import { Sparks } from '../../../../components'
 
 const sparksPosition = {
   left: '-150px',
