@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet'
+import { useTranslation } from 'react-i18next'
 
 import '../../../assets/styles/_helpers.sass'
 import './style/styles.sass'
@@ -17,6 +19,8 @@ import { ScrollItem } from '../../components'
 import { scrollToTop } from '../../../core/lib/utilities/functions'
 
 export const PublicPage = () => {
+  const { t } = useTranslation()
+
   useEffect(() => {
     scrollToTop()
     Aos.init()
@@ -24,13 +28,19 @@ export const PublicPage = () => {
   }, [])
 
   return (
-    <div className="public-wrapper">
-      <ScrollItem />
-      <PublicHelp />
-      <PublicReasons />
-      <PublicPartners />
-      <PublicReviews />
-      <PublicAssessment />
-    </div>
+    <>
+      <Helmet>
+        <title>{t('translation:meta-public-title')}</title>
+        <meta name="description" content={t('translation:meta-public-description')} />
+      </Helmet>
+      <div className="public-wrapper">
+        <ScrollItem />
+        <PublicHelp />
+        <PublicReasons />
+        <PublicPartners />
+        <PublicReviews />
+        <PublicAssessment />
+      </div>
+    </>
   )
 }
