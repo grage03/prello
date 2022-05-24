@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
@@ -9,8 +9,7 @@ import { useClickOutside } from '../../../../../core/hooks/useClickOutside'
 
 const Burger = () => {
   const { t } = useTranslation()
-  const element = useRef(null)
-  const { isOpen, setIsOpen } = useClickOutside(false, element)
+  const { isOpen, setIsOpen, element } = useClickOutside(false)
 
   return (
     <>

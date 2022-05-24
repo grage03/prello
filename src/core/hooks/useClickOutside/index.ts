@@ -1,7 +1,13 @@
-import { RefObject, useEffect, useState } from 'react'
+import {
+  RefObject,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 
-export const useClickOutside = <T extends HTMLElement = HTMLElement>(visible: boolean, element: RefObject<T>) => {
+export const useClickOutside = <T extends HTMLDivElement>(visible: boolean) => {
   const [ isOpen, setIsOpen ] = useState(visible)
+  const element: RefObject<T> = useRef(null)
 
   // TODO: remove any and add type for event
   const onClickOutside = (event: any) => {
@@ -20,5 +26,5 @@ export const useClickOutside = <T extends HTMLElement = HTMLElement>(visible: bo
     }
   }, [ isOpen ])
 
-  return { isOpen, setIsOpen }
+  return { isOpen, setIsOpen, element }
 }
