@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
 import { UiIcon } from '../../../../../core/components/ui-components'
 import { navigationOptions } from '../../enums'
 import { Anchor } from '../../../../../core/components/app/Anchor'
+import { useClickOutside } from '../../../../../core/hooks/useClickOutside'
 
 const Burger = () => {
   const { t } = useTranslation()
-  const [ isOpen, setIsOpen ] = useState(false)
+  const { isOpen, setIsOpen, element } = useClickOutside(false)
 
   return (
     <>
@@ -20,7 +21,7 @@ const Burger = () => {
       {
         isOpen && (
           <div className={styles['burger__wrapper']}>
-            <div className={styles['burger__menu']}>
+            <div className={styles['burger__menu']} ref={element}>
               <div className={styles['burger__menu-title']}>
                 <h3 className={styles['burger__close']} onClick={() => setIsOpen(false)}>
                   {t('translation:public-header-go-back')}
