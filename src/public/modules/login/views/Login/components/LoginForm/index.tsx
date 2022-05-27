@@ -24,7 +24,6 @@ export const LoginForm = () => {
         <UiInput
           placeholder={t('translation:email-placeholder')}
           type="email"
-          key="content"
           label="email"
           register={register}
         />
@@ -34,7 +33,6 @@ export const LoginForm = () => {
         <UiInput
           placeholder={t('translation:password-placeholder')}
           type="password"
-          key="content"
           label="password"
           register={register}
         />

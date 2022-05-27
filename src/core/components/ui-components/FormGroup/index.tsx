@@ -1,27 +1,22 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { IUiFormGroup } from './interface'
-import { useSlots } from '../../../hooks'
 
 import './style/styles.sass'
 
-// TODO rewrite required, min, max and other to one props - options
-export const UiFormGroup = ({
+export const UiFormGroup = React.memo(({
   label,
   children,
   errors,
   value,
 }: IUiFormGroup) => {
-  const slots = useSlots({ children })
-
-  useEffect(() => {
-
-  }, [])
-
+  const error = errors[value]?.message
+  console.log(error)
   return (
     <div className="form-group">
-      {errors[value]?.message && <h5>error</h5>}
-      <label htmlFor={label} className="form-group__label">{label}</label>
-      {slots.content}
+      {error ? (
+        <h5>{error}</h5>
+      ) : (label ? <label htmlFor={label} className="form-group__label">{label}</label> : null)}
+      {children}
     </div>
   )
-}
+})

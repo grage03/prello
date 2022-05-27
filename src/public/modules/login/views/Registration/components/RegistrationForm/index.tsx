@@ -19,8 +19,8 @@ export const RegistrationForm = () => {
   })
   const { t } = useTranslation()
 
-  const onSubmit: SubmitHandler<IRegistrationForm> = (data) => {
-    console.log(data)
+  const onSubmit: SubmitHandler<IRegistrationForm> = () => {
+    console.log(errors)
   }
 
   const loginUser = () => {
@@ -35,7 +35,6 @@ export const RegistrationForm = () => {
           type="email"
           label="email"
           register={register}
-          key="content"
         />
       </UiFormGroup>
 
@@ -43,17 +42,18 @@ export const RegistrationForm = () => {
         <UiInput
           placeholder={t('translation:password-placeholder')}
           type="password"
-          key="content"
           label="password"
           register={register}
         />
       </UiFormGroup>
 
-      <UiCheckBox
-        placeholder={t('translation:public-registration-agree')}
-        label="isAgree"
-        register={register}
-      />
+      <UiFormGroup errors={errors} value="isAgree">
+        <UiCheckBox
+          placeholder={t('translation:public-registration-agree')}
+          label="isAgree"
+          register={register}
+        />
+      </UiFormGroup>
 
       <div className={styles['registration-form__submit']}>
         <UiButton

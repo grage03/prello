@@ -61,7 +61,8 @@
         "dot-notation": "off",
         "no-return-await": "off",
         "spaced-comment": "off",
-        "react/button-has-type": "off"
+        "react/button-has-type": "off",
+        "no-nested-ternary": "off"
     },
     "settings": {
         "import/parsers": {
