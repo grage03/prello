@@ -12,7 +12,6 @@ export const UiInput = ({
   register,
   children,
   label,
-  required
 }: UiInputProps) => {
   const slots = useSlots({ children })
   const classes = classNames({
@@ -26,7 +25,7 @@ export const UiInput = ({
         className={classes}
         placeholder={placeholder}
         type={type}
-        {...register(label, { required })}
+        {...register(label)}
       />
       {slots.button}
     </div>

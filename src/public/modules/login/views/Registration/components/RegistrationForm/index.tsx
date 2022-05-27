@@ -1,5 +1,6 @@
 import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
 import { useTranslation } from 'react-i18next'
 import { IRegistrationForm } from './interface'
 import {
@@ -10,9 +11,12 @@ import {
 } from '../../../../../../../core/components/ui-components'
 
 import styles from './style/styles.module.sass'
+import { schema } from '../../schema'
 
 export const RegistrationForm = () => {
-  const { handleSubmit, register, formState: { errors } } = useForm<IRegistrationForm>()
+  const { handleSubmit, register, formState: { errors } } = useForm<IRegistrationForm>({
+    resolver: yupResolver(schema),
+  })
   const { t } = useTranslation()
 
   const onSubmit: SubmitHandler<IRegistrationForm> = (data) => {
@@ -25,25 +29,23 @@ export const RegistrationForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles['registration-form']}>
-      <UiFormGroup label={t('translation:input-email')} errors={errors}>
+      <UiFormGroup label={t('translation:input-email')} errors={errors} value="email">
         <UiInput
           placeholder={t('translation:email-placeholder')}
           type="email"
           label="email"
           register={register}
           key="content"
-          required
         />
       </UiFormGroup>
 
-      <UiFormGroup label={t('translation:input-password')} errors={errors}>
+      <UiFormGroup label={t('translation:input-password')} errors={errors} value="password">
         <UiInput
           placeholder={t('translation:password-placeholder')}
           type="password"
           key="content"
           label="password"
           register={register}
-          required
         />
       </UiFormGroup>
 
@@ -51,7 +53,6 @@ export const RegistrationForm = () => {
         placeholder={t('translation:public-registration-agree')}
         label="isAgree"
         register={register}
-        required
       />
 
       <div className={styles['registration-form__submit']}>

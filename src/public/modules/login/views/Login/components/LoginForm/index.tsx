@@ -20,7 +20,7 @@ export const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles['login-form']}>
-      <UiFormGroup label={t('translation:input-email')} errors={errors}>
+      <UiFormGroup label={t('translation:input-email')} errors={errors} value="email">
         <UiInput
           placeholder={t('translation:email-placeholder')}
           type="email"
@@ -30,7 +30,7 @@ export const LoginForm = () => {
         />
       </UiFormGroup>
 
-      <UiFormGroup label={t('translation:input-password')} errors={errors}>
+      <UiFormGroup label={t('translation:input-password')} errors={errors} value="email">
         <UiInput
           placeholder={t('translation:password-placeholder')}
           type="password"
