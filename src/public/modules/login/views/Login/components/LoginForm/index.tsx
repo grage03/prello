@@ -7,11 +7,11 @@ import { UiButton, UiFormGroup, UiInput } from '../../../../../../../core/compon
 import styles from './style/styles.module.sass'
 
 export const LoginForm = () => {
-  const { handleSubmit } = useForm<ILoginForm>()
+  const { handleSubmit, register, formState: { errors } } = useForm<ILoginForm>()
   const { t } = useTranslation()
 
   const onSubmit: SubmitHandler<ILoginForm> = (data) => {
-    return data
+    console.log(data)
   }
 
   const loginUser = () => {
@@ -20,15 +20,27 @@ export const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles['login-form']}>
-      <UiFormGroup label={t('translation:input-email')}>
-        <UiInput placeholder={t('translation:email-placeholder')} type="email" key="content" />
+      <UiFormGroup label={t('translation:input-email')} errors={errors}>
+        <UiInput
+          placeholder={t('translation:email-placeholder')}
+          type="email"
+          key="content"
+          label="email"
+          register={register}
+        />
       </UiFormGroup>
 
-      <UiFormGroup label={t('translation:input-password')}>
-        <UiInput placeholder={t('translation:password-placeholder')} type="password" key="content" />
+      <UiFormGroup label={t('translation:input-password')} errors={errors}>
+        <UiInput
+          placeholder={t('translation:password-placeholder')}
+          type="password"
+          key="content"
+          label="password"
+          register={register}
+        />
       </UiFormGroup>
 
-      <UiButton description={t('translation:public-login')} onClick={loginUser} width="100%" />
+      <UiButton description={t('translation:public-login')} onClick={loginUser} width="100%" type="submit" />
     </form>
   )
 }

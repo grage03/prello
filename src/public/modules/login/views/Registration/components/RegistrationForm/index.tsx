@@ -12,11 +12,11 @@ import {
 import styles from './style/styles.module.sass'
 
 export const RegistrationForm = () => {
-  const { handleSubmit } = useForm<IRegistrationForm>()
+  const { handleSubmit, register, formState: { errors } } = useForm<IRegistrationForm>()
   const { t } = useTranslation()
 
   const onSubmit: SubmitHandler<IRegistrationForm> = (data) => {
-    return data
+    console.log(data)
   }
 
   const loginUser = () => {
@@ -25,18 +25,43 @@ export const RegistrationForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles['registration-form']}>
-      <UiFormGroup label={t('translation:input-email')}>
-        <UiInput placeholder={t('translation:email-placeholder')} type="email" key="content" />
+      <UiFormGroup label={t('translation:input-email')} errors={errors}>
+        <UiInput
+          placeholder={t('translation:email-placeholder')}
+          type="email"
+          label="email"
+          register={register}
+          key="content"
+          required
+        />
       </UiFormGroup>
 
-      <UiFormGroup label={t('translation:input-password')}>
-        <UiInput placeholder={t('translation:password-placeholder')} type="password" key="content" />
+      <UiFormGroup label={t('translation:input-password')} errors={errors}>
+        <UiInput
+          placeholder={t('translation:password-placeholder')}
+          type="password"
+          key="content"
+          label="password"
+          register={register}
+          required
+        />
       </UiFormGroup>
 
-      <UiCheckBox label={t('translation:public-registration-agree')} />
+      <UiCheckBox
+        placeholder={t('translation:public-registration-agree')}
+        label="isAgree"
+        register={register}
+        required
+      />
 
       <div className={styles['registration-form__submit']}>
-        <UiButton description={t('translation:public-registration')} onClick={loginUser} width="100%" transparent />
+        <UiButton
+          description={t('translation:public-registration')}
+          onClick={loginUser}
+          width="100%"
+          transparent
+          type="submit"
+        />
       </div>
     </form>
   )

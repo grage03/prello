@@ -59,7 +59,9 @@
         "react/jsx-props-no-spreading": "off",
         "jsx-a11y/label-has-associated-control": "off",
         "dot-notation": "off",
-        "no-return-await": "off"
+        "no-return-await": "off",
+        "spaced-comment": "off",
+        "react/button-has-type": "off"
     },
     "settings": {
         "import/parsers": {

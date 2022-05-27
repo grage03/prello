@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
-import { UiButton, UiImage, UiInput } from '../../../../../core/components/ui-components'
+import { UiImage } from '../../../../../core/components/ui-components'
 import { Sparks } from '../../../../components'
 
 const sparksPosition = {
@@ -13,10 +13,6 @@ const sparksPosition = {
 export const PublicHelp = () => {
   const { t } = useTranslation()
 
-  const onUserClickButton = () => {
-    return true
-  }
-
   return (
     <div className={styles['help-teams']}>
       <div className={styles['help-teams__interaction']}>
@@ -24,14 +20,12 @@ export const PublicHelp = () => {
         <Sparks position={sparksPosition}>
           <p className={styles['help-teams__description']}>{t('translation:public-teams-description')}</p>
         </Sparks>
-        <UiInput
-          placeholder={t('translation:input-email')}
-          type="email"
-        >
-          <React.Fragment key="button">
-            <UiButton description={t('translation:user-join')} onClick={onUserClickButton} />
-          </React.Fragment>
-        </UiInput>
+        { /*<UiInput*/ }
+        {/*  placeholder={t('translation:input-email')}*/}
+        {/*  type="email"*/}
+        {/*>*/}
+        {/*  <UiButton description={t('translation:user-join')} onClick={onUserClickButton} key="button"/>*/}
+        {/*</UiInput>*/}
       </div>
       <div className={styles['help-teams__image']}>
         <UiImage src="helpTeams" width="480px" />
