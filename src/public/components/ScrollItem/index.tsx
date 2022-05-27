@@ -1,11 +1,10 @@
 import React from 'react'
 
 import styles from './style/styles.module.sass'
-import { useScroll } from '../../../core/hooks/useScroll/useScroll'
+import { useScroll } from '../../../core/hooks'
 
-// TODO: add check device, on device !== pc return null and change name
 export const ScrollItem = () => {
-  const { y } = useScroll()
+  const { y, isMobile } = useScroll()
 
   const moveToTop = () => {
     window.scrollBy({
@@ -14,7 +13,7 @@ export const ScrollItem = () => {
     })
   }
 
-  if (y < 300) return null
+  if (y < 300 || isMobile) return null
   return (
     <div className={styles['scroll-item']} onClick={moveToTop}>
       <div className={styles['scroll-item__arrow']}>
