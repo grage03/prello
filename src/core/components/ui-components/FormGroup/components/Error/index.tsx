@@ -21,7 +21,6 @@ const getErrorMessage = (type: string) => {
   return errorMessage[type]
 }
 
-// TODO: maybe delete error and add error.type
 export const Error = ({ error }: IError) => {
   if (!error) return null
   return <label htmlFor={error.message} className={styles['error__text']}>{getErrorMessage(error.type)}</label>
