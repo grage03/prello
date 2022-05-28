@@ -42,6 +42,7 @@
 
   "input-email": "Введите адрес почты",
   "input-password": "Введите пароль",
+  "input-agree": "Согласитесь с правилами пользования",
 
   "email-placeholder": "Адрес почты",
   "password-placeholder": "Пароль"

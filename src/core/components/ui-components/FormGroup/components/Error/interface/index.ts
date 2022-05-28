@@ -1,5 +1,10 @@
+import { Message, MultipleFieldErrors, Ref } from 'react-hook-form'
 
 export interface IError {
-  error: string
-  type: string
+  error?: {
+    type: string;
+    ref?: Ref;
+    types?: MultipleFieldErrors;
+    message?: Message;
+  }
 }

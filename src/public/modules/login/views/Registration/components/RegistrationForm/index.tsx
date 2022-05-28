@@ -11,7 +11,7 @@ import {
 } from '../../../../../../../core/components/ui-components'
 
 import styles from './style/styles.module.sass'
-import { schema } from '../../schema'
+import { schema } from './schema'
 
 export const RegistrationForm = () => {
   const { handleSubmit, register, formState: { errors } } = useForm<IRegistrationForm>({
@@ -19,8 +19,8 @@ export const RegistrationForm = () => {
   })
   const { t } = useTranslation()
 
-  const onSubmit: SubmitHandler<IRegistrationForm> = () => {
-    console.log(errors)
+  const onSubmit: SubmitHandler<IRegistrationForm> = (data) => {
+    console.log(data)
   }
 
   const loginUser = () => {
@@ -29,7 +29,7 @@ export const RegistrationForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles['registration-form']}>
-      <UiFormGroup label={t('translation:input-email')} errors={errors} value="email">
+      <UiFormGroup label={t('translation:input-email')} error={errors.email}>
         <UiInput
           placeholder={t('translation:email-placeholder')}
           type="email"
@@ -38,7 +38,7 @@ export const RegistrationForm = () => {
         />
       </UiFormGroup>
 
-      <UiFormGroup label={t('translation:input-password')} errors={errors} value="password">
+      <UiFormGroup label={t('translation:input-password')} error={errors.password}>
         <UiInput
           placeholder={t('translation:password-placeholder')}
           type="password"
@@ -47,7 +47,7 @@ export const RegistrationForm = () => {
         />
       </UiFormGroup>
 
-      <UiFormGroup errors={errors} value="isAgree">
+      <UiFormGroup label={t('translation:input-agree')} error={errors.isAgree}>
         <UiCheckBox
           placeholder={t('translation:public-registration-agree')}
           label="isAgree"

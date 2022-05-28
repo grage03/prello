@@ -1,13 +1,17 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
 import { ILoginForm } from './interface'
 import { UiButton, UiFormGroup, UiInput } from '../../../../../../../core/components/ui-components'
 
 import styles from './style/styles.module.sass'
+import { schema } from './schema'
 
 export const LoginForm = () => {
-  const { handleSubmit, register, formState: { errors } } = useForm<ILoginForm>()
+  const { handleSubmit, register, formState: { errors } } = useForm<ILoginForm>({
+    resolver: yupResolver(schema),
+  })
   const { t } = useTranslation()
 
   const onSubmit: SubmitHandler<ILoginForm> = (data) => {
@@ -20,7 +24,7 @@ export const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles['login-form']}>
-      <UiFormGroup label={t('translation:input-email')} errors={errors} value="email">
+      <UiFormGroup label={t('translation:input-email')} error={errors.email}>
         <UiInput
           placeholder={t('translation:email-placeholder')}
           type="email"
@@ -29,7 +33,7 @@ export const LoginForm = () => {
         />
       </UiFormGroup>
 
-      <UiFormGroup label={t('translation:input-password')} errors={errors} value="email">
+      <UiFormGroup label={t('translation:input-password')} error={errors.password}>
         <UiInput
           placeholder={t('translation:password-placeholder')}
           type="password"

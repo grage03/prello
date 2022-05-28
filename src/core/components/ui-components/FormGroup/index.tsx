@@ -2,20 +2,17 @@ import React from 'react'
 import { IUiFormGroup } from './interface'
 
 import './style/styles.sass'
+import { Error } from './components/Error'
 
 export const UiFormGroup = React.memo(({
   label,
   children,
-  errors,
-  value,
+  error,
 }: IUiFormGroup) => {
-  const error = errors[value]?.message
-  console.log(error)
   return (
     <div className="form-group">
-      {error ? (
-        <h5>{error}</h5>
-      ) : (label ? <label htmlFor={label} className="form-group__label">{label}</label> : null)}
+      <Error error={error} />
+      {(label && !error) && <label htmlFor={label} className="form-group__label">{label}</label>}
       {children}
     </div>
   )

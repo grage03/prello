@@ -62,7 +62,9 @@
         "no-return-await": "off",
         "spaced-comment": "off",
         "react/button-has-type": "off",
-        "no-nested-ternary": "off"
+        "no-nested-ternary": "off",
+        "no-shadow": "off",
+        "no-unused-vars": "off"
     },
     "settings": {
         "import/parsers": {
