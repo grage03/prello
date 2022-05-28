@@ -6,7 +6,11 @@ import { ButtonProps } from './interface'
 import './style/styles.sass'
 
 export const UiButton = ({
-  description, transparent, onClick, width,
+  description,
+  transparent,
+  onClick,
+  width,
+  type = 'button',
 }: ButtonProps) => {
   const classes = classNames({
     button: true,
@@ -14,12 +18,8 @@ export const UiButton = ({
     'button--standard': !transparent,
   })
 
-  function onInteracting() {
-    onClick()
-  }
-
   return (
-    <button type="button" className={classes} onClick={onInteracting} style={{ width: width || 'auto' }}>
+    <button type={type} className={classes} onClick={onClick} style={{ width: width || 'auto' }}>
       {description}
     </button>
   )

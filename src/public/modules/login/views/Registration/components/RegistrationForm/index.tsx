@@ -1,6 +1,8 @@
 import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 import { IRegistrationForm } from './interface'
 import {
   UiButton,
@@ -10,33 +12,58 @@ import {
 } from '../../../../../../../core/components/ui-components'
 
 import styles from './style/styles.module.sass'
+import { schema } from './schema'
+import { useDispatch } from '../../../../../../../core/hooks'
+import { createUser } from '../../../../../../../domain/user/service'
 
 export const RegistrationForm = () => {
-  const { handleSubmit } = useForm<IRegistrationForm>()
+  const { handleSubmit, register, formState: { errors } } = useForm<IRegistrationForm>({
+    resolver: yupResolver(schema),
+  })
   const { t } = useTranslation()
+  const { dispatch, data: response } = useDispatch(createUser)
+  const navigate = useNavigate()
 
-  const onSubmit: SubmitHandler<IRegistrationForm> = (data) => {
-    return data
-  }
-
-  const loginUser = () => {
-    return 'ok'
+  const onSubmit: SubmitHandler<IRegistrationForm> = async (data) => {
+    const { email, name, password } = data
+    await dispatch({ email, name, password }).then(() => navigate('/login'))
   }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles['registration-form']}>
-      <UiFormGroup label={t('translation:input-email')}>
-        <UiInput placeholder={t('translation:email-placeholder')} type="email" key="content" />
+      <UiFormGroup label={t('translation:input-email')} error={errors.email}>
+        <UiInput
+          placeholder={t('translation:email-placeholder')}
+          type="email"
+          label="email"
+          register={register}
+        />
       </UiFormGroup>
 
-      <UiFormGroup label={t('translation:input-password')}>
-        <UiInput placeholder={t('translation:password-placeholder')} type="password" key="content" />
+      <UiFormGroup label={t('translation:input-password')} error={errors.password}>
+        <UiInput
+          placeholder={t('translation:password-placeholder')}
+          type="password"
+          label="password"
+          register={register}
+        />
       </UiFormGroup>
 
-      <UiCheckBox label={t('translation:public-registration-agree')} />
+      <UiFormGroup label={t('translation:input-agree')} error={errors.isAgree}>
+        <UiCheckBox
+          placeholder={t('translation:public-registration-agree')}
+          label="isAgree"
+          register={register}
+        />
+      </UiFormGroup>
 
       <div className={styles['registration-form__submit']}>
-        <UiButton description={t('translation:public-registration')} onClick={loginUser} width="100%" transparent />
+        <UiButton
+          description={t('translation:public-registration')}
+          width="100%"
+          transparent
+          type="submit"
+        />
       </div>
     </form>
   )

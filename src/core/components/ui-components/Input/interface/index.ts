@@ -1,9 +1,11 @@
 import { ReactElement } from 'react'
+import { UseFormRegister } from 'react-hook-form'
 
 export interface UiInputProps {
   placeholder: string
   type: 'email' | 'text' | 'password'
-
+  label: string
+  register: UseFormRegister<any>
   width?: string
   children?: ReactElement | ReactElement[]
 }

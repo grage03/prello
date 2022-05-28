@@ -42,7 +42,10 @@
 
   "input-email": "Введите адрес почты",
   "input-password": "Введите пароль",
+  "input-agree": "Согласитесь с правилами пользования",
+  "input-name": "Придумайте имя",
 
   "email-placeholder": "Адрес почты",
-  "password-placeholder": "Пароль"
+  "password-placeholder": "Пароль",
+  "name-placeholder": "Имя аккаунта"
 }

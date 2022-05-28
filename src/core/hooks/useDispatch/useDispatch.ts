@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 // TODO: either delete useFetch, or figure out how to optimize them
-export const useDispatch = <T>(action: Function, ...args: T[]) => {
+export const useDispatch = <T>(action: Function) => {
   const [ data, setData ] = useState<any>(null)
   const [ loading, setLoading ] = useState(false)
   const [ error, setError ] = useState<any>(null)
 
-  const getResponse = async () => {
+  const dispatch = async (...args: T[]) => {
     try {
       setLoading(true)
       const response = await action.apply(this, args)
@@ -18,11 +18,8 @@ export const useDispatch = <T>(action: Function, ...args: T[]) => {
     }
   }
 
-  useEffect(() => {
-    getResponse()
-  }, [])
-
   return {
+    dispatch,
     data,
     loading,
     error,

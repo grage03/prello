@@ -42,7 +42,10 @@
 
   "input-email": "Enter your email address",
   "input-password": "Enter password",
+  "input-agree": "Agree to the terms of use",
+  "input-name": "Come up with a name",
 
   "email-placeholder": "Email",
-  "password-placeholder": "Password"
+  "password-placeholder": "Password",
+  "name-placeholder": "Account name"
 }
