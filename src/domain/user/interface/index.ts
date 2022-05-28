@@ -1,12 +1,11 @@
 export interface IUser {
   id: number
-  name: string
   email: string
-  role: Roles.admin | Roles.member | null
-  group: string | null
+  iat: number
+  exp: number
 }
 
-enum Roles {
-  admin = 'ADMIN',
-  member = 'MEMBER'
+export interface IUserCreate {
+  email: string
+  password: string
 }

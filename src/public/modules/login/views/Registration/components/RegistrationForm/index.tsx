@@ -2,6 +2,7 @@ import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 import { IRegistrationForm } from './interface'
 import {
   UiButton,
@@ -12,19 +13,20 @@ import {
 
 import styles from './style/styles.module.sass'
 import { schema } from './schema'
+import { useDispatch } from '../../../../../../../core/hooks'
+import { createUser } from '../../../../../../../domain/user/service'
 
 export const RegistrationForm = () => {
   const { handleSubmit, register, formState: { errors } } = useForm<IRegistrationForm>({
     resolver: yupResolver(schema),
   })
   const { t } = useTranslation()
+  const { dispatch, data: response } = useDispatch(createUser)
+  const navigate = useNavigate()
 
-  const onSubmit: SubmitHandler<IRegistrationForm> = (data) => {
-    console.log(data)
-  }
-
-  const loginUser = () => {
-    return 'ok'
+  const onSubmit: SubmitHandler<IRegistrationForm> = async (data) => {
+    const { email, name, password } = data
+    await dispatch({ email, name, password }).then(() => navigate('/login'))
   }
 
   return (
@@ -58,7 +60,6 @@ export const RegistrationForm = () => {
       <div className={styles['registration-form__submit']}>
         <UiButton
           description={t('translation:public-registration')}
-          onClick={loginUser}
           width="100%"
           transparent
           type="submit"

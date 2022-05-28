@@ -18,12 +18,8 @@ export const UiButton = ({
     'button--standard': !transparent,
   })
 
-  function onInteracting() {
-    onClick()
-  }
-
   return (
-    <button type={type} className={classes} onClick={onInteracting} style={{ width: width || 'auto' }}>
+    <button type={type} className={classes} onClick={onClick} style={{ width: width || 'auto' }}>
       {description}
     </button>
   )

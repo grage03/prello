@@ -64,7 +64,8 @@
         "react/button-has-type": "off",
         "no-nested-ternary": "off",
         "no-shadow": "off",
-        "no-unused-vars": "off"
+        "no-unused-vars": "off",
+        "import/no-cycle": "off"
     },
     "settings": {
         "import/parsers": {

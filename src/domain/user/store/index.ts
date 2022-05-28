@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx'
 import { IUser } from '../interface'
 
-class User {
+export class User {
   private user: IUser | null
 
   constructor() {

@@ -5,5 +5,5 @@ export interface ButtonProps {
   width?: string
   type?: 'button' | 'submit'
 
-  onClick(): void
+  onClick?(): void
 }
