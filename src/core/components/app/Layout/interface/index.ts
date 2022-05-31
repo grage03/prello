@@ -1,5 +1,9 @@
-import { ReactElement } from 'react'
+import { ReactNode } from 'react'
+import { User } from '../../../../../domain/user/store'
 
 export interface LayoutProps {
-  children: ReactElement
+  children: ReactNode
+  contextStore: {
+    userStore: User
+  }
 }

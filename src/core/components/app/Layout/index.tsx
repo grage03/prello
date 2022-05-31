@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 
 import '../../../../assets/styles/_helpers.sass'
 import { LayoutProps } from './interface'
+import { Context } from '../../../../public'
 
-export const Layout = ({ children }: LayoutProps) => {
+// TODO: move to public
+export const Layout = ({ children, contextStore }: LayoutProps) => {
+  const store = useMemo(() => (contextStore), [])
+
   return (
-    <main className="h-container">
-      {children}
-    </main>
+    <Context.Provider value={store}>
+      <main className="h-container">
+        {children}
+      </main>
+    </Context.Provider>
   )
 }
