@@ -2,18 +2,17 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
 
-import './style/styles.sass'
+import styles from './style/styles.module.sass'
 
 import { UiLinkProps } from './interface'
 
-// TODO rewrite children to React.Element
 export const UiLink = ({
   to, isArrow, isUnderline, children,
 }: UiLinkProps) => {
   const classes = classNames({
-    link: true,
-    'link--underline': isUnderline,
-    'link--arrow': isArrow,
+    [styles['link']]: true,
+    [styles['link--underline']]: isUnderline,
+    [styles['link--arrow']]: isArrow,
   })
 
   const navigate = useNavigate()

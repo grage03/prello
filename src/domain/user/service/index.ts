@@ -16,7 +16,10 @@ export const createUser = async (user: IUserCreate) => {
 
 export const loginUser = async (user: IUserCreate) => {
   const storage = new Storage('local')
-  const response = await postUserLogin(user).then(({ data }) => storage.setItem('jwt-token', data.token))
+  const response = await postUserLogin(user).then(({ data }) => {
+    storage.setItem('jwt-token', data.token)
+    return data
+  })
 
   return response.data
 }

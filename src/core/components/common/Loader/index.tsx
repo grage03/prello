@@ -5,10 +5,9 @@ export const Loader = () => {
   return (
     <div className="wrapper">
       <div className="loader">
-        <div className="loader__item" />
-        <div className="loader__item" />
-        <div className="loader__item" />
-        <div className="loader__item" />
+        {Array.from([ ...Array(4) ].keys()).map((item) => (
+          <div className="loader__item" key={item} />
+        ))}
       </div>
     </div>
   )

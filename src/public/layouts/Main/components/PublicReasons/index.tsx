@@ -5,7 +5,7 @@ import { reasons } from './enum'
 
 import styles from './style/styles.module.sass'
 import { UiImage, UiLink } from '../../../../../core/components/ui-components'
-import { Sparks } from '../../../../components/Sparks'
+import { Sparks } from '../../../../components'
 
 const sparksPosition = {
   bottom: '80px',

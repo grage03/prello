@@ -9,11 +9,8 @@ export const useClickOutside = <T extends HTMLDivElement>(visible: boolean) => {
   const [ isOpen, setIsOpen ] = useState(visible)
   const element: RefObject<T> = useRef(null)
 
-  // TODO: remove any and add type for event
-  const onClickOutside = (event: any) => {
-    if (element.current && element.current.contains(event.target as Node)) {
-      return
-    }
+  const onClickOutside = (event: Event) => {
+    if (element.current && element.current.contains(event.target as Node)) return
 
     setIsOpen(false)
   }

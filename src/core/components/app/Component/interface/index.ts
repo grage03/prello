@@ -1,5 +1,5 @@
 export interface ComponentProps<T> {
-  element: string
+  element: 'div'
   value: string
   props: {
     [key: string]: T

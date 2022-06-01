@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { UiHintProps } from './interface'
-import { useSlots } from '../../../hooks/useSlots/useSlots'
+import { useSlots } from '../../../hooks'
 import './style/styles.sass'
 
 export const UiHint = ({ children, title, description }: UiHintProps) => {

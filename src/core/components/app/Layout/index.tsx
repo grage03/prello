@@ -4,7 +4,6 @@ import '../../../../assets/styles/_helpers.sass'
 import { LayoutProps } from './interface'
 import { Context } from '../../../../public'
 
-// TODO: move to public
 export const Layout = ({ children, contextStore }: LayoutProps) => {
   const store = useMemo(() => (contextStore), [])
 

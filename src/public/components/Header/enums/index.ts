@@ -1,7 +1,4 @@
-// TODO: add index.ts import
-import { Reasons } from '../../../../assets/icon/app/burgerMenu/reasons'
-import { Partners } from '../../../../assets/icon/app/burgerMenu/partners'
-import { Reviews } from '../../../../assets/icon/app/burgerMenu/reviews'
+import { Reasons, Partners, Reviews } from '../../../../assets/icon/app/burger-menu'
 
 export const navigationOptions = [
   { name: 'public-header-reasons', option: 'reasons', icon: Reasons },
