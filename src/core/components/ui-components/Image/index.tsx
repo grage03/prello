@@ -2,14 +2,14 @@ import React from 'react'
 import classNames from 'classnames'
 import { UiImageProps } from './interface'
 
-import './style/styles.sass'
+import styles from './style/styles.module.sass'
 
 export const UiImage = ({
   src, alt, width, noRadius,
 }: UiImageProps) => {
   const classes = classNames({
-    img: true,
-    'img--radius': noRadius,
+    [styles['img']]: true,
+    [styles['img--radius']]: noRadius,
   })
 
   const imgSrc = () => {

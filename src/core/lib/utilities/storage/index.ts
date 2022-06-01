@@ -1,6 +1,5 @@
 export class Storage {
-  // TODO: add type
-  storage: any
+  storage: typeof localStorage | typeof sessionStorage
 
   constructor(type: 'local' | 'session') {
     this.storage = type === 'local' ? localStorage : sessionStorage

@@ -17,9 +17,9 @@ export const ScrollItem = () => {
   return (
     <div className={styles['scroll-item']} onClick={moveToTop}>
       <div className={styles['scroll-item__arrow']}>
-        <span />
-        <span />
-        <span />
+        {Array.from([ ...Array(3) ].keys()).map((item) => (
+          <span />
+        ))}
       </div>
     </div>
   )

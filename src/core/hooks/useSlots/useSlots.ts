@@ -1,16 +1,5 @@
-import {
-  useMemo, Children, isValidElement, ReactElement,
-} from 'react'
-
-// TODO move to ./interface/index.ts
-type CollectionType = {
-  content: ReactElement[],
-  [slot: string]: ReactElement[] | ReactElement
-}
-
-interface Slots {
-  children?: ReactElement[] | ReactElement
-}
+import { useMemo, Children, isValidElement } from 'react'
+import { CollectionType, Slots } from './interface'
 
 export const useSlots = ({ children }: Slots): CollectionType => {
   return useMemo(() => {

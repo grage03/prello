@@ -3,13 +3,13 @@ import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
 import { UiLogoProps } from './interface'
 import { UiImage } from '../Image'
-import './style/styles.sass'
+import styles from './style/styles.module.sass'
 
 export const UiLogo = ({ logo, size, to }: UiLogoProps) => {
   const classes = classNames({
-    logo: true,
-    'logo--small': size === "small",
-    'logo--big': size === "big",
+    [styles['logo']]: true,
+    [styles['logo--small']]: size === "small",
+    [styles['logo--big']]: size === "big",
   })
 
   const navigate = useNavigate()

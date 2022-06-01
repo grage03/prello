@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import { ButtonProps } from './interface'
 
-import './style/styles.sass'
+import styles from './style/styles.module.sass'
 
 export const UiButton = ({
   description,
@@ -13,9 +13,9 @@ export const UiButton = ({
   type = 'button',
 }: ButtonProps) => {
   const classes = classNames({
-    button: true,
-    'button--transparent': transparent,
-    'button--standard': !transparent,
+    [styles['button']]: true,
+    [styles['button--transparent']]: transparent,
+    [styles['button--standard']]: !transparent,
   })
 
   return (
