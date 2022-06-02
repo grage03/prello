@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import { ButtonProps } from './interface'
+import { IButtonProps } from './interface'
 
 import styles from './style/styles.module.sass'
 
@@ -11,7 +11,7 @@ export const UiButton = ({
   onClick,
   width,
   type = 'button',
-}: ButtonProps) => {
+}: IButtonProps) => {
   const classes = classNames({
     [styles['button']]: true,
     [styles['button--transparent']]: transparent,

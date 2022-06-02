@@ -1,10 +1,10 @@
 import React from 'react'
-import { ScoreProps } from './interface/interface'
+import { IScoreProps } from './interface/interface'
 import { UiIcon } from '../../../../../../../core/components/ui-components'
 import { FullStar } from '../../../../../../../assets/icon/app/fullStar'
 import { HalfEmptyStar } from '../../../../../../../assets/icon/app/halfEmptyStar'
 
-export const Score = ({ score }: ScoreProps) => {
+export const Score = ({ score }: IScoreProps) => {
   return (
     <>
       {
@@ -12,9 +12,7 @@ export const Score = ({ score }: ScoreProps) => {
           <UiIcon size={40} viewBox="0 0 40 40" key={index} icon={<FullStar />} />
         ))
       }
-      {!!(score % 1) && (
-        <UiIcon size={40} viewBox="0 0 40 40" icon={<HalfEmptyStar />} />
-      )}
+      {!!(score % 1) && <UiIcon size={40} viewBox="0 0 40 40" icon={<HalfEmptyStar />} />}
     </>
   )
 }

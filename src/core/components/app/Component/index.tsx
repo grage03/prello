@@ -1,6 +1,6 @@
 import React from 'react'
-import { ComponentProps } from './interface'
+import { IComponentProps } from './interface'
 
-export const Component = ({ element, props = null, value }: ComponentProps<any>) => {
+export const Component = ({ element, props = null, value }: IComponentProps<any>) => {
   return React.createElement(element, props, value)
 }

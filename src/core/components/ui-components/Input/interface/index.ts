@@ -1,14 +1,17 @@
 import { ReactElement } from 'react'
 import { UseFormRegister } from 'react-hook-form'
 
-export interface UiInputProps {
+export interface IUiInputProps {
   placeholder: string
-  type: 'email' | 'text' | 'password'
+  type: InputTypes
   label: string
   register: UseFormRegister<any>
   width?: string
-  children?: ReactElement | ReactElement[]
+  children?: ChildrenType
 }
+
+type ChildrenType = ReactElement | ReactElement[]
+type InputTypes = 'email' | 'text' | 'password'
 
 // EMAIL = 'email,
 // COLOR = 'color',

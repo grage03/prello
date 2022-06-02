@@ -5,7 +5,15 @@ export interface IUser {
   exp: number
 }
 
-export interface IUserCreate {
+export interface IPostUserRegistrationProps {
   email: string
   password: string
 }
+
+export interface IPostUserRegistrationReturn {
+  token: string
+}
+
+export interface IPostUserLoginReturn extends IPostUserRegistrationReturn {}
+
+export interface IPostUserLoginProps extends IPostUserRegistrationProps {}

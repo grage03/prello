@@ -1,4 +1,5 @@
 import { useLayoutEffect, useState } from 'react'
+import { IUseMatchMediaReturn } from './interface'
 
 const screenSize = [
   "(max-width: 579px)",
@@ -6,7 +7,7 @@ const screenSize = [
   "(min-width: 1216px)",
 ]
 
-export const useMatchMedia = () => {
+export const useMatchMedia = (): IUseMatchMediaReturn => {
   const mediaQueryList = screenSize.map((query) => matchMedia(query))
   const getScreenSizes = () => mediaQueryList.map(({ matches }) => matches)
 

@@ -2,8 +2,9 @@ import { useNavigate } from 'react-router-dom'
 import { IRegistrationForm } from '../../components/RegistrationForm/interface'
 import { useDispatch } from '../../../../../../../core/hooks'
 import { createUser } from '../../../../../../../domain/user/service'
+import { IUseRegistrationReturn } from './interface'
 
-export const useRegistration = () => {
+export const useRegistration = (): IUseRegistrationReturn => {
   const navigate = useNavigate()
   const { dispatch, data: response } = useDispatch(createUser)
 

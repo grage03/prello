@@ -1,10 +1,5 @@
 import { RefObject, useEffect, useState } from 'react'
-
-type Position = {
-  x: number
-  y: number
-  position: DOMRect | null
-}
+import { IPosition, IUsePositionReturn } from './interface'
 
 // bottom: 352.9375
 // height: 66
@@ -15,8 +10,8 @@ type Position = {
 // x: 116.80000305175781
 // y: 286.9375
 
-export const usePosition = (ref: RefObject<HTMLElement>) => {
-  const [ position, setPosition ] = useState<Position>({
+export const usePosition = (ref: RefObject<HTMLElement>): IUsePositionReturn => {
+  const [ position, setPosition ] = useState<IPosition>({
     x: 0,
     y: 0,
     position: null,

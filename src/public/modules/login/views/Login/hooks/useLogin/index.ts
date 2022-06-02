@@ -7,8 +7,9 @@ import { Context } from '../../../../../../index'
 import { ILoginForm } from '../../components/LoginForm/interface'
 import { useDispatch } from '../../../../../../../core/hooks'
 import { loginUser } from '../../../../../../../domain/user/service'
+import { IUseLoginReturn } from './interface'
 
-export const useLogin = () => {
+export const useLogin = (): IUseLoginReturn => {
   const { userStore } = useContext(Context)
   const navigate = useNavigate()
   const { dispatch, data: response } = useDispatch(loginUser)

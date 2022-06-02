@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 
-export interface IUiFormGroup {
-  label?: string
+export interface IUiFormGroupProps {
   error: any
+  label?: string
   children?: ReactElement
 }

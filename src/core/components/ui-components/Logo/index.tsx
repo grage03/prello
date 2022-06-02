@@ -1,11 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
-import { UiLogoProps } from './interface'
+import { IUiLogoProps } from './interface'
 import { UiImage } from '../Image'
 import styles from './style/styles.module.sass'
 
-export const UiLogo = ({ logo, size, to }: UiLogoProps) => {
+export const UiLogo = ({ logo, size, to }: IUiLogoProps) => {
   const classes = classNames({
     [styles['logo']]: true,
     [styles['logo--small']]: size === "small",

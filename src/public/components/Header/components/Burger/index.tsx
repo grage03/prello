@@ -5,25 +5,33 @@ import styles from './style/styles.module.sass'
 import { UiIcon } from '../../../../../core/components/ui-components'
 import { navigationOptions } from '../../enums'
 import { Anchor } from '../../../../../core/components/app/Anchor'
-import { useClickOutside } from '../../../../../core/hooks/useClickOutside'
+import { useClickOutside } from '../../../../../core/hooks'
 
 const Burger = () => {
   const { t } = useTranslation()
   const { isOpen, setIsOpen, element } = useClickOutside(false)
 
+  const handleOpenBurgerMenu = () => {
+    setIsOpen(true)
+  }
+
+  const handleCloseBurgerMenu = () => {
+    setIsOpen(false)
+  }
+
   return (
     <>
-      <div className={styles['burger__icon']} onClick={() => setIsOpen(true)}>
-        <span />
-        <span />
-        <span />
+      <div className={styles['burger__icon']} onClick={handleOpenBurgerMenu}>
+        {Array.from([ ...Array(3) ].keys()).map((_, index) => (
+          <span key={index} />
+        ))}
       </div>
       {
         isOpen && (
           <div className={styles['burger__wrapper']}>
             <div className={styles['burger__menu']} ref={element}>
               <div className={styles['burger__menu-title']}>
-                <h3 className={styles['burger__close']} onClick={() => setIsOpen(false)}>
+                <h3 className={styles['burger__close']} onClick={handleCloseBurgerMenu}>
                   {t('translation:public-header-go-back')}
                 </h3>
               </div>
@@ -38,7 +46,7 @@ const Burger = () => {
                         <li
                           key={item.option}
                           className={styles['burger__navigation-link']}
-                          onClick={() => setIsOpen(false)}
+                          onClick={handleCloseBurgerMenu}
                         >
                           <Anchor anchor={item.option}>{t(`translation:${item.name}`)}</Anchor>
                         </li>

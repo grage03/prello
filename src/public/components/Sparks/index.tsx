@@ -1,5 +1,5 @@
 import React from 'react'
-import { SparksProps } from './interface'
+import { ISparksProps } from './interface'
 
 import styles from './style/styles.module.sass'
 
@@ -18,7 +18,7 @@ const positionInit = {
 
 export const Sparks = ({
   quantity = 3, position = positionInit, size = 'standard', rotate = 0, children,
-}: SparksProps) => {
+}: ISparksProps) => {
   const initStyles = () => {
     return {
       transform: `scale(${sizes[size]}) rotate(${rotate}deg)`,

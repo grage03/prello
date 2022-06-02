@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react'
 
 import '../../../../assets/styles/_helpers.sass'
-import { LayoutProps } from './interface'
+import { ILayoutProps } from './interface'
 import { Context } from '../../../../public'
 
-export const Layout = ({ children, contextStore }: LayoutProps) => {
+export const Layout = ({ children, contextStore }: ILayoutProps) => {
   const store = useMemo(() => (contextStore), [])
 
   return (

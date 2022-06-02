@@ -1,6 +1,6 @@
 import { UseFormRegister } from 'react-hook-form'
 
-export interface IUiCheckBox {
+export interface IUiCheckBoxProps {
   placeholder: string
   label: string
   required?: boolean

@@ -1,9 +1,9 @@
 import { useMemo, Children, isValidElement } from 'react'
-import { CollectionType, Slots } from './interface'
+import { IUseSlotsReturn, IUseSlotsProps, ICollection } from './interface'
 
-export const useSlots = ({ children }: Slots): CollectionType => {
+export const useSlots = ({ children }: IUseSlotsProps): IUseSlotsReturn => {
   return useMemo(() => {
-    const collection: CollectionType = {
+    const collection: ICollection = {
       content: [],
     }
 

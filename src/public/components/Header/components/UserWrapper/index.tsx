@@ -22,9 +22,7 @@ export const UserWrapper = observer(() => {
       {
         userStore.profile
           ? <h3>{userStore.profile.email}</h3>
-          : (
-            <UiButton description={t(`translation:user-login`)} onClick={onUserLogin} />
-          )
+          : <UiButton description={t(`translation:user-login`)} onClick={onUserLogin} />
       }
     </div>
   )

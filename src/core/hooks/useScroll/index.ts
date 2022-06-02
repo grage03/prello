@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { debounce } from '../../lib/utilities/functions'
 import { useMatchMedia } from '../useMatchMedia'
+import { IPosition, IUseScrollReturn } from './interface'
 
-export const useScroll = () => {
-  const [ position, setPosition ] = useState({
+export const useScroll = (): IUseScrollReturn => {
+  const [ position, setPosition ] = useState<IPosition>({
     x: 0,
     y: 0,
   })
