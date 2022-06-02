@@ -1,4 +1,4 @@
-export interface ComponentProps<T> {
+export interface IComponentProps<T> {
   element: 'div'
   value: string
   props: {

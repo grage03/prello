@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 
-export interface UiIconProps {
+export interface IUiIconProps {
   icon: ReactElement;
   size?: number;
   viewBox?: string;

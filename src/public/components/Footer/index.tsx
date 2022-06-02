@@ -5,6 +5,7 @@ import styles from './style/styles.module.sass'
 import { LogoIcon } from '../../../assets/icon/app/logo'
 import { UiIcon, UiSelect } from '../../../core/components/ui-components'
 import { Storage } from '../../../core/lib/utilities/storage'
+import { KeyType } from './interface'
 
 const servicesPlaceholder = [
   { name: "Email Marketing", to: "" },
@@ -29,7 +30,7 @@ const followPlaceholder = [
 export const Footer = () => {
   const storage = new Storage('local')
 
-  const changeLocale = async (key: 'en' | 'ru') => {
+  const changeLocale = async (key: KeyType) => {
     if (i18n.language === key) return
     await i18n.changeLanguage(key)
   }

@@ -23,7 +23,7 @@ export const debounce = <T, U extends any[]>(fn: () => T, ms: number) => {
   }
 }
 
-export const scrollToTop = () => {
+export const scrollToTop = (): void => {
   const isScrollTop = true
 
   if (isScrollTop) {

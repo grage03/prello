@@ -1,15 +1,15 @@
 import { ReactElement } from 'react'
 
-export interface AuthWrapperProps {
+export interface IAuthWrapperProps {
   children: ReactElement
 }
 
 export type pageInformationType = {
-  page: pageList
-  to: pageList
+  page: PageListType
+  to: PageListType
 
   description: string
   value: string
 }
 
-type pageList = 'login' | 'registration'
+type PageListType = 'login' | 'registration'

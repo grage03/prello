@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { UiInputProps } from './interface'
+import { IUiInputProps } from './interface'
 
 import styles from './style/styles.module.sass'
 import { useSlots } from '../../../hooks'
@@ -12,7 +12,7 @@ export const UiInput = ({
   register,
   children,
   label,
-}: UiInputProps) => {
+}: IUiInputProps) => {
   const slots = useSlots({ children })
   const classes = classNames({
     [styles['form-input__item']]: true,

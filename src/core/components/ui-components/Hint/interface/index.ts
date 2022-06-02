@@ -1,7 +1,9 @@
 import { ReactElement } from 'react'
 
-export interface UiHintProps {
-  children: ReactElement | ReactElement[],
+export interface IUiHintProps {
+  children: ChildrenType
   title?: string
   description: string
 }
+
+type ChildrenType = ReactElement | ReactElement[]

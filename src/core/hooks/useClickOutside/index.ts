@@ -4,8 +4,9 @@ import {
   useRef,
   useState,
 } from 'react'
+import { IUseClickOutsideReturn } from './interface'
 
-export const useClickOutside = <T extends HTMLDivElement>(visible: boolean) => {
+export const useClickOutside = <T extends HTMLDivElement>(visible: boolean): IUseClickOutsideReturn<T> => {
   const [ isOpen, setIsOpen ] = useState(visible)
   const element: RefObject<T> = useRef(null)
 

@@ -1,10 +1,14 @@
 import { ReactElement } from 'react'
 
-export type CollectionType = {
+export interface IUseSlotsReturn {
   content: ReactElement[],
-  [slot: string]: ReactElement[] | ReactElement
+  [slot: string]: ChildrenType
 }
 
-export interface Slots {
-  children?: ReactElement[] | ReactElement
+export interface IUseSlotsProps {
+  children?: ChildrenType
 }
+
+export interface ICollection extends IUseSlotsReturn {}
+
+type ChildrenType = ReactElement[] | ReactElement

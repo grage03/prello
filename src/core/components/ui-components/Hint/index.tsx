@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { UiHintProps } from './interface'
+import { IUiHintProps } from './interface'
 import { useSlots } from '../../../hooks'
 import './style/styles.sass'
 
-export const UiHint = ({ children, title, description }: UiHintProps) => {
+export const UiHint = ({ children, title, description }: IUiHintProps) => {
   const slots = useSlots({ children })
   const [ isHovered, setIsHovered ] = useState(false)
 

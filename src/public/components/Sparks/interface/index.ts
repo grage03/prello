@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 
 // TODO: add animation: boolean
-export interface SparksProps {
+export interface ISparksProps {
   quantity?: 1 | 2 | 3;
   position?: {
     top?: string;
