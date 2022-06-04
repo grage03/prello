@@ -3,13 +3,13 @@ import { useTranslation } from 'react-i18next'
 import { observer } from 'mobx-react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
-import { UiButton } from '../../../../../core/components/ui-components'
-import { Context } from '../../../../index'
+import { UiButton } from '../../../../ui-components'
+import { AppContext } from '../../../../../../App'
 
 export const UserWrapper = observer(() => {
   const navigate = useNavigate()
   const { pathname } = useLocation()
-  const { userStore } = useContext(Context)
+  const { userStore } = useContext(AppContext)
   const { t } = useTranslation()
 
   const onUserLogin = () => {

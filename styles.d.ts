@@ -1,4 +1,4 @@
-declare module '*.sass' {
-  const content: {[key: string]: any}
-  export = content
+declare module "*.module.sass" {
+  const classes: { [key: string]: string };
+  export default classes;
 }
