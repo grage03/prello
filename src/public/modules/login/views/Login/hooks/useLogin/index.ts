@@ -3,14 +3,14 @@ import jwtDecode from 'jwt-decode'
 import { useNavigate } from 'react-router-dom'
 import { Storage } from '../../../../../../../core/lib/utilities/storage'
 import { IUser } from '../../../../../../../domain/user/interface'
-import { Context } from '../../../../../../index'
 import { ILoginForm } from '../../components/LoginForm/interface'
 import { useDispatch } from '../../../../../../../core/hooks'
 import { loginUser } from '../../../../../../../domain/user/service'
 import { IUseLoginReturn } from './interface'
+import { AppContext } from '../../../../../../../App'
 
 export const useLogin = (): IUseLoginReturn => {
-  const { userStore } = useContext(Context)
+  const { userStore } = useContext(AppContext)
   const navigate = useNavigate()
   const { dispatch, data: response } = useDispatch(loginUser)
 

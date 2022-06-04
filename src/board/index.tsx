@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { createContext } from 'react'
+import { Layout } from '../core/components/app/Layout'
+import { Header } from '../core/components/common'
+import { BoardPage } from './layouts/Main'
+
+const contextStore = {}
+
+export const BoardContext = createContext(contextStore)
 
 const Board = () => {
-  const board = 'board'
   return (
-    <div>
-      <aside>{board}</aside>
-    </div>
+    <Layout contextStore={contextStore} ContextProvider={BoardContext}>
+      <main className="board">
+        <Header />
+        <BoardPage />
+      </main>
+    </Layout>
   )
 }
 

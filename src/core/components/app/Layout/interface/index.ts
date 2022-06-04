@@ -1,9 +1,11 @@
-import { ReactNode } from 'react'
-import { User } from '../../../../../domain/user/store'
+import { ReactNode, Context } from 'react'
 
 export interface ILayoutProps {
   children: ReactNode
-  contextStore: {
-    userStore: User
-  }
+  contextStore: ContextStore
+  ContextProvider: Context<any>
+}
+
+type ContextStore = {
+  [key: string]: object
 }

@@ -2,10 +2,10 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
-import { UiIcon } from '../../../../../core/components/ui-components'
+import { UiIcon } from '../../../../ui-components'
 import { navigationOptions } from '../../enums'
-import { Anchor } from '../../../../../core/components/app/Anchor'
-import { useClickOutside } from '../../../../../core/hooks'
+import { Anchor } from '../../../../app/Anchor'
+import { useClickOutside } from '../../../../../hooks'
 
 const Burger = () => {
   const { t } = useTranslation()
