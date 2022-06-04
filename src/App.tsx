@@ -9,6 +9,7 @@ import './assets/styles/main.sass'
 const PublicRoute = React.lazy(() => import('./public'))
 const AdminRoute = React.lazy(() => import('./admin'))
 const BoardRoute = React.lazy(() => import('./board'))
+const ProfileRoute = React.lazy(() => import('./profile'))
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/*" element={<PublicRoute />} />
           <Route path="admin" element={<AdminRoute />} />
           <Route path="board" element={<BoardRoute />} />
+          <Route path="profile" element={<ProfileRoute />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
