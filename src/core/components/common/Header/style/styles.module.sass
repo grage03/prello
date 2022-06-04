@@ -13,20 +13,21 @@
   max-width: 100% !important
   @include h-container
 
+  &__logo
+    display: flex
+    align-items: center
+
+    &-icon
+      height: 50px
+      cursor: pointer
+
   &__burger
     display: none
 
     @media screen and (max-width: $sm-max-width)
       display: block
       height: 25px
-
-  &__logo
-    height: 50px
-    cursor: pointer
-
-    @media screen and (max-width: $sm-max-width)
-      position: absolute
-      left: 60px
+      margin-right: 20px
 
   &__navigation
     ul

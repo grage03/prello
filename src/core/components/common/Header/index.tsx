@@ -25,11 +25,15 @@ export const Header = () => {
 
   return (
     <header className={styles['header']}>
-      <div className={styles['header__burger']}>
-        <BurgerMenu />
-      </div>
-      <div className={styles['header__logo']} onClick={onUserClickLogo}>
-        <UiIcon size={60} viewBox="0 0 80 80" icon={<LogoIcon />} />
+      <div className={styles['header__logo']}>
+        {isPublicPage && (
+          <div className={styles['header__burger']}>
+            <BurgerMenu />
+          </div>
+        )}
+        <div className={styles['header__logo-icon']} onClick={onUserClickLogo}>
+          <UiIcon size={60} viewBox="0 0 80 80" icon={<LogoIcon />} />
+        </div>
       </div>
       {isPublicPage && (
         <nav className={styles['header__navigation']}>
