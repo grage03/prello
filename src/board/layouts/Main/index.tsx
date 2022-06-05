@@ -1,13 +1,17 @@
 import React from 'react'
 import { BoardList } from './components/BoardList'
 import { SubHeader } from './components/SubHeader'
-import './style/styles.sass'
+import styles from './style/styles.module.sass'
+import { BoardItems } from './components/BoardItems'
 
 export const BoardPage = () => {
   return (
-    <div className="board-wrapper">
+    <div className={styles['board-wrapper']}>
       <BoardList />
-      <SubHeader />
+      <div className={styles['board-wrapper__main']}>
+        <SubHeader />
+        <BoardItems />
+      </div>
     </div>
   )
 }
