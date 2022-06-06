@@ -13,7 +13,7 @@ export const PublicContext = createContext(contextStore)
 
 const PublicRoute = () => {
   return (
-    <Layout contextStore={contextStore} ContextProvider={PublicContext}>
+    <Layout contextStore={contextStore} contextProvider={PublicContext}>
       <main className="public h-container">
         <Header />
         <Routes>

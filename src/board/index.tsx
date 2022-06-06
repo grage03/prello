@@ -9,9 +9,9 @@ export const BoardContext = createContext(contextStore)
 
 const Board = () => {
   return (
-    <Layout contextStore={contextStore} ContextProvider={BoardContext}>
+    <Layout contextStore={contextStore} contextProvider={BoardContext}>
       <main className="board">
-        <Header />
+        <Header shadow={false} />
         <BoardPage />
       </main>
     </Layout>
