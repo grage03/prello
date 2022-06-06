@@ -1,7 +1,26 @@
+@import "../../../../../../assets/styles/_mixins.sass"
+
 .board-list
   width: 75px
   height: calc(100vh - 67px)
   border-right: 2px solid #F1F1F1
   border-top: 2px solid #F1F1F1
   background-color: white
-  z-index: 999
+
+  &__icon
+    @include flex-justify-align-center
+    height: 50px
+
+    svg
+      cursor: pointer
+
+  &__items
+    @include flex-column
+    align-items: center
+    gap: 16px
+    margin-top: 20px
+
+    &-add
+      cursor: pointer
+
+
