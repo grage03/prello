@@ -1,8 +1,7 @@
 import React from 'react'
 import { IScoreProps } from './interface/interface'
-import { UiIcon } from '../../../../../../../core/components/ui-components'
-import { FullStar } from '../../../../../../../assets/icon/app/fullStar'
-import { HalfEmptyStar } from '../../../../../../../assets/icon/app/halfEmptyStar'
+import { UiIcon } from '../../../../../../../core/components'
+import { FullStar, HalfEmptyStar } from '../../../../../../../assets/icon'
 
 export const Score = ({ score }: IScoreProps) => {
   return (

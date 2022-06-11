@@ -1,10 +1,9 @@
 import React from 'react'
 
 import styles from './style/styles.module.sass'
-import { UiIcon } from '../../../../../core/components/ui-components'
-import { SecondMenu } from '../../../../../assets/icon/border/SecondMenu'
-import { BoardGroup } from '../../../../components/BoardGroup'
-import { AddBoard } from '../../../../../assets/icon/border/AddBoard'
+import { UiIcon } from '../../../../../core/components'
+import { SecondMenu, AddBoard } from '../../../../../assets/icon'
+import { BoardGroup } from '../../../../components'
 
 const boardGroupsPlaceholder = [
   {

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { ILoginForm } from './interface'
-import { UiButton, UiFormGroup, UiInput } from '../../../../../../../core/components/ui-components'
+import { UiButton, UiFormGroup, UiInput } from '../../../../../../../core/components'
 
 import styles from './style/styles.module.sass'
 import { schema } from './schema'

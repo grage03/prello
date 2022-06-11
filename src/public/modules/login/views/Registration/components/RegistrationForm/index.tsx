@@ -8,7 +8,7 @@ import {
   UiFormGroup,
   UiInput,
   UiCheckBox,
-} from '../../../../../../../core/components/ui-components'
+} from '../../../../../../../core/components'
 
 import styles from './style/styles.module.sass'
 import { schema } from './schema'
