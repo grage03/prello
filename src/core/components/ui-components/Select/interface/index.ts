@@ -3,4 +3,5 @@ export interface ISelectProps {
   selectItems: string[],
   // TODO: move to type
   onClickItem(item: string): void
+  customAttributes: object
 }

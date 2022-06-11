@@ -36,7 +36,7 @@ export const Footer = () => {
   }
 
   return (
-    <footer className={styles['footer']}>
+    <footer className={styles['footer']} data-test-id="footer">
       <div className={styles['footer__description']}>
         <div className={styles['footer__description-logo']}>
           <div className={styles['footer__description-language']}>
@@ -45,6 +45,9 @@ export const Footer = () => {
               label={storage.getItem('i18nextLng')}
               selectItems={[ 'en', 'ru' ]}
               onClickItem={changeLocale}
+              customAttributes={{
+                'data-test-id': 'change-language',
+              }}
             />
           </div>
           <p className={styles['footer__description-text']}>

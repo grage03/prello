@@ -4,12 +4,12 @@ import { useTranslation } from 'react-i18next'
 import classNames from 'classnames'
 
 import { UserWrapper } from './components/UserWrapper'
-import { LogoIcon } from '../../../../assets/icon/app/logo'
+import { LogoIcon } from '../../../../assets/icon'
 import { UiIcon } from '../../ui-components'
 
 import styles from './style/styles.module.sass'
 import { navigationOptions } from './enums'
-import { Anchor } from '../../app/Anchor'
+import { Anchor } from '../../app'
 import { IHeader } from './interface'
 
 const BurgerMenu = React.lazy(() => import('./components/Burger'))
@@ -31,7 +31,7 @@ export const Header = ({ shadow = true }: IHeader) => {
   }
 
   return (
-    <header className={classes}>
+    <header className={classes} data-test-id="header">
       <div className={styles['header__logo']}>
         {isPublicPage && (
           <div className={styles['header__burger']}>
@@ -47,7 +47,7 @@ export const Header = ({ shadow = true }: IHeader) => {
           <ul>
             {
               navigationOptions.map((item) => (
-                <li key={item.option} className={styles['header__navigation-item']}>
+                <li key={item.option} className={styles['header__navigation-item']} data-test-id={`${item.option}`}>
                   <Anchor anchor={item.option}>{t(item.name)}</Anchor>
                 </li>
               ))

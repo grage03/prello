@@ -16,7 +16,9 @@ export const PublicHelp = () => {
   return (
     <div className={styles['help-teams']}>
       <div className={styles['help-teams__interaction']}>
-        <h1 className={styles['help-teams__title']}>{t('translation:public-teams-title')}</h1>
+        <h1 className={styles['help-teams__title']} data-test-id="team-help">
+          {t('translation:public-teams-title')}
+        </h1>
         <Sparks position={sparksPosition}>
           <p className={styles['help-teams__description']}>{t('translation:public-teams-description')}</p>
         </Sparks>
