@@ -1,8 +1,6 @@
 import React from 'react'
 import styles from './style/styles.module.sass'
-import { BoardName } from './components/BoardName'
-import { BoardFilters } from './components/BoardFilters'
-import { BoardMenu } from './components/BoardMenu'
+import { BoardMenu, BoardName, BoardFilters } from './components'
 
 export const SubHeader = () => {
   return (

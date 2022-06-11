@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
-import { UiLink } from '../../../../../core/components/ui-components'
+import { UiLink } from '../../../../../core/components'
 
 const reviewsPlaceholder = [
   {

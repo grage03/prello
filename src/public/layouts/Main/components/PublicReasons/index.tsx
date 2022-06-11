@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { reasons } from './enum'
 
 import styles from './style/styles.module.sass'
-import { UiImage, UiLink } from '../../../../../core/components/ui-components'
+import { UiImage, UiLink } from '../../../../../core/components'
 import { Sparks } from '../../../../components'
 
 const sparksPosition = {

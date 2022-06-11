@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
-import { UiImage } from '../../../../../core/components/ui-components'
+import { UiImage } from '../../../../../core/components'
 import { Sparks } from '../../../../components'
 
 const sparksPosition = {

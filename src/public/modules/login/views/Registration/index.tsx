@@ -1,5 +1,5 @@
 import React from 'react'
-import { AuthWrapper } from '../../components/AuthWrapper'
+import { AuthWrapper } from '../../components'
 import { RegistrationForm } from './components/RegistrationForm'
 
 export const RegistrationPage = () => {

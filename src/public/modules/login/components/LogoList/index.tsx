@@ -1,6 +1,6 @@
 import React from 'react'
 import { logoList } from './enums'
-import { UiLogo } from '../../../../../core/components/ui-components'
+import { UiLogo } from '../../../../../core/components'
 
 import styles from './style/styles.module.sass'
 

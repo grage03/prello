@@ -2,8 +2,8 @@ import React from 'react'
 import i18n from 'i18next'
 
 import styles from './style/styles.module.sass'
-import { LogoIcon } from '../../../assets/icon/app/logo'
-import { UiIcon, UiSelect } from '../../../core/components/ui-components'
+import { LogoIcon } from '../../../assets/icon'
+import { UiIcon, UiSelect } from '../../../core/components'
 import { Storage } from '../../../core/lib/utilities/storage'
 import { KeyType } from './interface'
 
