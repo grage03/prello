@@ -31,9 +31,11 @@ export const Sparks = ({
 
   return (
     // TODO: add name
-    <div style={{ position: 'relative' }}>
-      {children}
-      <div className={styles['sparks']} style={initStyles()}>
+    <div>
+      <div className={styles['sparks-children']}>
+        {children}
+      </div>
+      <div className={styles['sparks-element']} style={initStyles()}>
         <div className={styles['sparks__item']} />
         {quantity > 1 && <div className={styles['sparks__item']} />}
         {quantity > 2 && <div className={styles['sparks__item']} />}
