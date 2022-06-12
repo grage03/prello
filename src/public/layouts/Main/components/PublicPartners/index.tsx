@@ -15,7 +15,7 @@ export const PublicPartners = () => {
   const { t } = useTranslation()
 
   return (
-    <div className="partners" id="partners">
+    <div className="partners" id="partners" data-test-id="public-partners">
       <div className={styles['partners__title']} data-aos="fade-right" data-aos-duration="1000">
         <Sparks size="small" position={sparksPosition} rotate={120}>
           <h2>{t('translation:public-partners-title')}</h2>

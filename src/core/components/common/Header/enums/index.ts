@@ -1,4 +1,4 @@
-import { Reasons, Partners, Reviews } from '../../../../../assets/icon/app/burger-menu'
+import { Reasons, Partners, Reviews } from '../../../../../assets/icon'
 
 export const navigationOptions = [
   { name: 'public-header-reasons', option: 'reasons', icon: Reasons },

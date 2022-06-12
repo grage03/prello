@@ -31,7 +31,7 @@ export const PublicAssessment = () => {
   const { t } = useTranslation()
 
   return (
-    <div className={styles['assessment']}>
+    <div className={styles['assessment']} data-test-id="public-assessment">
       <div className={styles['assessment__title']} data-aos="zoom-in" data-aos-duration="1500">
         <h2>{t('translation:public-assessment-title')}</h2>
         <h4>{t('translation:public-assessment-subtitle')}</h4>

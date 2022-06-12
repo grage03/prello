@@ -17,7 +17,7 @@ export const PublicReasons = () => {
   const titleRef = useRef(null)
 
   return (
-    <div className="reasons" id="reasons">
+    <div className="reasons" id="reasons" data-test-id="public-reasons">
       <div className="reasons__title" ref={titleRef} data-aos="fade-up" data-aos-duration="1000">
         <Sparks quantity={2} size="small" position={sparksPosition} rotate={65}>
           <h2 className={styles['reasons__title-text']}>{t('translation:public-reasons-title')}</h2>

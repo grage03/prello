@@ -15,10 +15,10 @@ export const ScrollItem = () => {
 
   if (y < 300 || isMobile) return null
   return (
-    <div className={styles['scroll-item']} onClick={moveToTop}>
+    <div className={styles['scroll-item']} onClick={moveToTop} data-test-id="scroll-item">
       <div className={styles['scroll-item__arrow']}>
         {Array.from([ ...Array(3) ].keys()).map((item) => (
-          <span />
+          <span key={item} />
         ))}
       </div>
     </div>

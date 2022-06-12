@@ -3,7 +3,12 @@ import { ISelectProps } from './interface'
 import './style/style.sass'
 
 // TODO add animation, add the ability to close when clicking outside the component, also the arrow icon
-export const UiSelect = ({ label, selectItems, onClickItem }: ISelectProps) => {
+export const UiSelect = ({
+  label,
+  selectItems,
+  onClickItem,
+  customAttributes,
+}: ISelectProps) => {
   const [ selectItem, setSelectItem ] = useState(label)
   const [ classes, setClasses ] = useState('select__label')
   const [ isActive, setIsActive ] = useState(false)
@@ -20,7 +25,7 @@ export const UiSelect = ({ label, selectItems, onClickItem }: ISelectProps) => {
   }
 
   return (
-    <div className="select">
+    <div className="select" {...customAttributes}>
       <div className={classes} onClick={onClickSelect}>
         <p>{ selectItem || selectItems[0] }</p>
       </div>
