@@ -8,7 +8,7 @@ import { UiImage, UiLink } from '../../../../../core/components'
 import { Sparks } from '../../../../components'
 
 const sparksPosition = {
-  bottom: '80px',
+  bottom: '100px',
   right: '0px',
 }
 
