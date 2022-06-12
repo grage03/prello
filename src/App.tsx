@@ -2,7 +2,7 @@ import React, { createContext, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './core/lib/locale/config'
 
-import { Loader, NotFound } from './core/components/common'
+import { Loader, NotFound } from './core/components'
 
 import './assets/styles/main.sass'
 import { User } from './domain/user/store'
