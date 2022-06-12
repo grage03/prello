@@ -4,8 +4,14 @@ import { IAnchorProps } from './interface'
 import './style/styles.sass'
 
 export const Anchor = ({ children, anchor }: IAnchorProps) => {
+  const onClickAnchor = () => {
+    const element = document.getElementById(anchor)
+
+    element?.scrollIntoView({ block: 'center' })
+  }
+
   return (
-    <a href={`#${anchor}`} className="anchor">
+    <a onClick={onClickAnchor} className="anchor">
       {children}
     </a>
   )

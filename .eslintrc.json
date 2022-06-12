@@ -65,7 +65,8 @@
         "no-nested-ternary": "off",
         "no-shadow": "off",
         "no-unused-vars": "off",
-        "import/no-cycle": "off"
+        "import/no-cycle": "off",
+        "jsx-a11y/anchor-is-valid": "off"
     },
     "settings": {
         "import/parsers": {
