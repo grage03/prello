@@ -33,7 +33,7 @@ export const PublicPage = () => {
         <title>{t('translation:meta-public-title')}</title>
         <meta name="description" content={t('translation:meta-public-description')} />
       </Helmet>
-      <div className="public-wrapper">
+      <div className="public-wrapper" data-test-id="public-main">
         <ScrollItem />
         <PublicHelp />
         <PublicReasons />

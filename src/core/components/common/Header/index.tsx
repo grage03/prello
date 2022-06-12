@@ -11,6 +11,7 @@ import styles from './style/styles.module.sass'
 import { navigationOptions } from './enums'
 import { Anchor } from '../../app'
 import { IHeader } from './interface'
+import { useMatchMedia } from '../../../hooks'
 
 const BurgerMenu = React.lazy(() => import('./components/Burger'))
 
@@ -18,6 +19,7 @@ export const Header = ({ shadow = true }: IHeader) => {
   const navigate = useNavigate()
   const { pathname } = useLocation()
   const { t } = useTranslation()
+  const { isMobile } = useMatchMedia()
   const isPublicPage = pathname === '/'
 
   const classes = classNames({
@@ -33,8 +35,8 @@ export const Header = ({ shadow = true }: IHeader) => {
   return (
     <header className={classes} data-test-id="header">
       <div className={styles['header__logo']}>
-        {isPublicPage && (
-          <div className={styles['header__burger']}>
+        {isPublicPage && isMobile && (
+          <div className={styles['header__burger']} data-test-id="burger-menu">
             <BurgerMenu />
           </div>
         )}

@@ -14,7 +14,7 @@ export const PublicHelp = () => {
   const { t } = useTranslation()
 
   return (
-    <div className={styles['help-teams']}>
+    <div className={styles['help-teams']} data-test-id="public-help">
       <div className={styles['help-teams__interaction']}>
         <h1 className={styles['help-teams__title']} data-test-id="team-help">
           {t('translation:public-teams-title')}
