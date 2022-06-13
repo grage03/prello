@@ -20,9 +20,11 @@ export const PublicReasons = () => {
     <div className="reasons" id="reasons" data-test-id="public-reasons">
       <div className="reasons__title" ref={titleRef} data-aos="fade-up" data-aos-duration="1000">
         <Sparks quantity={2} size="small" position={sparksPosition} rotate={65}>
-          <h2 className={styles['reasons__title-text']}>{t('translation:public-reasons-title')}</h2>
+          <>
+            <h2 className={styles['reasons__title-text']}>{t('translation:public-reasons-title')}</h2>
+            <h4 className={styles['reasons__title-description']}>{t('translation:public-reasons-description')}</h4>
+          </>
         </Sparks>
-        <h4 className={styles['reasons__title-description']}>{t('translation:public-reasons-description')}</h4>
       </div>
       <div className={styles['reasons__list']}>
         {
