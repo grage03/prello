@@ -67,7 +67,9 @@
         "no-unused-vars": "off",
         "import/no-cycle": "off",
         "jsx-a11y/anchor-is-valid": "off",
-        "no-unused-expressions": "off"
+        "no-unused-expressions": "off",
+        "import/no-extraneous-dependencies": "off",
+        "react/require-default-props": "off"
     },
     "settings": {
         "import/parsers": {
