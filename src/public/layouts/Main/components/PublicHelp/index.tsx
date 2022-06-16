@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
-import { UiImage } from '../../../../../core/components'
+import { Image } from '../../../../../core/components'
 import { Sparks } from '../../../../components'
 
 const sparksPosition = {
@@ -22,15 +22,15 @@ export const PublicHelp = () => {
         <Sparks position={sparksPosition}>
           <p className={styles['help-teams__description']}>{t('translation:public-teams-description')}</p>
         </Sparks>
-        { /*<UiInput*/ }
+        { /*<Input*/ }
         {/*  placeholder={t('translation:input-email')}*/}
         {/*  type="email"*/}
         {/*>*/}
-        {/*  <UiButton description={t('translation:user-join')} onClick={onUserClickButton} key="button"/>*/}
-        {/*</UiInput>*/}
+        {/*  <Button description={t('translation:user-join')} onClick={onUserClickButton} key="button"/>*/}
+        {/*</Input>*/}
       </div>
       <div className={styles['help-teams__image']}>
-        <UiImage src="helpTeams" width="480px" />
+        <Image src="helpTeams" width="480px" />
       </div>
     </div>
   )

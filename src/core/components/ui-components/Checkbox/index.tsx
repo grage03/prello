@@ -1,14 +1,14 @@
 import React from 'react'
-import { IUiCheckBoxProps } from './interface'
+import { ICheckBoxProps } from './interface'
 
 import './style/styles.sass'
 
-export const UiCheckBox = ({
+export const Checkbox = ({
   label,
   required,
   register,
   placeholder,
-}: IUiCheckBoxProps) => {
+}: ICheckBoxProps) => {
   return (
     <div>
       <input id={label} type="checkbox" {...register(label, { required })} />

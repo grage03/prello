@@ -5,7 +5,7 @@ import { IButtonProps } from './interface'
 
 import styles from './style/styles.module.sass'
 
-export const UiButton = ({
+export const Button = ({
   description,
   transparent,
   onClick,

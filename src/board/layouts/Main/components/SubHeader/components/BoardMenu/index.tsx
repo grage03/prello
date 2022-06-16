@@ -1,13 +1,13 @@
 import React from 'react'
-import { UiIcon } from '../../../../../../../core/components/ui-components'
-import { Menu } from '../../../../../../../assets/icon/border/Menu'
+import { Icon } from '../../../../../../../core/components'
+import { Menu } from '../../../../../../../assets/icon'
 
 import styles from './style/styles.module.sass'
 
 export const BoardMenu = () => {
   return (
     <section className={styles['board-menu']}>
-      <UiIcon icon={<Menu />} />
+      <Icon icon={<Menu />} />
     </section>
   )
 }

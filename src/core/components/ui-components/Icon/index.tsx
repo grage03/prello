@@ -1,9 +1,9 @@
 import React from 'react'
-import { IUiIconProps } from './interface'
+import { IIconProps } from './interface'
 
-export const UiIcon = ({
+export const Icon = ({
   viewBox = "0 0 24 24", icon, size = 24, fill = 'fillColor',
-}: IUiIconProps) => {
+}: IIconProps) => {
   return (
     <svg
       width={size}

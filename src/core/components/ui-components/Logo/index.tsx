@@ -1,11 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
-import { IUiLogoProps } from './interface'
-import { UiImage } from '../Image'
+import { ILogoProps } from './interface'
+import { Image } from '../Image'
 import styles from './style/styles.module.sass'
 
-export const UiLogo = ({ logo, size, to }: IUiLogoProps) => {
+export const Logo = ({ logo, size, to }: ILogoProps) => {
   const classes = classNames({
     [styles['logo']]: true,
     [styles['logo--small']]: size === "small",
@@ -25,7 +25,7 @@ export const UiLogo = ({ logo, size, to }: IUiLogoProps) => {
 
   return (
     <div className={classes} onClick={onUserClickLogo}>
-      <UiImage src={logo} noRadius width={imgSize()} />
+      <Image src={logo} noRadius width={imgSize()} />
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
-import { UiIcon } from '../../../../ui-components'
+import { Icon } from '../../../../ui-components'
 import { navigationOptions } from '../../enums'
 import { Anchor } from '../../../../app'
 import { useClickOutside } from '../../../../../hooks'
@@ -40,7 +40,7 @@ const Burger = () => {
                     navigationOptions.map((item) => (
                       <div className={styles['burger__navigation-item']} key={item.option}>
                         <div className={styles['burger__navigation-icon']}>
-                          <UiIcon icon={<item.icon />} size={24} viewBox="0 0 16 16" fill="none" />
+                          <Icon icon={<item.icon />} size={24} viewBox="0 0 16 16" fill="none" />
                         </div>
                         <li
                           key={item.option}

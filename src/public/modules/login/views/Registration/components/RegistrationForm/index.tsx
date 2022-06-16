@@ -4,10 +4,10 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { useTranslation } from 'react-i18next'
 import { IRegistrationForm } from './interface'
 import {
-  UiButton,
-  UiFormGroup,
-  UiInput,
-  UiCheckBox,
+  Button,
+  FormGroup,
+  Input,
+  Checkbox,
 } from '../../../../../../../core/components'
 
 import styles from './style/styles.module.sass'
@@ -27,34 +27,34 @@ export const RegistrationForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles['registration-form']}>
-      <UiFormGroup label={t('translation:input-email')} error={errors.email}>
-        <UiInput
+      <FormGroup label={t('translation:input-email')} error={errors.email}>
+        <Input
           placeholder={t('translation:email-placeholder')}
           type="email"
           label="email"
           register={register}
         />
-      </UiFormGroup>
+      </FormGroup>
 
-      <UiFormGroup label={t('translation:input-password')} error={errors.password}>
-        <UiInput
+      <FormGroup label={t('translation:input-password')} error={errors.password}>
+        <Input
           placeholder={t('translation:password-placeholder')}
           type="password"
           label="password"
           register={register}
         />
-      </UiFormGroup>
+      </FormGroup>
 
-      <UiFormGroup label={t('translation:input-agree')} error={errors.isAgree}>
-        <UiCheckBox
+      <FormGroup label={t('translation:input-agree')} error={errors.isAgree}>
+        <Checkbox
           placeholder={t('translation:public-registration-agree')}
           label="isAgree"
           register={register}
         />
-      </UiFormGroup>
+      </FormGroup>
 
       <div className={styles['registration-form__submit']}>
-        <UiButton
+        <Button
           description={t('translation:public-registration')}
           width="100%"
           transparent

@@ -1,7 +1,7 @@
-export interface IUiLogoProps {
-  size?: LogoSize
+export interface ILogoProps {
+  size?: LogoSizeType
   logo: string
   to?: string | null
 }
 
-type LogoSize = 'small' | 'big'
+type LogoSizeType = 'small' | 'big'

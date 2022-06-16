@@ -1,23 +1,23 @@
-import { UiFormGroup } from './FormGroup'
-import { UiCheckBox } from './Checkbox'
-import { UiButton } from './Button'
-import { UiSelect } from './Select'
-import { UiImage } from './Image'
-import { UiInput } from './Input'
-import { UiHint } from './Hint'
-import { UiLink } from './Link'
-import { UiIcon } from './Icon'
-import { UiLogo } from './Logo'
+import { FormGroup } from './FormGroup'
+import { Checkbox } from './Checkbox'
+import { Button } from './Button'
+import { Select } from './Select'
+import { Image } from './Image'
+import { Input } from './Input'
+import { Hint } from './Hint'
+import { Link } from './Link'
+import { Icon } from './Icon'
+import { Logo } from './Logo'
 
 export {
-  UiFormGroup,
-  UiCheckBox,
-  UiSelect,
-  UiButton,
-  UiImage,
-  UiInput,
-  UiHint,
-  UiLink,
-  UiIcon,
-  UiLogo,
+  FormGroup,
+  Checkbox,
+  Select,
+  Button,
+  Image,
+  Input,
+  Hint,
+  Link,
+  Icon,
+  Logo,
 }

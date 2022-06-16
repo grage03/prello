@@ -5,7 +5,7 @@ import classNames from 'classnames'
 
 import { UserWrapper } from './components/UserWrapper'
 import { LogoIcon } from '../../../../assets/icon'
-import { UiIcon } from '../../ui-components'
+import { Icon } from '../../ui-components'
 
 import styles from './style/styles.module.sass'
 import { navigationOptions } from './enums'
@@ -41,7 +41,7 @@ export const Header = ({ shadow = true }: IHeader) => {
           </div>
         )}
         <div className={styles['header__logo-icon']} onClick={onUserClickLogo}>
-          <UiIcon size={60} viewBox="0 0 80 80" icon={<LogoIcon />} />
+          <Icon size={60} viewBox="0 0 80 80" icon={<LogoIcon />} />
         </div>
       </div>
       {isPublicPage && (

@@ -1,6 +1,4 @@
-import { Filter } from '../../../../../../../../assets/icon/border/Filter'
-import { Sort } from '../../../../../../../../assets/icon/border/Sort'
-import { Search } from '../../../../../../../../assets/icon/border/Search'
+import { Filter, Sort, Search } from '../../../../../../../../assets/icon'
 
 export const filters = [
   {

@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 
-export interface IUiHintProps {
+export interface IHintProps {
   children: ChildrenType
   title?: string
   description: string

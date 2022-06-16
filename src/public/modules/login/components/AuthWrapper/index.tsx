@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
-import { UiImage } from '../../../../../core/components'
+import { Image } from '../../../../../core/components'
 import { IAuthWrapperProps, pageInformationType } from './interface'
 
 import styles from './style/styles.module.sass'
@@ -31,7 +31,7 @@ export const AuthWrapper = ({ children }: IAuthWrapperProps) => {
       </Helmet>
       <div className={styles['authorization']}>
         <div className={styles['authorization__img']}>
-          <UiImage src={pageInformation.page} width="60%" />
+          <Image src={pageInformation.page} width="60%" />
         </div>
         <div className={styles['authorization__interaction']}>
           <h2 className={styles['authorization__title']}>{t(`translation:public-${pageInformation.page}`)}</h2>

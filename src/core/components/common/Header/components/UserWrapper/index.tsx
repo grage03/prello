@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { observer } from 'mobx-react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
-import { UiButton } from '../../../../ui-components'
+import { Button } from '../../../../ui-components'
 import { AppContext } from '../../../../../../App'
 
 export const UserWrapper = observer(() => {
@@ -22,7 +22,7 @@ export const UserWrapper = observer(() => {
       {
         userStore.profile
           ? <h3>{userStore.profile.email}</h3>
-          : <UiButton description={t(`translation:user-login`)} onClick={onUserLogin} />
+          : <Button description={t(`translation:user-login`)} onClick={onUserLogin} />
       }
     </div>
   )
