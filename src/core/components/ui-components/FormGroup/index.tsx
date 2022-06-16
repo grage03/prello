@@ -1,15 +1,15 @@
 import React from 'react'
-import { IUiFormGroupProps } from './interface'
+import { IFormGroupProps } from './interface'
 
 import styles from './style/styles.module.sass'
 import { Error } from './components/Error'
 
 // TODO: delete memo
-export const UiFormGroup = React.memo(({
+export const FormGroup = React.memo(({
   label,
   children,
   error,
-}: IUiFormGroupProps) => {
+}: IFormGroupProps) => {
   return (
     <div className={styles['form-group']}>
       <Error error={error} />

@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
-import { UiLink } from '../../../../../core/components'
+import { Link } from '../../../../../core/components'
 
 const reviewsPlaceholder = [
   {
@@ -32,7 +32,7 @@ export const PublicReviews = () => {
     <div className={styles['people-reviews']} id="reviews" data-test-id="public-reviews">
       <div className={styles['people-reviews__interactions']} data-aos="fade-up" data-aos-duration="1000">
         <h2>{t('translation:public-reviews-title')}</h2>
-        <UiLink>{t('translation:see-more')}</UiLink>
+        <Link>{t('translation:see-more')}</Link>
       </div>
       <div className={styles['people-reviews__list']}>
         {

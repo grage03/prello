@@ -4,11 +4,11 @@ import classNames from 'classnames'
 
 import styles from './style/styles.module.sass'
 
-import { IUiLinkProps } from './interface'
+import { ILinkProps } from './interface'
 
-export const UiLink = ({
+export const Link = ({
   to, isArrow, isUnderline, children,
-}: IUiLinkProps) => {
+}: ILinkProps) => {
   const classes = classNames({
     [styles['link']]: true,
     [styles['link--underline']]: isUnderline,

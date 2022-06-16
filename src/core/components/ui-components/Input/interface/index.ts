@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 import { UseFormRegister } from 'react-hook-form'
 
-export interface IUiInputProps {
+export interface IInputProps {
   placeholder: string
   type: InputTypes
   label: string

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { reasons } from './enum'
 
 import styles from './style/styles.module.sass'
-import { UiImage, UiLink } from '../../../../../core/components'
+import { Image, Link } from '../../../../../core/components'
 import { Sparks } from '../../../../components'
 
 const sparksPosition = {
@@ -36,12 +36,12 @@ export const PublicReasons = () => {
               data-aos-duration="1500"
             >
               <div className={styles['reasons__item-image']}>
-                <UiImage src={item.img} />
+                <Image src={item.img} />
               </div>
               <div className={styles['reasons__item-description']}>
                 <h4 className={styles['reasons__item-title']}>{item.title}</h4>
                 <p className={styles['reasons__item-text']}>{item.description}</p>
-                <UiLink>{t('translation:user-more')}</UiLink>
+                <Link>{t('translation:user-more')}</Link>
               </div>
             </div>
           ))

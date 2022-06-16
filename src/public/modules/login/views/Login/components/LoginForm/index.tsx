@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { ILoginForm } from './interface'
-import { UiButton, UiFormGroup, UiInput } from '../../../../../../../core/components'
+import { Button, FormGroup, Input } from '../../../../../../../core/components'
 
 import styles from './style/styles.module.sass'
 import { schema } from './schema'
@@ -22,25 +22,25 @@ export const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles['login-form']}>
-      <UiFormGroup label={t('translation:input-email')} error={errors.email}>
-        <UiInput
+      <FormGroup label={t('translation:input-email')} error={errors.email}>
+        <Input
           placeholder={t('translation:email-placeholder')}
           type="email"
           label="email"
           register={register}
         />
-      </UiFormGroup>
+      </FormGroup>
 
-      <UiFormGroup label={t('translation:input-password')} error={errors.password}>
-        <UiInput
+      <FormGroup label={t('translation:input-password')} error={errors.password}>
+        <Input
           placeholder={t('translation:password-placeholder')}
           type="password"
           label="password"
           register={register}
         />
-      </UiFormGroup>
+      </FormGroup>
 
-      <UiButton description={t('translation:public-login')} width="100%" type="submit" />
+      <Button description={t('translation:public-login')} width="100%" type="submit" />
     </form>
   )
 }

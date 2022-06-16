@@ -1,6 +1,6 @@
 import React from 'react'
 import { logoList } from './enums'
-import { UiLogo } from '../../../../../core/components'
+import { Logo } from '../../../../../core/components'
 
 import styles from './style/styles.module.sass'
 
@@ -9,7 +9,7 @@ export const LogoList = () => {
     <div className={styles['logo-list']}>
       {
         logoList.map((item, index) => (
-          <UiLogo logo={item.logo} key={index} size="small" />
+          <Logo logo={item.logo} key={index} size="small" />
         ))
       }
     </div>

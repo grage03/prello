@@ -3,7 +3,7 @@ import i18n from 'i18next'
 
 import styles from './style/styles.module.sass'
 import { LogoIcon } from '../../../assets/icon'
-import { UiIcon, UiSelect } from '../../../core/components'
+import { Icon, Select } from '../../../core/components'
 import { Storage } from '../../../core/lib/utilities/storage'
 import { KeyType } from './interface'
 
@@ -40,8 +40,8 @@ export const Footer = () => {
       <div className={styles['footer__description']}>
         <div className={styles['footer__description-logo']}>
           <div className={styles['footer__description-language']}>
-            <UiIcon size={60} viewBox="0 0 70 70" icon={<LogoIcon />} />
-            <UiSelect
+            <Icon size={60} viewBox="0 0 70 70" icon={<LogoIcon />} />
+            <Select
               label={storage.getItem('i18nextLng')}
               selectItems={[ 'en', 'ru' ]}
               onClickItem={changeLocale}

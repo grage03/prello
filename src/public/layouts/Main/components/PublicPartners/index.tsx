@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
 import { partners } from './enum'
-import { UiLogo } from '../../../../../core/components'
+import { Logo } from '../../../../../core/components'
 import { Sparks } from '../../../../components'
 
 const sparksPosition = {
@@ -26,7 +26,7 @@ export const PublicPartners = () => {
         {
           partners.map((item, index) => (
             <div data-aos="zoom-in" data-aos-duration={`${index}000`} key={index}>
-              <UiLogo logo={item.img} />
+              <Logo logo={item.img} />
             </div>
           ))
         }

@@ -3,7 +3,7 @@ import { ISelectProps } from './interface'
 import './style/style.sass'
 
 // TODO add animation, add the ability to close when clicking outside the component, also the arrow icon
-export const UiSelect = ({
+export const Select = ({
   label,
   selectItems,
   onClickItem,

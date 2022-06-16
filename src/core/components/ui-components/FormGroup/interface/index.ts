@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 
-export interface IUiFormGroupProps {
+export interface IFormGroupProps {
   error: any
   label?: string
   children?: ReactElement

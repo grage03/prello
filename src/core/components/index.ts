@@ -1,21 +1,21 @@
-// APP
+/* APP */
 import { Anchor, Layout, Component } from './app'
 
-// COMMON
+/* COMMON */
 import { Header, NotFound, Loader } from './common'
 
-// UI
+/* UI */
 import {
-  UiButton,
-  UiCheckBox,
-  UiFormGroup,
-  UiHint,
-  UiIcon,
-  UiImage,
-  UiInput,
-  UiLink,
-  UiLogo,
-  UiSelect,
+  Button,
+  Checkbox,
+  FormGroup,
+  Hint,
+  Icon,
+  Image,
+  Input,
+  Link,
+  Logo,
+  Select,
 } from './ui-components'
 
 export {
@@ -25,14 +25,14 @@ export {
   Header,
   NotFound,
   Loader,
-  UiButton,
-  UiCheckBox,
-  UiFormGroup,
-  UiHint,
-  UiIcon,
-  UiImage,
-  UiInput,
-  UiLink,
-  UiLogo,
-  UiSelect,
+  Button,
+  Checkbox,
+  FormGroup,
+  Hint,
+  Icon,
+  Image,
+  Input,
+  Link,
+  Logo,
+  Select,
 }

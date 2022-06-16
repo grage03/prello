@@ -1,4 +1,4 @@
-export interface IUiLinkProps {
+export interface ILinkProps {
   to?: string
   isUnderline?: boolean
   isArrow?: boolean
