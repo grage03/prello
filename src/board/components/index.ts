@@ -1,3 +1,1 @@
-import { BoardGroup } from './BoardGroup'
-
-export { BoardGroup }
+export * from './BoardGroup'

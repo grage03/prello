@@ -3,8 +3,7 @@ import i18n from 'i18next'
 
 import styles from './style/styles.module.sass'
 import { LogoIcon } from '../../../assets/icon'
-import { Icon, Select } from '../../../core/components'
-import { Storage } from '../../../core/lib/utilities/storage'
+import { Icon, Select, Storage } from '../../../core'
 import { KeyType } from './interface'
 
 const servicesPlaceholder = [

@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
-import { Image } from '../../../../../core/components'
+import { Image } from '../../../../../core'
 import { Sparks } from '../../../../components'
 
 const sparksPosition = {

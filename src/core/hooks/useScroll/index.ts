@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { debounce } from '../../lib/utilities/functions'
+import { debounce } from '../../lib'
 import { useMatchMedia } from '../useMatchMedia'
 import { IPosition, IUseScrollReturn } from './interface'
 

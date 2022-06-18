@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon } from '../../../../../../../core/components'
+import { Icon } from '../../../../../../../core'
 import { Menu } from '../../../../../../../assets/icon'
 
 import styles from './style/styles.module.sass'

@@ -5,7 +5,7 @@ import {
   IPostUserRegistrationProps,
   IPostUserRegistrationReturn,
 } from '../interface'
-import { Storage } from '../../../core/lib/utilities/storage'
+import { Storage } from '../../../core'
 
 export const getUsersList = async () => {
   const response = await getUsers()

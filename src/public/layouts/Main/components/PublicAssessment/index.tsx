@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
-import { Score } from './components/Score'
+import { Score } from './components'
 
 const assessmentPlaceholder = [
   {

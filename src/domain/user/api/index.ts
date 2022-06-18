@@ -1,4 +1,4 @@
-import { apiClient } from '../../../core/lib/api'
+import { apiClient } from '../../../core'
 import { IPostUserLoginProps, IPostUserRegistrationProps } from '../interface'
 
 export const getUsers = async () => {

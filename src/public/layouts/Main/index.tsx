@@ -16,7 +16,7 @@ import {
   PublicPartners,
 } from './components'
 import { ScrollItem } from '../../components'
-import { scrollToTop } from '../../../core/lib/utilities/functions'
+import { scrollToTop } from '../../../core'
 
 export const PublicPage = () => {
   const { t } = useTranslation()

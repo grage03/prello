@@ -1,5 +1,3 @@
-import { Loader } from './Loader'
-import { NotFound } from './NotFound'
-import { Header } from './Header'
-
-export { Loader, NotFound, Header }
+export * from './Loader'
+export * from './NotFound'
+export * from './Header'

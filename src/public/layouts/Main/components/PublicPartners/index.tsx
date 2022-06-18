@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
 import { partners } from './enum'
-import { Logo } from '../../../../../core/components'
+import { Logo } from '../../../../../core'
 import { Sparks } from '../../../../components'
 
 const sparksPosition = {

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styles from './style/styles.module.sass'
-import { useScroll } from '../../../core/hooks'
+import { useScroll } from '../../../core'
 
 export const ScrollItem = () => {
   const { y, isMobile } = useScroll()
