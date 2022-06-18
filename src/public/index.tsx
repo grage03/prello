@@ -1,10 +1,9 @@
 import React, { createContext } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Footer } from './components'
-import { Layout } from '../core/components/app/Layout'
-import { LoginPage, RegistrationPage } from './modules/login/views'
-import { PublicPage } from './layouts/Main'
-import { Header } from '../core/components/common'
+import { Layout, Header } from '../core'
+import { LoginPage, RegistrationPage } from './modules'
+import { PublicPage } from './layouts'
 import '../assets/styles/_helpers.sass'
 
 const contextStore = {}

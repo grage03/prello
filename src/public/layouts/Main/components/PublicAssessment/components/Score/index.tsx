@@ -1,6 +1,6 @@
 import React from 'react'
 import { IScoreProps } from './interface/interface'
-import { Icon } from '../../../../../../../core/components'
+import { Icon } from '../../../../../../../core'
 import { FullStar, HalfEmptyStar } from '../../../../../../../assets/icon'
 
 export const Score = ({ score }: IScoreProps) => {

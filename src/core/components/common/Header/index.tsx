@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import classNames from 'classnames'
 
-import { UserWrapper } from './components/UserWrapper'
+import { UserWrapper } from './components'
 import { LogoIcon } from '../../../../assets/icon'
 import { Icon } from '../../ui-components'
 

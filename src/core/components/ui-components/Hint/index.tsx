@@ -9,7 +9,11 @@ export const Hint = ({ children, title, description }: IHintProps) => {
 
   return (
     <div className="hint">
-      <div className="hint__trigger" onMouseOver={() => setIsHovered(true)} onMouseOut={() => setIsHovered(false)}>
+      <div
+        className="hint__trigger"
+        onMouseOver={() => setIsHovered(true)}
+        onMouseOut={() => setIsHovered(false)}
+      >
         <h1 className="hint__trigger--title">{slots.trigger}</h1>
       </div>
       {isHovered && (

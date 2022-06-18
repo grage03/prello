@@ -3,11 +3,11 @@ import { useTranslation } from 'react-i18next'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { ILoginForm } from './interface'
-import { Button, FormGroup, Input } from '../../../../../../../core/components'
+import { Button, FormGroup, Input } from '../../../../../../../core'
 
 import styles from './style/styles.module.sass'
 import { schema } from './schema'
-import { useLogin } from '../../hooks/useLogin'
+import { useLogin } from '../../hooks'
 
 export const LoginForm = () => {
   const { handleSubmit, register, formState: { errors } } = useForm<ILoginForm>({

@@ -1,6 +1,6 @@
 import React, { createContext } from 'react'
-import { Layout, Header } from '../core/components'
-import { BoardPage } from './layouts/Main'
+import { Layout, Header } from '../core'
+import { BoardPage } from './layouts'
 
 const contextStore = {}
 

@@ -1,9 +1,3 @@
-import { Footer } from './Footer'
-import { ScrollItem } from './ScrollItem'
-import { Sparks } from './Sparks'
-
-export {
-  Footer,
-  Sparks,
-  ScrollItem,
-}
+export * from './Sparks'
+export * from './Footer'
+export * from './ScrollItem'

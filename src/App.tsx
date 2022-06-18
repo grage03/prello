@@ -2,10 +2,10 @@ import React, { createContext, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './core/lib/locale/config'
 
-import { Loader, NotFound } from './core/components'
+import { Loader, NotFound } from './core'
 
 import './assets/styles/main.sass'
-import { User } from './domain/user/store'
+import { User } from './domain'
 
 const PublicRoute = React.lazy(() => import('./public'))
 const AdminRoute = React.lazy(() => import('./admin'))

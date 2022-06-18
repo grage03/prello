@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styles from './style/styles.module.sass'
-import { Icon } from '../../../../../core/components'
+import { Icon } from '../../../../../core'
 import { SecondMenu, AddBoard } from '../../../../../assets/icon'
 import { BoardGroup } from '../../../../components'
 

@@ -8,11 +8,11 @@ import {
   FormGroup,
   Input,
   Checkbox,
-} from '../../../../../../../core/components'
+} from '../../../../../../../core'
 
 import styles from './style/styles.module.sass'
 import { schema } from './schema'
-import { useRegistration } from '../../hooks/useRegistration'
+import { useRegistration } from '../../hooks'
 
 export const RegistrationForm = () => {
   const { handleSubmit, register, formState: { errors } } = useForm<IRegistrationForm>({

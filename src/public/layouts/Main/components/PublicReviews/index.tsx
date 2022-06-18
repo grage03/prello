@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
-import { Link } from '../../../../../core/components'
+import { Link } from '../../../../../core'
 
 const reviewsPlaceholder = [
   {

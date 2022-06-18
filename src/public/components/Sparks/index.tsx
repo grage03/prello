@@ -30,8 +30,7 @@ export const Sparks = ({
   }
 
   return (
-    // TODO: add name
-    <div>
+    <div className="sparks">
       <div className={styles['sparks-children']}>
         {children}
       </div>
