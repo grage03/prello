@@ -1,0 +1,38 @@
+.board-list
+  padding: 0 14px
+  width: 290px
+  height: calc(100vh - 66px)
+  background-color: white
+  border-right: 2px solid #F1F1F1
+
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    min-height: 50px
+
+  &__main
+    &-header
+      display: flex
+      justify-content: space-between
+
+    &-list
+      display: flex
+      flex-direction: column
+      gap: 16px
+      margin-top: 18px
+
+      &-item
+        display: flex
+        align-items: center
+
+        & > h4
+          margin-left: 12px
+
+      &-button
+        margin-top: 18px
+
+      & > div
+        display: flex
+        justify-content: space-between
+        align-items: center

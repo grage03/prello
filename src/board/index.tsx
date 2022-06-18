@@ -1,6 +1,7 @@
 import React, { createContext } from 'react'
 import { Layout, Header } from '../core'
 import { BoardPage } from './layouts'
+import './style/styles.sass'
 
 const contextStore = {}
 
@@ -10,7 +11,7 @@ const Board = () => {
   return (
     <Layout contextStore={contextStore} contextProvider={BoardContext}>
       <main className="board">
-        <Header shadow={false} />
+        <Header />
         <BoardPage />
       </main>
     </Layout>
