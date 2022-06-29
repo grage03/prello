@@ -5,10 +5,11 @@ import styles from './style/styles.module.sass'
 import { partners } from './enum'
 import { Logo } from '../../../../../core'
 import { Sparks } from '../../../../components'
+import { Sizes } from '../../../../components/Sparks/interface'
 
 const sparksPosition = {
-  top: '40px',
-  left: '20px',
+  top: 40,
+  left: 20,
 }
 
 export const PublicPartners = () => {
@@ -17,7 +18,7 @@ export const PublicPartners = () => {
   return (
     <div className="partners" id="partners" data-test-id="public-partners">
       <div className={styles['partners__title']} data-aos="fade-right" data-aos-duration="1000">
-        <Sparks size="small" position={sparksPosition} rotate={120}>
+        <Sparks size={Sizes.SMALL} position={sparksPosition} rotate={120}>
           <h2>{t('translation:public-partners-title')}</h2>
         </Sparks>
         <h4>{t('translation:public-partners-description')}</h4>

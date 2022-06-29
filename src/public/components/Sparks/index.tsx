@@ -1,31 +1,25 @@
 import React from 'react'
-import { ISparksProps } from './interface'
+import { ISparksProps, Sizes } from './interface'
 
 import styles from './style/styles.module.sass'
 
-const sizes = {
-  small: 0.4,
-  standard: 0.6,
-  big: 0.8,
-}
-
 const positionInit = {
-  top: '0',
-  right: '0',
-  bottom: '0',
-  left: '0',
+  top: 0,
+  right: 0,
+  bottom: 0,
+  left: 0,
 }
 
 export const Sparks = ({
-  quantity = 3, position = positionInit, size = 'standard', rotate = 0, children,
+  quantity = 3, position = positionInit, size = Sizes.STANDARD, rotate = 0, children,
 }: ISparksProps) => {
   const initStyles = () => {
     return {
-      transform: `scale(${sizes[size]}) rotate(${rotate}deg)`,
-      top: position.top,
-      right: position.right,
-      bottom: position.bottom,
-      left: position.left,
+      transform: `scale(${size}) rotate(${rotate}deg)`,
+      top: `${position.top}px`,
+      right: `${position.right}px`,
+      bottom: `${position.bottom}px`,
+      left: `${position.left}px`,
     }
   }
 

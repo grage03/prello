@@ -6,10 +6,10 @@ import { reasons } from './enum'
 import styles from './style/styles.module.sass'
 import { Image, Link } from '../../../../../core'
 import { Sparks } from '../../../../components'
+import { Sizes } from '../../../../components/Sparks/interface'
 
 const sparksPosition = {
-  bottom: '100px',
-  right: '0px',
+  bottom: 100,
 }
 
 export const PublicReasons = () => {
@@ -19,7 +19,7 @@ export const PublicReasons = () => {
   return (
     <div className="reasons" id="reasons" data-test-id="public-reasons">
       <div className="reasons__title" ref={titleRef} data-aos="fade-up" data-aos-duration="1000">
-        <Sparks quantity={2} size="small" position={sparksPosition} rotate={65}>
+        <Sparks quantity={2} size={Sizes.SMALL} position={sparksPosition} rotate={65}>
           <>
             <h2 className={styles['reasons__title-text']}>{t('translation:public-reasons-title')}</h2>
             <h4 className={styles['reasons__title-description']}>{t('translation:public-reasons-description')}</h4>

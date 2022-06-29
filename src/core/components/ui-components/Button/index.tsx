@@ -8,19 +8,17 @@ import styles from './style/styles.module.sass'
 export const Button = ({
   description,
   onClick,
-  width,
+  width = '100%',
   type = 'button',
   style = StyleType.STANDARD,
 }: IButtonProps) => {
   const classes = classNames({
     [styles['button']]: true,
-    [styles['button--transparent']]: style === StyleType.TRANSPARENT,
-    [styles['button--standard']]: style === StyleType.STANDARD,
-    [styles['button--empty']]: style === StyleType.EMPTY,
+    [styles[`button--${style}`]]: true,
   })
 
   return (
-    <button type={type} className={classes} onClick={onClick} style={{ width: width || 'auto' }}>
+    <button type={type} className={classes} onClick={onClick} style={{ width }}>
       {description}
     </button>
   )

@@ -4,8 +4,7 @@ import { IFormGroupProps } from './interface'
 import styles from './style/styles.module.sass'
 import { Error } from './components/Error'
 
-// TODO: delete memo
-export const FormGroup = React.memo(({
+export const FormGroup = ({
   label,
   children,
   error,
@@ -17,4 +16,4 @@ export const FormGroup = React.memo(({
       {children}
     </div>
   )
-})
+}
