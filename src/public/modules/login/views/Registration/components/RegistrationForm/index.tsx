@@ -57,7 +57,6 @@ export const RegistrationForm = () => {
       <div className={styles['registration-form__submit']}>
         <Button
           description={t('translation:public-registration')}
-          width="100%"
           type="submit"
           style={StyleType.TRANSPARENT}
         />

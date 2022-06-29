@@ -7,7 +7,7 @@ import { useSlots } from '../../../hooks'
 
 export const Input = ({
   placeholder,
-  width,
+  width = 'auto',
   type = "text",
   register,
   children,
@@ -20,7 +20,7 @@ export const Input = ({
   })
 
   return (
-    <div className={styles['form-input']} style={{ width: width || 'auto' }}>
+    <div className={styles['form-input']} style={{ width }}>
       <input
         className={classes}
         placeholder={placeholder}

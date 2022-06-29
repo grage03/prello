@@ -10,6 +10,7 @@ import { IPosition, IUsePositionReturn } from './interface'
 // x: 116.80000305175781
 // y: 286.9375
 
+// TODO: delete
 export const usePosition = (ref: RefObject<HTMLElement>): IUsePositionReturn => {
   const [ position, setPosition ] = useState<IPosition>({
     x: 0,

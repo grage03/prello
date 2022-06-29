@@ -3,12 +3,6 @@ import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
 import { Image } from '../../../../../core'
-import { Sparks } from '../../../../components'
-
-const sparksPosition = {
-  left: '-150px',
-  bottom: '60px',
-}
 
 export const PublicHelp = () => {
   const { t } = useTranslation()
@@ -19,9 +13,7 @@ export const PublicHelp = () => {
         <h1 className={styles['help-teams__title']} data-test-id="team-help">
           {t('translation:public-teams-title')}
         </h1>
-        <Sparks position={sparksPosition}>
-          <p className={styles['help-teams__description']}>{t('translation:public-teams-description')}</p>
-        </Sparks>
+        <p className={styles['help-teams__description']}>{t('translation:public-teams-description')}</p>
         { /*<Input*/ }
         {/*  placeholder={t('translation:input-email')}*/}
         {/*  type="email"*/}

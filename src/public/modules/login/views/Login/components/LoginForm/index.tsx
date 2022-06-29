@@ -40,7 +40,7 @@ export const LoginForm = () => {
         />
       </FormGroup>
 
-      <Button description={t('translation:public-login')} width="100%" type="submit" />
+      <Button description={t('translation:public-login')} type="submit" />
     </form>
   )
 }

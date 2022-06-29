@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
-import { Image } from '../../../../../core/components'
+import { Image, scrollToTop } from '../../../../../core'
 import { IAuthWrapperProps, pageInformationType } from './interface'
 
 import styles from './style/styles.module.sass'
 import { loginPlaceholder, registrationPlaceholder } from './const'
 import { LogoList } from '../LogoList'
-import { scrollToTop } from '../../../../../core/lib/utilities/functions'
 
 export const AuthWrapper = ({ children }: IAuthWrapperProps) => {
   const { pathname } = useLocation()
