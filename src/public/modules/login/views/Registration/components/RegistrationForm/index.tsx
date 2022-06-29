@@ -5,14 +5,15 @@ import { useTranslation } from 'react-i18next'
 import { IRegistrationForm } from './interface'
 import {
   Button,
+  Checkbox,
   FormGroup,
   Input,
-  Checkbox,
 } from '../../../../../../../core'
 
 import styles from './style/styles.module.sass'
 import { schema } from './schema'
 import { useRegistration } from '../../hooks'
+import { StyleType } from '../../../../../../../core/components/ui-components/Button/interface'
 
 export const RegistrationForm = () => {
   const { handleSubmit, register, formState: { errors } } = useForm<IRegistrationForm>({
@@ -57,8 +58,8 @@ export const RegistrationForm = () => {
         <Button
           description={t('translation:public-registration')}
           width="100%"
-          transparent
           type="submit"
+          style={StyleType.TRANSPARENT}
         />
       </div>
     </form>

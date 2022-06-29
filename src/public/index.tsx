@@ -5,6 +5,7 @@ import { Layout, Header } from '../core'
 import { LoginPage, RegistrationPage } from './modules'
 import { PublicPage } from './layouts'
 import '../assets/styles/_helpers.sass'
+import './style/styles.sass'
 
 const contextStore = {}
 

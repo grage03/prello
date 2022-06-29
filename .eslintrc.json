@@ -69,7 +69,8 @@
         "jsx-a11y/anchor-is-valid": "off",
         "no-unused-expressions": "off",
         "import/no-extraneous-dependencies": "off",
-        "react/require-default-props": "off"
+        "react/require-default-props": "off",
+        "react/jsx-one-expression-per-line": "off"
     },
     "settings": {
         "import/parsers": {

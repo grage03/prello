@@ -1,7 +1,6 @@
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import classNames from 'classnames'
 
 import { UserWrapper } from './components'
 import { LogoIcon } from '../../../../assets/icon'
@@ -10,22 +9,16 @@ import { Icon } from '../../ui-components'
 import styles from './style/styles.module.sass'
 import { navigationOptions } from './enums'
 import { Anchor } from '../../app'
-import { IHeader } from './interface'
 import { useMatchMedia } from '../../../hooks'
 
 const BurgerMenu = React.lazy(() => import('./components/Burger'))
 
-export const Header = ({ shadow = true }: IHeader) => {
+export const Header = () => {
   const navigate = useNavigate()
   const { pathname } = useLocation()
   const { t } = useTranslation()
   const { isMobile } = useMatchMedia()
   const isPublicPage = pathname === '/'
-
-  const classes = classNames({
-    [styles['header']]: true,
-    [styles['header--shadow']]: shadow,
-  })
 
   const onUserClickLogo = () => {
     if (pathname === '/') return
@@ -33,7 +26,7 @@ export const Header = ({ shadow = true }: IHeader) => {
   }
 
   return (
-    <header className={classes} data-test-id="header">
+    <header className={styles['header']} data-test-id="header">
       <div className={styles['header__logo']}>
         {isPublicPage && isMobile && (
           <div className={styles['header__burger']} data-test-id="burger-menu">
