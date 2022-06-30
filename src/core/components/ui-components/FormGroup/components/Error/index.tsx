@@ -13,17 +13,18 @@ type ErrorMessageType = {
   [key: string]: string
 }
 
-const getErrorMessage = (type: string) => {
+export const Error = ({ error }: IError) => {
   const { t } = useTranslation()
-  const errorMessage: ErrorMessageType = {
-    [TYPES.REQUIRED]: t('translation:required-field'),
-    [TYPES.IS_VALUE]: t('translation:is_value-field'),
+
+  const getErrorMessage = (type: string) => {
+    const errorMessage: ErrorMessageType = {
+      [TYPES.REQUIRED]: t('translation:required-field'),
+      [TYPES.IS_VALUE]: t('translation:is_value-field'),
+    }
+
+    return errorMessage[type]
   }
 
-  return errorMessage[type]
-}
-
-export const Error = ({ error }: IError) => {
   if (!error) return null
   return <label htmlFor={error.message} className={styles['error__text']}>{getErrorMessage(error.type)}</label>
 }
