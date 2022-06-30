@@ -47,5 +47,8 @@
 
   "email-placeholder": "Адрес почты",
   "password-placeholder": "Пароль",
-  "name-placeholder": "Имя аккаунта"
+  "name-placeholder": "Имя аккаунта",
+  
+  "required-field": "Это поле должно быть заполнено",
+  "is_value-field": "Это поле должно быть выбрано"
 }

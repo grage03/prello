@@ -6,7 +6,7 @@ import { IUseRegistrationReturn } from './interface'
 
 export const useRegistration = (): IUseRegistrationReturn => {
   const navigate = useNavigate()
-  const { dispatch, data: response } = useDispatch(createUser)
+  const { dispatch } = useDispatch(createUser)
 
   const onRegistration = async (data: IRegistrationForm) => {
     const { email, name, password } = data

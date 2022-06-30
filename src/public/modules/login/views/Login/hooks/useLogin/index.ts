@@ -9,7 +9,7 @@ import { useUser } from '../../../../../../../domain/hooks/useUser'
 export const useLogin = (): IUseLoginReturn => {
   const { user } = useUser()
   const navigate = useNavigate()
-  const { dispatch, data: response } = useDispatch(loginUser)
+  const { dispatch } = useDispatch(loginUser)
 
   const updateUserInformation = () => {
     const storage = new Storage('local')

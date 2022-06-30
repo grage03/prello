@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { IError } from './interface'
 
 import styles from './style/styles.module.sass'
@@ -13,9 +14,10 @@ type ErrorMessageType = {
 }
 
 const getErrorMessage = (type: string) => {
+  const { t } = useTranslation()
   const errorMessage: ErrorMessageType = {
-    [TYPES.REQUIRED]: 'This field must be filled in',
-    [TYPES.IS_VALUE]: 'This field must be selected',
+    [TYPES.REQUIRED]: t('translation:required-field'),
+    [TYPES.IS_VALUE]: t('translation:is_value-field'),
   }
 
   return errorMessage[type]
