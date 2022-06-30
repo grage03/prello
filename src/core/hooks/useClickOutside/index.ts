@@ -22,7 +22,7 @@ export const useClickOutside = <T extends HTMLDivElement>(visible: boolean): IUs
     return () => {
       document.removeEventListener('click', onClickOutside, true)
     }
-  }, [ isOpen ])
+  }, [isOpen])
 
   return { isOpen, setIsOpen, element }
 }

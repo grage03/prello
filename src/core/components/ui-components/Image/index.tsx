@@ -14,7 +14,7 @@ export const Image = ({
 
   const imgSrc = useMemo(() => {
     return require(`../../../../assets/img/${src}.png`)
-  }, [ src ])
+  }, [src])
 
   return (
     <img

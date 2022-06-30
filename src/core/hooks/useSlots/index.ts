@@ -21,5 +21,5 @@ export const useSlots = ({ children }: IUseSlotsProps): IUseSlotsReturn => {
     })
 
     return collection
-  }, [ children ])
+  }, [children])
 }

@@ -16,7 +16,7 @@ export const AuthWrapper = ({ children }: IAuthWrapperProps) => {
 
   useEffect(() => {
     setPageInformation(pathname === '/login' ? loginPlaceholder : registrationPlaceholder)
-  }, [ pathname ])
+  }, [pathname])
 
   useEffect(() => {
     scrollToTop()

@@ -19,6 +19,7 @@ export const Header = () => {
   const { t } = useTranslation()
   const { isMobile } = useMatchMedia()
   const isPublicPage = pathname === '/'
+  console.log(21)
 
   const onUserClickLogo = () => {
     if (pathname === '/') return

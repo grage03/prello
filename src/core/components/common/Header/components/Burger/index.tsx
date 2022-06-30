@@ -17,7 +17,7 @@ const Burger = () => {
   return (
     <>
       <div className={styles['burger__icon']} onClick={handleOpenBurgerMenu}>
-        {Array.from([ ...Array(3) ].keys()).map((_, index) => (
+        {Array.from([...Array(3)].keys()).map((_, index) => (
           <span key={index} />
         ))}
       </div>
