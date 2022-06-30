@@ -47,5 +47,8 @@
 
   "email-placeholder": "Email",
   "password-placeholder": "Password",
-  "name-placeholder": "Account name"
+  "name-placeholder": "Account name",
+
+  "required-field": "This field must be filled in",
+  "is_value-field": "This field must be selected"
 }
