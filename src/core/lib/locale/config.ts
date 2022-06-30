@@ -25,7 +25,7 @@ i18n
     resources,
     debug: true,
 
-    ns: [ 'translation' ],
+    ns: ['translation'],
     defaultNS: 'translation',
 
     keySeparator: false,

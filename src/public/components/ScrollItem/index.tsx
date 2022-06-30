@@ -17,7 +17,7 @@ export const ScrollItem = () => {
   return (
     <div className={styles['scroll-item']} onClick={moveToTop} data-test-id="scroll-item">
       <div className={styles['scroll-item__arrow']}>
-        {Array.from([ ...Array(3) ].keys()).map((_, index) => (
+        {Array.from([...Array(3)].keys()).map((_, index) => (
           <span key={index} />
         ))}
       </div>

@@ -7,7 +7,7 @@ export const Score = ({ score }: IScoreProps) => {
   return (
     <>
       {
-        Array.from([ ...Array(Math.trunc(score)) ].keys()).map((_, index) => (
+        Array.from([...Array(Math.trunc(score))].keys()).map((_, index) => (
           <Icon size={40} viewBox="0 0 40 40" key={index} icon={<FullStar />} />
         ))
       }
