@@ -3,38 +3,39 @@ import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
 import { Score } from './components'
+import { Namespace } from '../../../../../core'
 
 const assessmentPlaceholder = [
   {
     icon: "",
-    service: "translation:public-assessment-convenience",
+    service: "public__layout:assessment-convenience",
     score: 5,
   },
   {
     icon: "",
-    service: "translation:public-assessment-support",
+    service: "public__layout:assessment-support",
     score: 4.5,
   },
   {
     icon: "",
-    service: "translation:public-assessment-interfaces",
+    service: "public__layout:assessment-interfaces",
     score: 3,
   },
   {
     icon: "",
-    service: "translation:public-assessment-communication",
+    service: "public__layout:assessment-communication",
     score: 3.5,
   },
 ]
 
 export const PublicAssessment = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation<Namespace[]>(['public__layout'])
 
   return (
     <div className={styles['assessment']} data-test-id="public-assessment">
       <div className={styles['assessment__title']} data-aos="zoom-in" data-aos-duration="1500">
-        <h2>{t('translation:public-assessment-title')}</h2>
-        <h4>{t('translation:public-assessment-subtitle')}</h4>
+        <h2>{t('public__layout:assessment-title')}</h2>
+        <h4>{t('public__layout:assessment-subtitle')}</h4>
       </div>
       <div className={styles['assessment__list']}>
         {

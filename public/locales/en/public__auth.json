@@ -1,0 +1,22 @@
+{
+  "meta-login-title": "Prello - authorization",
+  "meta-login-description": "The best pastime for a person is using the functionality that Prello gives you",
+  "meta-registration-title": "Prello - registration of a new account",
+  "meta-registration-description": "Creating a Perello account is the best decision you have made in this life!",
+  "login": "Login",
+  "login-help": "Don't have an account yet?",
+  "registration": "Registration",
+  "registration-agree": "I agree to terms & conditions",
+  "registration-help": "Do you already have an account?",
+  "user-login": "Log In",
+  "user-join": "Join Now",
+  "user-more": "Learn more",
+  "see-more": "See more",
+  "input-email": "Enter your email address",
+  "input-password": "Enter password",
+  "input-agree": "Agree to the terms of use",
+  "input-name": "Come up with a name",
+  "email-placeholder": "Email",
+  "password-placeholder": "Password",
+  "name-placeholder": "Account name"
+}

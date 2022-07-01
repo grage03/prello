@@ -7,7 +7,7 @@ import {
   Button,
   Checkbox,
   FormGroup,
-  Input,
+  Input, Namespace,
 } from '../../../../../../../core'
 
 import styles from './style/styles.module.sass'
@@ -19,7 +19,7 @@ export const RegistrationForm = () => {
   const { handleSubmit, register, formState: { errors } } = useForm<IRegistrationForm>({
     resolver: yupResolver(schema),
   })
-  const { t } = useTranslation()
+  const { t } = useTranslation<Namespace[]>(['public__auth'])
   const { onRegistration } = useRegistration()
 
   const onSubmit: SubmitHandler<IRegistrationForm> = async (data) => {
@@ -28,27 +28,27 @@ export const RegistrationForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles['registration-form']}>
-      <FormGroup label={t('translation:input-email')} error={errors.email}>
+      <FormGroup label={t('public__auth:input-email')} error={errors.email}>
         <Input
-          placeholder={t('translation:email-placeholder')}
+          placeholder={t('public__auth:email-placeholder')}
           type="email"
           label="email"
           register={register}
         />
       </FormGroup>
 
-      <FormGroup label={t('translation:input-password')} error={errors.password}>
+      <FormGroup label={t('public__auth:input-password')} error={errors.password}>
         <Input
-          placeholder={t('translation:password-placeholder')}
+          placeholder={t('public__auth:password-placeholder')}
           type="password"
           label="password"
           register={register}
         />
       </FormGroup>
 
-      <FormGroup label={t('translation:input-agree')} error={errors.isAgree}>
+      <FormGroup label={t('public__auth:input-agree')} error={errors.isAgree}>
         <Checkbox
-          placeholder={t('translation:public-registration-agree')}
+          placeholder={t('public__auth:registration-agree')}
           label="isAgree"
           register={register}
         />
@@ -56,7 +56,7 @@ export const RegistrationForm = () => {
 
       <div className={styles['registration-form__submit']}>
         <Button
-          description={t('translation:public-registration')}
+          description={t('public__auth:registration')}
           type="submit"
           style={StyleType.TRANSPARENT}
         />

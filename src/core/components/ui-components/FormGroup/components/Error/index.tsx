@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { IError } from './interface'
 
 import styles from './style/styles.module.sass'
+import { Namespace } from '../../../../../lib'
 
 enum TYPES {
   REQUIRED = "required",
@@ -14,12 +15,12 @@ type ErrorMessageType = {
 }
 
 export const Error = ({ error }: IError) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation<Namespace[]>(['error__message'])
 
   const message = useMemo(() => {
     const errorMessage: ErrorMessageType = {
-      [TYPES.REQUIRED]: t('translation:required-field'),
-      [TYPES.IS_VALUE]: t('translation:is_value-field'),
+      [TYPES.REQUIRED]: t('error__message:required-field'),
+      [TYPES.IS_VALUE]: t('error__message:is_value-field'),
     }
 
     return errorMessage[error?.type as string]

@@ -10,16 +10,16 @@ import styles from './style/styles.module.sass'
 import { navigationOptions } from './enums'
 import { Anchor } from '../../app'
 import { useMatchMedia } from '../../../hooks'
+import { Namespace } from '../../../lib'
 
 const BurgerMenu = React.lazy(() => import('./components/Burger'))
 
 export const Header = () => {
   const navigate = useNavigate()
   const { pathname } = useLocation()
-  const { t } = useTranslation()
+  const { t } = useTranslation<Namespace[]>(['header__layout'])
   const { isMobile } = useMatchMedia()
   const isPublicPage = pathname === '/'
-  console.log(21)
 
   const onUserClickLogo = () => {
     if (pathname === '/') return
@@ -44,7 +44,7 @@ export const Header = () => {
             {
               navigationOptions.map((item) => (
                 <li key={item.option} className={styles['header__navigation-item']} data-test-id={`${item.option}`}>
-                  <Anchor anchor={item.option}>{t(item.name)}</Anchor>
+                  <Anchor anchor={item.option}>{t(`header__layout:${item.option}`)}</Anchor>
                 </li>
               ))
             }

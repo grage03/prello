@@ -16,10 +16,10 @@ import {
   PublicPartners,
 } from './components'
 import { ScrollItem } from '../../components'
-import { scrollToTop } from '../../../core'
+import { scrollToTop, Namespace } from '../../../core'
 
 export const PublicPage = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation<Namespace[]>(['public__layout'])
 
   useEffect(() => {
     scrollToTop()
@@ -30,8 +30,8 @@ export const PublicPage = () => {
   return (
     <>
       <Helmet>
-        <title>{t('translation:meta-public-title')}</title>
-        <meta name="description" content={t('translation:meta-public-description')} />
+        <title>{t('public__layout:meta-title')}</title>
+        <meta name="description" content={t('public__layout:meta-description')} />
       </Helmet>
       <div className="public-wrapper" data-test-id="public-main">
         <ScrollItem />

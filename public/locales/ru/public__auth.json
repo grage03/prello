@@ -1,0 +1,22 @@
+{
+  "meta-login-title": "Прелло - авторизация",
+  "meta-login-description": "Лучшее времяпровождение для человека - это использование функционала, который дает вам Prello!",
+  "meta-registration-title": "Прелло - регистрация нового аккаунта",
+  "meta-registration-description": "Создание аккаунта Prello, это лучшее решение, которые вы приняли в этой жизни!",
+  "login": "Авторизация",
+  "login-help": "Ещё нет аккаунта?",
+  "registration": "Регистрация",
+  "registration-agree": "Я согласен с правилами и условиями",
+  "registration-help": "Уже есть аккаунт?",
+  "user-login": "Логин",
+  "user-join": "Присоединяйтесь",
+  "user-more": "Читать больше",
+  "see-more": "Увидеть больше",
+  "input-email": "Введите адрес почты",
+  "input-password": "Введите пароль",
+  "input-agree": "Согласитесь с правилами пользования",
+  "input-name": "Придумайте имя",
+  "email-placeholder": "Адрес почты",
+  "password-placeholder": "Пароль",
+  "name-placeholder": "Имя аккаунта"
+}
