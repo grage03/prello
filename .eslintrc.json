@@ -54,7 +54,7 @@
         "dot-notation": ["error", { "allowPattern": "^[a-z]|^[a-z]+((_|__)[a-z]+)+$" }],
         "no-return-await": "error",
         "spaced-comment": "off",
-        "react/button-has-type": "error",
+        "react/button-has-type": "off",
         "no-nested-ternary": "error",
         "no-shadow": "off",
         "no-unused-vars": "off",
@@ -63,7 +63,7 @@
         "no-unused-expressions": "error",
         "import/no-extraneous-dependencies": "off",
         "react/require-default-props": "off",
-        "react/jsx-one-expression-per-line": "error"
+        "react/jsx-one-expression-per-line": "off"
     },
     "settings": {
         "import/parsers": {

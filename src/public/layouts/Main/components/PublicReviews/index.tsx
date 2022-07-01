@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import styles from './style/styles.module.sass'
-import { Link } from '../../../../../core'
+import { Link, Namespace } from '../../../../../core'
 
 const reviewsPlaceholder = [
   {
@@ -26,13 +26,13 @@ const reviewsPlaceholder = [
 ]
 
 export const PublicReviews = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation<Namespace[]>(['public__layout'])
 
   return (
     <div className={styles['people-reviews']} id="reviews" data-test-id="public-reviews">
       <div className={styles['people-reviews__interactions']} data-aos="fade-up" data-aos-duration="1000">
-        <h2>{t('translation:public-reviews-title')}</h2>
-        <Link>{t('translation:see-more')}</Link>
+        <h2>{t('public__layout:reviews-title')}</h2>
+        <Link>{t('public__layout:reviews-see-more')}</Link>
       </div>
       <div className={styles['people-reviews__list']}>
         {

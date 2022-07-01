@@ -6,9 +6,10 @@ import { Icon } from '../../../../ui-components'
 import { navigationOptions } from '../../enums'
 import { Anchor } from '../../../../app'
 import { useClickOutside } from '../../../../../hooks'
+import { Namespace } from '../../../../../lib'
 
 const Burger = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation<Namespace[]>(['header__layout'])
   const { isOpen, setIsOpen, element } = useClickOutside(false)
 
   const handleOpenBurgerMenu = () => setIsOpen(true)
@@ -31,7 +32,7 @@ const Burger = () => {
                   onClick={handleCloseBurgerMenu}
                   data-test-id="burger-menu-close"
                 >
-                  {t('translation:public-header-go-back')}
+                  {t('header__layout:go-back')}
                 </h3>
               </div>
               <nav className={styles['burger__navigation']}>
@@ -47,7 +48,7 @@ const Burger = () => {
                           className={styles['burger__navigation-link']}
                           onClick={handleCloseBurgerMenu}
                         >
-                          <Anchor anchor={item.option}>{t(`translation:${item.name}`)}</Anchor>
+                          <Anchor anchor={item.option}>{t(`header__layout:${item.option}`)}</Anchor>
                         </li>
                       </div>
                     ))

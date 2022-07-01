@@ -8,8 +8,8 @@ describe('main', () => {
   })
 
   it('main -- correct title and meta-content', () => {
-    const title = 'Prello - the best task manager in the world'
-    const content = 'Prello is the best solution for teams to organize work on the application. A huge number of useful features are combined with pleasant functionality.'
+    const title = 'Прелло - лучший менеджер задач в мире'
+    const content = 'Прелло - это лучшее решение для команд по организации работы над приложением. Огромное количество полезных возможностей объединено c приятным функционалом.'
 
     cy.get('title').contains(title)
     cy.get('meta[name="description"]').should("have.attr", "content", content)

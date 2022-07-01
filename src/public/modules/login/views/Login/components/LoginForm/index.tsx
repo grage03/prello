@@ -3,7 +3,12 @@ import { useTranslation } from 'react-i18next'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { ILoginForm } from './interface'
-import { Button, FormGroup, Input } from '../../../../../../../core'
+import {
+  Button,
+  FormGroup,
+  Input,
+  Namespace,
+} from '../../../../../../../core'
 
 import styles from './style/styles.module.sass'
 import { schema } from './schema'
@@ -13,7 +18,7 @@ export const LoginForm = () => {
   const { handleSubmit, register, formState: { errors } } = useForm<ILoginForm>({
     resolver: yupResolver(schema),
   })
-  const { t } = useTranslation()
+  const { t } = useTranslation<Namespace[]>(['public__auth'])
   const { onLogin } = useLogin()
 
   const onSubmit: SubmitHandler<ILoginForm> = async (data) => {
@@ -22,25 +27,25 @@ export const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles['login-form']}>
-      <FormGroup label={t('translation:input-email')} error={errors.email}>
+      <FormGroup label={t('public__auth:input-email')} error={errors.email}>
         <Input
-          placeholder={t('translation:email-placeholder')}
+          placeholder={t('public__auth:email-placeholder')}
           type="email"
           label="email"
           register={register}
         />
       </FormGroup>
 
-      <FormGroup label={t('translation:input-password')} error={errors.password}>
+      <FormGroup label={t('public__auth:input-password')} error={errors.password}>
         <Input
-          placeholder={t('translation:password-placeholder')}
+          placeholder={t('public__auth:password-placeholder')}
           type="password"
           label="password"
           register={register}
         />
       </FormGroup>
 
-      <Button description={t('translation:public-login')} type="submit" />
+      <Button description={t('public__auth:login')} type="submit" />
     </form>
   )
 }

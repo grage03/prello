@@ -6,8 +6,6 @@ export interface IAuthWrapperProps {
 
 export type pageInformationType = {
   page: PageListType
-  to: PageListType
-
   description: string
   value: string
 }
