@@ -2,6 +2,7 @@ const namespace = [
   'error__message',
   'public__auth',
   'public__layout',
+  'public__review',
   'header__layout',
 ] as const
 

@@ -1,3 +1,6 @@
+import { ReactNode } from 'react'
+
+// TODO: edit to ButtonType
 export enum StyleType {
   STANDARD = 'standard',
   EMPTY = 'empty',
@@ -8,7 +11,7 @@ type ButtonType = 'button' | 'submit'
 type OnClickType = () => void
 
 export interface IButtonProps {
-  description: string
+  placeholder: string | ReactNode
   width?: string
   type?: ButtonType
   onClick?: OnClickType

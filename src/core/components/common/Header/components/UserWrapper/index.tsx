@@ -23,7 +23,7 @@ export const UserWrapper = observer(() => {
       {
         user.profile
           ? <h3>{user.profile.email}</h3>
-          : <Button description={t(`header__layout:user-login`)} onClick={onUserLogin} />
+          : <Button placeholder={t(`header__layout:user-login`)} onClick={onUserLogin} />
       }
     </div>
   )

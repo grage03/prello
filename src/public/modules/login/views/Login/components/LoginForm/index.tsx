@@ -45,7 +45,7 @@ export const LoginForm = () => {
         />
       </FormGroup>
 
-      <Button description={t('public__auth:login')} type="submit" />
+      <Button placeholder={t('public__auth:login')} type="submit" />
     </form>
   )
 }

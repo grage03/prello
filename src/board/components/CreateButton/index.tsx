@@ -4,6 +4,6 @@ import { StyleType } from '../../../core/components/ui-components/Button/interfa
 
 export const CreateButton = () => {
   return (
-    <Button description="Create your own project" style={StyleType.EMPTY} />
+    <Button placeholder="Create your own project" style={StyleType.EMPTY} />
   )
 }

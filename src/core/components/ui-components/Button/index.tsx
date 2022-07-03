@@ -6,7 +6,7 @@ import { IButtonProps, StyleType } from './interface'
 import styles from './style/styles.module.sass'
 
 export const Button = ({
-  description,
+  placeholder,
   onClick,
   width = '100%',
   type = 'button',
@@ -19,7 +19,7 @@ export const Button = ({
 
   return (
     <button type={type} className={classes} onClick={onClick} style={{ width }}>
-      {description}
+      {placeholder}
     </button>
   )
 }

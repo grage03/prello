@@ -56,7 +56,7 @@ export const RegistrationForm = () => {
 
       <div className={styles['registration-form__submit']}>
         <Button
-          description={t('public__auth:registration')}
+          placeholder={t('public__auth:registration')}
           type="submit"
           style={StyleType.TRANSPARENT}
         />
