@@ -4,9 +4,6 @@
 
 Сontains styles for the main page elements. All styles should be applied automatically when the application is first rendered.
 
-### _functions.sass
-
-Here you should make various kinds of calculations, different operations that are repeated in different files.
 
 ### _helpers.sass
 
@@ -24,16 +21,16 @@ Contains styles that are used for global page blocks.
 
 This should include frequently repeated styles.
 
-### _variables.sass
-
-Contains a list of the main project variables. you can use them in the code in the following ways:
-
-- standart 
-```css 
-color: $yourVariable
+```sass
+.block
+  @include display-justify-between
 ```
 
-- function
-```css
-color: clr(yourVariable, opacity)
+### _breakpoints.sass
+
+Contains variables that are needed when using media
+
+```sass
+.block
+  @media screen and (max-width: $lg-min-width)
 ```

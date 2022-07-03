@@ -1,8 +1,6 @@
-@import './_base.sass'
-@import './_functions.sass'
-@import './_helpers.sass'
-@import './_mixins.sass'
-@import './_variables'
+@import 'base'
+@import 'root'
+@import 'mixins'
 
 @import url('https://fonts.google.com/specimen/Manrope?query=Manrope#glyphs')
 
@@ -50,7 +48,7 @@ table
 /* Global fonts */
 
 h1, h2, h3
-  color: #2e3038
+  color: var(--pr-color-font)
 
 h1
   @include large-700
@@ -67,4 +65,4 @@ h4
 
 h5
   @include small-400
-  color: #7b8193
+  color: var(--pr-color-disabled)

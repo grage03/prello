@@ -1,3 +1,5 @@
+$sparks: #C4DFE6
+
 .sparks
   &-children
     position: relative
@@ -5,7 +7,7 @@
 
   &-element
     position: absolute
-    z-index: 1
+    z-index: var(--pr-priority-standard)
 
   &__item
     position: absolute
@@ -13,7 +15,7 @@
     height: 0
     border-left: 50px solid transparent
     border-right: 50px solid transparent
-    border-bottom: 100px solid #C4DFE6
+    border-bottom: 100px solid $sparks
 
     &:nth-child(1)
       top: 132px

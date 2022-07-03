@@ -1,6 +1,0 @@
-@function clr($name, $opacity: false)
-  @if $opacity
-    @return RGBA(var(--color-#{unquote($name)}), $opacity)
-  @else
-    @return RGB(var(--color-#{unquote($name)}))
-

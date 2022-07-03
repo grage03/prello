@@ -1,4 +1,4 @@
-@import '../../../../../../../assets/styles/_variables.sass'
+@import '../../../../../../../assets/styles/mixins'
 
 .burger
   &__icon
@@ -7,7 +7,7 @@
       width: 30px
       height: 3px
       margin-bottom: 7px
-      background-color: $grey-80
+      background-color: var(--pr-color-grey-80)
 
   &__close
     margin-bottom: 10px
@@ -30,12 +30,12 @@
     right: 0
     top: 0
     height: 100vh
-    z-index: 999
+    z-index: var(--pr-priority-maximum)
     backdrop-filter: blur(1.5px)
 
   &__menu
     padding: 30px 0
-    background-color: white
+    background-color: var(--pr-color-white)
     height: 100%
     width: 80%
     box-shadow: 0.5px 4px 5px #A9A9A9
@@ -67,5 +67,5 @@
     &-link
       margin-left: 12px
       width: 80%
-      border-bottom: 2px solid #c4c4c4
+      border-bottom: 2px solid var(--pr-color-grey-20)
       text-align: center

@@ -1,17 +1,15 @@
-@import './_variables.sass'
-
 ::-webkit-scrollbar
   width: 8px
   height: 8px
-  background-color: #fff
+  background-color: var(--pr-color-white)
 
 ::-webkit-scrollbar-thumb
-  background-color: $blue-ice
+  background-color: var(--pr-color-blue-ice)
   border-radius: 4px
-  box-shadow: inset 1px 1px 10px $blue-ice
+  box-shadow: inset 1px 1px 10px var(--pr-color-blue-ice)
 
 textarea::-webkit-scrollbar-corner
-  background-color: #fff
+  background-color: var(--pr-color-white)
 
 ::-webkit-scrollbar-button:vertical:start:decrement,
 ::-webkit-scrollbar-button:vertical:end:increment,
