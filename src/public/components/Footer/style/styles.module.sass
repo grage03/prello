@@ -1,4 +1,4 @@
-@import '../../../../assets/styles/_variables.sass'
+@import '../../../../assets/styles/mixins'
 
 .footer
   height: auto
@@ -8,7 +8,7 @@
     @include flex-justify-between
 
     @media screen and (max-width: $md-min-width)
-     flex-direction: column
+      flex-direction: column
 
   &__description-logo
     @include flex-column

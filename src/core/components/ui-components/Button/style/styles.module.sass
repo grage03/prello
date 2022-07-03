@@ -1,5 +1,3 @@
-@import '../../../../../assets/styles/_variables.sass'
-@import '../../../../../assets/styles/_functions.sass'
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
 
 .button
@@ -9,10 +7,10 @@
   font-size: 14px
   padding: 9px 18px
   font-family: Manrope,sans-serif
-  font-weight: bold
+  font-weight: var(--pr-font-weight-bold)
 
   &--empty
-    background-color: white
+    background-color: var(--pr-color-white)
     color: #181A1B
     border: dashed #D3D3D3
 
@@ -20,27 +18,27 @@
       border-color: #C0C0C0
 
   &--standard
-    background-color: $glacier
+    background-color: var(--pr-color-glacier)
     padding: 11px 18px
-    color: white
+    color: var(--pr-color-white)
     border: 0
 
     &:hover
-      background-color: $green-50
-      box-shadow: 0 0 16px $green-50
+      background-color: var(--pr-color-green-50)
+      box-shadow: 0 0 16px var(--pr-color-green-50)
 
     &:active
-      box-shadow: inset 0 0 20px $blue-peacock
+      box-shadow: inset 0 0 20px var(--pr-color-blue-peacock)
 
   &--transparent
-    background-color: white
-    color: $glacier
-    border: 2px solid $glacier
+    background-color: var(--pr-color-white)
+    color: var(--pr-color-glacier)
+    border: 2px solid var(--pr-color-glacier)
 
     &:hover
-      border: 2px solid $green-50
-      color: $green-50
+      border: 2px solid  var(--pr-color-green-50)
+      color:  var(--pr-color-green-50)
 
     &:active
-      border: 2px solid $blue-peacock
-      color: $blue-peacock
+      border: 2px solid var(--pr-color-blue-peacock)
+      color: var(--pr-color-blue-peacock)

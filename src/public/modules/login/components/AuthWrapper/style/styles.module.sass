@@ -1,4 +1,4 @@
-@import '../../../../../../assets/styles/_variables.sass'
+@import '../../../../../../assets/styles/breakpoints'
 
 .authorization
   display: flex
@@ -8,7 +8,7 @@
   @media screen and (max-width: $lg-min-width)
     justify-content: space-around
 
-  &__title    
+  &__title
     &:first-letter
       text-transform: capitalize
 
@@ -28,14 +28,14 @@
 
     @media screen and (max-width: $md-min-width)
       display: none
-      
+
   &__interaction
     width: 50%
     padding: 0 40px
 
     @media screen and (max-width: $sm-min-width)
       width: 70%
-    
+
     @media screen and (max-width: $md-min-width)
       margin-left: auto
       margin-right: auto
