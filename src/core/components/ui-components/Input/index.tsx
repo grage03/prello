@@ -3,7 +3,6 @@ import classNames from 'classnames'
 import { IInputProps } from './interface'
 
 import styles from './style/styles.module.sass'
-import { useSlots } from '../../../hooks'
 
 export const Input = ({
   placeholder,
@@ -13,10 +12,9 @@ export const Input = ({
   children,
   label,
 }: IInputProps) => {
-  const slots = useSlots({ children })
   const classes = classNames({
     [styles['form-input__item']]: true,
-    [styles['form-input__item--button']]: slots.button,
+    [styles['formInput__item-children']]: children,
   })
 
   return (
@@ -27,7 +25,7 @@ export const Input = ({
         type={type}
         {...register(label)}
       />
-      {slots.button}
+      {children}
     </div>
   )
 }

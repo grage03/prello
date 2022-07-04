@@ -1,6 +1,5 @@
 export * from './Icon'
 export * from './Logo'
-export * from './Hint'
 export * from './Button'
 export * from './Link'
 export * from './Checkbox'
