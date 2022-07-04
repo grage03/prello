@@ -1,5 +1,5 @@
 export * from './PublicAssessment'
 export * from './PublicHelp'
-export * from './PublicReasons'
 export * from './PublicPartners'
+export * from './PublicReasons'
 export * from './PublicReviews'

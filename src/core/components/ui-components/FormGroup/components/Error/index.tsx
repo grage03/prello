@@ -1,13 +1,14 @@
 import React, { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { IError } from './interface'
 
-import styles from './style/styles.module.sass'
+import { IError } from './interface'
 import { Namespace } from '../../../../../lib'
 
+import styles from './style/styles.module.sass'
+
 enum TYPES {
-  REQUIRED = "required",
   IS_VALUE = "is-value",
+  REQUIRED = "required",
 }
 
 type ErrorMessageType = {
@@ -19,8 +20,8 @@ export const Error = ({ error }: IError) => {
 
   const message = useMemo(() => {
     const errorMessage: ErrorMessageType = {
-      [TYPES.REQUIRED]: t('error__message:required-field'),
       [TYPES.IS_VALUE]: t('error__message:is_value-field'),
+      [TYPES.REQUIRED]: t('error__message:required-field'),
     }
 
     return errorMessage[error?.type as string]

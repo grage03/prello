@@ -1,8 +1,9 @@
 import React from 'react'
 import { IFormGroupProps } from './interface'
 
-import styles from './style/styles.module.sass'
 import { Error } from './components/Error'
+
+import styles from './style/styles.module.sass'
 
 export const FormGroup = ({
   label,

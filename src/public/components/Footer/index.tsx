@@ -1,10 +1,11 @@
 import React from 'react'
 import i18n from 'i18next'
 
-import styles from './style/styles.module.sass'
-import { LogoIcon } from '../../../assets/icon'
 import { Icon, Select, Storage } from '../../../core'
 import { KeyType } from './interface'
+
+import { LogoIcon } from '../../../assets/icon'
+import styles from './style/styles.module.sass'
 
 const servicesPlaceholder = [
   { name: "Email Marketing", to: "" },

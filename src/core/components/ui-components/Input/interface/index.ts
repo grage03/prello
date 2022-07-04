@@ -2,12 +2,12 @@ import { ReactElement } from 'react'
 import { UseFormRegister } from 'react-hook-form'
 
 export interface IInputProps {
-  placeholder: string
-  type: InputTypes
-  label: string
-  register: UseFormRegister<any>
-  width?: string
   children?: ChildrenType
+  label: string
+  placeholder: string
+  register: UseFormRegister<any>
+  type: InputTypes
+  width?: string
 }
 
 type ChildrenType = ReactElement | ReactElement[]

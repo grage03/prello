@@ -1,12 +1,13 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
-import styles from './style/styles.module.sass'
 import { Icon } from '../../../../ui-components'
 import { navigationOptions } from '../../enums'
 import { Anchor } from '../../../../app'
 import { useClickOutside } from '../../../../../hooks'
 import { Namespace } from '../../../../../lib'
+
+import styles from './style/styles.module.sass'
 
 const Burger = () => {
   const { t } = useTranslation<Namespace[]>(['header__layout'])

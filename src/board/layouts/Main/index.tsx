@@ -1,5 +1,6 @@
 import React from 'react'
 import { BoardList, BoardItems, SubHeader } from './components'
+
 import styles from './style/styles.module.sass'
 
 export const BoardPage = () => {

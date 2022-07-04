@@ -1,5 +1,3 @@
-import { BoardFilters } from './BoardFilters'
-import { BoardMenu } from './BoardMenu'
-import { BoardName } from './BoardName'
-
-export { BoardMenu, BoardName, BoardFilters }
+export * from './BoardFilters'
+export * from './BoardMenu'
+export * from './BoardName'

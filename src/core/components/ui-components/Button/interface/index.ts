@@ -1,6 +1,6 @@
 export enum StyleType {
-  STANDARD = 'standard',
   EMPTY = 'empty',
+  STANDARD = 'standard',
   TRANSPARENT = 'transparent',
 }
 
@@ -9,8 +9,8 @@ type OnClickType = () => void
 
 export interface IButtonProps {
   description: string
-  width?: string
-  type?: ButtonType
-  onClick?: OnClickType
   style?: StyleType
+  type?: ButtonType
+  width?: string
+  onClick?: OnClickType
 }

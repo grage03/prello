@@ -1,6 +1,6 @@
 export interface ILinkProps {
-  to?: string
-  isUnderline?: boolean
-  isArrow?: boolean
   children: string
+  isArrow?: boolean
+  isUnderline?: boolean
+  to?: string
 }

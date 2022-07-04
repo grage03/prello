@@ -1,3 +1,3 @@
 export * from './api'
-export * from './utilities'
 export * from './locale'
+export * from './utilities'

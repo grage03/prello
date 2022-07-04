@@ -1,6 +1,6 @@
 export interface IImageProps {
-  src: string
   alt?: string
   noRadius?: boolean
+  src: string
   width?: string
 }

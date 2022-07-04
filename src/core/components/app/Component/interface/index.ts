@@ -1,7 +1,9 @@
 export interface IComponentProps<T> {
   element: 'div'
+  props: IProps<T> | null
   value: string
-  props: {
-    [key: string]: T
-  } | null
+}
+
+interface IProps<T> {
+  [key: string]: T
 }
