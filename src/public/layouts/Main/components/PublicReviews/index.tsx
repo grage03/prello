@@ -1,8 +1,9 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
-import styles from './style/styles.module.sass'
 import { Link, Namespace } from '../../../../../core'
+
+import styles from './style/styles.module.sass'
 
 const reviewsPlaceholder = [
   {
@@ -45,6 +46,7 @@ export const PublicReviews = () => {
             >
               <p>{item.review}</p>
               <div className={styles['people-reviews__item-user']}>
+                {/* TODO: edit to Avatar */}
                 <img className={styles['people-reviews__avatar']} src={item.avatar} alt="avatar" />
                 <div>
                   <h4>{item.name}</h4>

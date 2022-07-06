@@ -2,18 +2,20 @@ import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useTranslation } from 'react-i18next'
+
 import { IRegistrationForm } from './interface'
 import {
   Button,
   Checkbox,
   FormGroup,
-  Input, Namespace,
+  Input,
+  Namespace,
 } from '../../../../../../../core'
-
-import styles from './style/styles.module.sass'
 import { schema } from './schema'
 import { useRegistration } from '../../hooks'
 import { StyleType } from '../../../../../../../core/components/ui-components/Button/interface'
+
+import styles from './style/styles.module.sass'
 
 export const RegistrationForm = () => {
   const { handleSubmit, register, formState: { errors } } = useForm<IRegistrationForm>({

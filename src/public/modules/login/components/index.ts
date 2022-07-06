@@ -1,2 +1,2 @@
-export * from './LogoList'
 export * from './AuthWrapper'
+export * from './LogoList'

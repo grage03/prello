@@ -2,11 +2,11 @@ import React, { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { reasons } from './enum'
-
-import styles from './style/styles.module.sass'
 import { Image, Link, Namespace } from '../../../../../core'
 import { Sparks } from '../../../../components'
 import { Sizes } from '../../../../components/Sparks/interface'
+
+import styles from './style/styles.module.sass'
 
 const sparksPosition = {
   bottom: 100,
