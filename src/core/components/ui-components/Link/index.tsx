@@ -2,10 +2,11 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
 
-import styles from './style/styles.module.sass'
-
 import { ILinkProps } from './interface'
 
+import styles from './style/styles.module.sass'
+
+// TODO: add style
 export const Link = ({
   to, isArrow, isUnderline, children,
 }: ILinkProps) => {

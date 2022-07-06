@@ -3,14 +3,14 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import { UserWrapper } from './components'
-import { LogoIcon } from '../../../../assets/icon'
 import { Icon } from '../../ui-components'
-
-import styles from './style/styles.module.sass'
 import { navigationOptions } from './enums'
 import { Anchor } from '../../app'
 import { useMatchMedia } from '../../../hooks'
 import { Namespace } from '../../../lib'
+
+import { LogoIcon } from '../../../../assets/icon'
+import styles from './style/styles.module.sass'
 
 const BurgerMenu = React.lazy(() => import('./components/Burger'))
 

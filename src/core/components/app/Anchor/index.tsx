@@ -1,8 +1,8 @@
 import React from 'react'
 import { IAnchorProps } from './interface'
+import { useMatchMedia } from '../../../hooks'
 
 import './style/styles.sass'
-import { useMatchMedia } from '../../../hooks'
 
 export const Anchor = ({ children, anchor }: IAnchorProps) => {
   const { isMobile } = useMatchMedia()

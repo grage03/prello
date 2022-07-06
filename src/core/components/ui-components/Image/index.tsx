@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import classNames from 'classnames'
-import { IImageProps } from './interface'
 
+import { IImageProps } from './interface'
 import styles from './style/styles.module.sass'
 
 export const Image = ({

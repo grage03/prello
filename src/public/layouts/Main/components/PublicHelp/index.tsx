@@ -1,8 +1,9 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
-import styles from './style/styles.module.sass'
 import { Image } from '../../../../../core'
+
+import styles from './style/styles.module.sass'
 
 export const PublicHelp = () => {
   const { t } = useTranslation(['public__layout'])

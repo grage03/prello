@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from '../../../core'
+// TODO: add short input
 import { StyleType } from '../../../core/components/ui-components/Button/interface'
 
 export const CreateButton = () => {

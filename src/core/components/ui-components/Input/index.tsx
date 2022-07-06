@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+
 import { IInputProps } from './interface'
 
 import styles from './style/styles.module.sass'

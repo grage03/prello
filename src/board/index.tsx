@@ -1,6 +1,7 @@
 import React, { createContext } from 'react'
 import { Layout, Header } from '../core'
 import { BoardPage } from './layouts'
+
 import './style/styles.sass'
 
 const contextStore = {}

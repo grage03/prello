@@ -1,3 +1,3 @@
 export interface IBoardListFull {
-  closeFullList(): void
+  closeFullList: () => void
 }

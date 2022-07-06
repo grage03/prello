@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 
-import styles from './style/styles.module.sass'
 import { Icon } from '../../../../../core'
-import { SecondMenu, AddBoard } from '../../../../../assets/icon'
 import { BoardGroup } from '../../../../components'
 import { BoardListFull } from './components'
+
+import { SecondMenu, AddBoard } from '../../../../../assets/icon'
+import styles from './style/styles.module.sass'
 
 export const boardGroupsPlaceholder = [
   {

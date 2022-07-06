@@ -1,11 +1,12 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
-import styles from './style/styles.module.sass'
-import { partners } from './enum'
 import { Logo, Namespace } from '../../../../../core'
+import { partners } from './enum'
 import { Sparks } from '../../../../components'
 import { Sizes } from '../../../../components/Sparks/interface'
+
+import styles from './style/styles.module.sass'
 
 const sparksPosition = {
   top: 40,

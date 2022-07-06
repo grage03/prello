@@ -1,11 +1,11 @@
 export enum LogoSize {
+  BIG = 'big',
   SMALL = 'small',
   STANDARD = 'standard',
-  BIG = 'big',
 }
 
 export interface ILogoProps {
-  size?: LogoSize
   logo: string
+  size?: LogoSize
   to?: string | null
 }

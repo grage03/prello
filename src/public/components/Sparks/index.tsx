@@ -4,10 +4,10 @@ import { ISparksProps, Sizes } from './interface'
 import styles from './style/styles.module.sass'
 
 const positionInit = {
-  top: 0,
-  right: 0,
   bottom: 0,
   left: 0,
+  right: 0,
+  top: 0,
 }
 
 export const Sparks = ({
@@ -15,11 +15,11 @@ export const Sparks = ({
 }: ISparksProps) => {
   const initStyles = () => {
     return {
-      transform: `scale(${size}) rotate(${rotate}deg)`,
-      top: `${position.top}px`,
-      right: `${position.right}px`,
       bottom: `${position.bottom}px`,
       left: `${position.left}px`,
+      right: `${position.right}px`,
+      top: `${position.top}px`,
+      transform: `scale(${size}) rotate(${rotate}deg)`,
     }
   }
 

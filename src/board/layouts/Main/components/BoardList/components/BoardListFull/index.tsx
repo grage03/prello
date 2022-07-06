@@ -1,11 +1,12 @@
 import React from 'react'
 
-import styles from './style/styles.module.sass'
-import { IBoardListFull } from './interface'
 import { Icon, Link } from '../../../../../../../core'
+import { IBoardListFull } from './interface'
 import { boardGroupsPlaceholder } from '../../index'
 import { BoardGroup, CreateButton } from '../../../../../../components'
+
 import { More } from '../../../../../../../assets/icon'
+import styles from './style/styles.module.sass'
 
 export const BoardListFull = ({ closeFullList }: IBoardListFull) => {
   return (

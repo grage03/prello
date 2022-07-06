@@ -1,8 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
+
 import { ILogoProps, LogoSize } from './interface'
 import { Image } from '../Image'
+
 import styles from './style/styles.module.sass'
 
 export const Logo = ({ logo, size = LogoSize.STANDARD, to }: ILogoProps) => {

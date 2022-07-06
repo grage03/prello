@@ -1,9 +1,9 @@
 import { RefObject } from 'react'
 
 export interface IUseClickOutsideReturn<T extends HTMLDivElement> {
+  element: RefObject<T>
   isOpen: boolean
   setIsOpen: SetIsOpenType
-  element: RefObject<T>
 }
 
 type SetIsOpenType = (value: boolean) => void
