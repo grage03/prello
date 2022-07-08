@@ -1,0 +1,49 @@
+.menu-sidebar
+  position: absolute
+  top: 65px
+  bottom: 0
+  right: 0
+  width: 290px
+  background-color: var(--pr-color-white)
+
+  &__header
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 50px
+    border-bottom: 2px solid var(--pr-color-grey-15)
+
+  &__content
+    display: flex
+    flex-direction: column
+    gap: 14px
+    padding: 18px
+
+    &-item
+      padding: 4px 12px
+      border-radius: 6px
+
+      &:hover
+        cursor: pointer
+        background-color: var(--pr-color-grey-10)
+
+  &__close
+    cursor: pointer
+    position: absolute
+    right: 8px
+    width: 18px
+    height: 18px
+
+    &::before, &::after
+      position: absolute
+      content: ''
+      width: 2px
+      height: 18px
+      background-color: var(--pr-color-black)
+
+    &::before
+      transform: rotate(45deg)
+
+    &::after
+      transform: rotate(-45deg)
+
