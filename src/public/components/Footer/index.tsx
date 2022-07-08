@@ -40,7 +40,7 @@ export const Footer = () => {
       <div className={styles['footer__description']}>
         <div className={styles['footer__description-logo']}>
           <div className={styles['footer__description-language']}>
-            <Icon size={60} viewBox="0 0 70 70" icon={<LogoIcon />} />
+            <Icon size={60} viewBox="0 0 80 80" icon={<LogoIcon />} />
             <Select
               label={storage.getItem('i18nextLng')}
               selectItems={[ 'en', 'ru' ]}
