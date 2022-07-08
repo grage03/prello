@@ -1,4 +1,5 @@
 const namespace = [
+  'board__menu_sidebar',
   'error__message',
   'header__layout',
   'public__auth',
