@@ -2,9 +2,8 @@ import React, { createContext, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import { Loader, NotFound } from './core'
-
-import './assets/styles/main.sass'
 import { User } from './domain'
+import './assets/styles/main.sass'
 
 const PublicRoute = React.lazy(() => import('./public'))
 const AdminRoute = React.lazy(() => import('./admin'))
