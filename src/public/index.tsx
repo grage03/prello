@@ -1,8 +1,12 @@
-import React, { createContext } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import React, { createContext, useEffect } from 'react'
+import { Route, Routes, useLocation } from 'react-router-dom'
 
 import { Footer } from './components'
-import { Layout, Header } from '../core'
+import {
+  Layout,
+  Header,
+  scrollToTop,
+} from '../core'
 import { LoginPage, RegistrationPage } from './modules'
 import { PublicPage } from './layouts'
 
@@ -14,6 +18,12 @@ const contextStore = {}
 export const PublicContext = createContext(contextStore)
 
 const PublicRoute = () => {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    scrollToTop()
+  }, [pathname])
+
   return (
     <Layout contextStore={contextStore} contextProvider={PublicContext}>
       <main className="public h-container">

@@ -1,9 +1,9 @@
-import React, { useEffect, useMemo } from 'react'
+import React, { useMemo } from 'react'
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
 
-import { Image, Namespace, scrollToTop } from '../../../../../core'
+import { Image, Namespace } from '../../../../../core'
 import { IAuthWrapperProps } from './interface'
 import { loginPlaceholder, registrationPlaceholder } from './const'
 import { LogoList } from '../LogoList'
@@ -17,10 +17,6 @@ export const AuthWrapper = ({ children }: IAuthWrapperProps) => {
   const pageInformation = useMemo(() => {
     return pathname === '/login' ? loginPlaceholder : registrationPlaceholder
   }, [pathname])
-
-  useEffect(() => {
-    scrollToTop()
-  }, [])
 
   return (
     <>

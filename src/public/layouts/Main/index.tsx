@@ -13,7 +13,7 @@ import {
   PublicPartners,
 } from './components'
 import { ScrollItem } from '../../components'
-import { scrollToTop, Namespace } from '../../../core'
+import { Namespace } from '../../../core'
 
 import '../../../assets/styles/_helpers.sass'
 import './style/styles.sass'
@@ -22,7 +22,6 @@ export const PublicPage = () => {
   const { t } = useTranslation<Namespace[]>(['public__layout'])
 
   useEffect(() => {
-    scrollToTop()
     Aos.init()
     Aos.refresh()
   }, [])

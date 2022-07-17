@@ -24,16 +24,12 @@ export const debounce = <T, U extends any[]>(fn: () => T, ms: number) => {
 }
 
 export const scrollToTop = (): void => {
-  const isScrollTop = true
+  const { pageYOffset } = window
 
-  if (isScrollTop) {
-    const { pageYOffset } = window
-
-    if (pageYOffset) {
-      window.scrollBy({
-        top: -Math.max(document.body.scrollTop, document.documentElement.scrollTop),
-        behavior: 'smooth',
-      })
-    }
+  if (pageYOffset) {
+    window.scrollBy({
+      top: -Math.max(document.body.scrollTop, document.documentElement.scrollTop),
+      behavior: 'smooth',
+    })
   }
 }
