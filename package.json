@@ -5,7 +5,7 @@
   "dependencies": {
     "@hookform/resolvers": "^2.9.5",
     "@types/aos": "^3.0.4",
-    "@types/jest": "^28.1.4",
+    "@types/jest": "^28.1.6",
     "@types/react": "^18.0.15",
     "@types/react-helmet": "^6.1.5",
     "aos": "^2.3.4",
